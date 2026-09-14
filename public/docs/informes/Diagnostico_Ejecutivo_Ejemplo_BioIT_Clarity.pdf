@@ -1,0 +1,52 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 2078 >>
+stream
+BT /F1 18 Tf 50 770 Td (Informe de Analisis de Datos - BioIT Clarity \(Muestra\)) Tj ET
+BT /F1 11 Tf 50 748 Td (Ejemplo de reporte sintetico en lenguaje claro para laboratorio) Tj ET
+BT /F1 9 Tf 50 732 Td (BioIT Clarity | Versión 2026.2 | Público | BioIT Clarity - Micaela) Tj ET
+0.2 w 50 722 m 545 722 l S
+BT /F1 12 Tf 50 700 Td (1. Resumen Exploratorio del Conjunto de Datos) Tj ET
+BT /F1 10 Tf 55 682 Td (- Evaluacion de calidad sobre 48 muestras experimentales \(ensayos qPCR / expresion\).) Tj ET
+BT /F1 10 Tf 55 667 Td (- Distribucion homogenea tras normalizacion log2; 3 valores atipicos identificados y documentados.) Tj ET
+BT /F1 10 Tf 55 652 Td (- Estructura de metadatos validada sin valores faltantes criticos.) Tj ET
+BT /F1 12 Tf 50 627 Td (2. Analisis Estadistico e Interpretacion Directa) Tj ET
+BT /F1 10 Tf 55 609 Td (- Prueba de hipotesis \(t-test pareado / ANOVA\): 12 variables muestran cambio significativo \(p < 0.01\).) Tj ET
+BT /F1 10 Tf 55 594 Td (- Correccion por comparaciones multiples \(FDR Benjamini-Hochberg\) aplicada de forma transparente.) Tj ET
+BT /F1 10 Tf 55 579 Td (- Conclusiones explicadas en terminos practicos para la toma de decisiones experimentales.) Tj ET
+BT /F1 12 Tf 50 554 Td (3. Figuras y Tablas Entregadas) Tj ET
+BT /F1 10 Tf 55 536 Td (- Figura 1: Grafico volcano de alta resolucion \(300 DPI, listo para paper\).) Tj ET
+BT /F1 10 Tf 55 521 Td (- Figura 2: Diagrama de cajas \(boxplots\) de los biomarcadores mas relevantes.) Tj ET
+BT /F1 10 Tf 55 506 Td (- Tabla 1: Resumen de medias, desviaciones estandar e intervalos de confianza \(CSV y Excel\).) Tj ET
+BT /F1 12 Tf 50 481 Td (4. Pasos Sugeridos y Documentacion Reproducible) Tj ET
+BT /F1 10 Tf 55 463 Td (- Scripts en Python / R adjuntos con instrucciones claras para replicar el analisis.) Tj ET
+BT /F1 10 Tf 55 448 Td (- Recomendacion de validar los 3 biomarcadores prioritarios en la proxima tanda experimental.) Tj ET
+0.2 w 50 60 m 545 60 l S
+BT /F1 8 Tf 50 48 Td (BioIT Clarity - Procesos Claros para Biotecnología | Contacto: micaela.bioinformatics@gmail.com) Tj ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000316 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2446
+%%EOF

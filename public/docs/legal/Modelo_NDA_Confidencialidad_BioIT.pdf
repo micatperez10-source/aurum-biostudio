@@ -1,0 +1,49 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 1585 >>
+stream
+BT /F1 18 Tf 50 770 Td (Acuerdo de Confidencialidad Mutuo \(NDA\)) Tj ET
+BT /F1 11 Tf 50 748 Td (Garantia de proteccion de datos cientificos y propiedad intelectual) Tj ET
+BT /F1 9 Tf 50 732 Td (BioIT Clarity | Versión 2026.1 | Confidencial | BioIT Clarity - Micaela) Tj ET
+0.2 w 50 722 m 545 722 l S
+BT /F1 12 Tf 50 700 Td (Partes del Acuerdo) Tj ET
+BT /F1 10 Tf 55 682 Td (De una parte: La Empresa / Laboratorio de Biotecnologia.) Tj ET
+BT /F1 10 Tf 55 667 Td (De otra parte: Micaela / BioIT Clarity \(Consultoria Tecnica Bioinformatica\).) Tj ET
+BT /F1 12 Tf 50 642 Td (Clausula 1: Definicion de Informacion Confidencial) Tj ET
+BT /F1 10 Tf 55 624 Td (Incluye secuencias, pipelines, metodologias propietarias, arquitecturas de software,) Tj ET
+BT /F1 10 Tf 55 609 Td (credenciales de infraestructura y datos experimentales del laboratorio.) Tj ET
+BT /F1 12 Tf 50 584 Td (Clausula 2: Compromiso de No Divulgacion) Tj ET
+BT /F1 10 Tf 55 566 Td (- Se prohibe expresamente compartir informacion con terceros.) Tj ET
+BT /F1 10 Tf 55 551 Td (- La informacion solo se utilizara para el diagnostico y optimizacion de procesos.) Tj ET
+BT /F1 10 Tf 55 536 Td (- Accesos de solo lectura concedidos seran revocados al concluir el analisis.) Tj ET
+BT /F1 12 Tf 50 511 Td (Clausula 3: Destruccion de Datos Temporales) Tj ET
+BT /F1 10 Tf 55 493 Td (Al finalizar el diagnostico, cualquier copia local de analisis sera eliminada de inmediato.) Tj ET
+0.2 w 50 60 m 545 60 l S
+BT /F1 8 Tf 50 48 Td (BioIT Clarity - Procesos Claros para Biotecnología | Contacto: micaela.bioinformatics@gmail.com) Tj ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000316 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1953
+%%EOF
