@@ -243,7 +243,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       text:
         'Book a free 20-minute call. Tell me about your project, what data you have, and what you need. I will tell you honestly whether I can help.',
       button: 'Book a free call',
-      calendarUrl: 'https://calendar.google.com/',
+      calendarUrl: 'https://calendar.app.google/uwzXpM72vd7B8whx6',
       note:
         'No pressure. If I am not the right fit for your project, I will tell you clearly.',
       emailLabel: 'Prefer to start by email?',
@@ -620,7 +620,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       text:
         'Agendá una llamada gratuita de 20 minutos. Contame sobre tu proyecto, qué datos tenés y qué necesitás, y te voy a decir con honestidad si puedo ayudarte.',
       button: 'Agendá una llamada gratuita',
-      calendarUrl: 'https://calendar.google.com/',
+      calendarUrl: 'https://calendar.app.google/uwzXpM72vd7B8whx6',
       note:
         'Sin presión. Si no soy la persona indicada para tu proyecto, te lo voy a decir con claridad.',
       emailLabel: '¿Preferís empezar por email?',

@@ -165,10 +165,11 @@ export const Navbar: React.FC<NavbarProps> = ({
               onToggle={handleLanguageChange}
             />
 
-            <button
+            <a
               id="nav-contact-btn"
-              type="button"
-              onClick={() => scrollToSection('contact')}
+              href={t.contact.calendarUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-xl bg-[#2F3E3A] px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-[#1A1F1D]"
             >
               <span>{t.nav.bookCall}</span>
@@ -177,7 +178,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="h-3.5 w-3.5 shrink-0 text-[#D4E8E1]"
                 aria-hidden="true"
               />
-            </button>
+            </a>
           </div>
 
           <div className="flex shrink-0 items-center gap-2 xl:hidden">
@@ -273,9 +274,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           <div className="border-t border-[#E6E4DF] pt-2">
-            <button
-              type="button"
-              onClick={() => scrollToSection('contact')}
+            <a
+              href={t.contact.calendarUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#2F3E3A] px-4 py-3 font-semibold text-white shadow-sm hover:bg-[#1A1F1D]"
             >
               <span>{t.nav.bookCall}</span>
@@ -284,7 +286,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="h-4 w-4 text-[#D4E8E1]"
                 aria-hidden="true"
               />
-            </button>
+            </a>
           </div>
         </div>
       )}

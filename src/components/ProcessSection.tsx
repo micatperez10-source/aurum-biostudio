@@ -13,16 +13,16 @@ import { TRANSLATIONS } from '../data/translations';
 
 interface ProcessSectionProps {
   lang: Language;
-  onOpenContact: () => void;
+  onOpenContact?: () => void;
   onOpenDocs: (initialDocId?: string) => void;
 }
 
 export const ProcessSection: React.FC<ProcessSectionProps> = ({
   lang,
-  onOpenContact,
   onOpenDocs,
 }) => {
   const t = TRANSLATIONS[lang].process;
+  const calendarUrl = TRANSLATIONS[lang].contact.calendarUrl;
 
   const viewDeliverablesLabel =
     lang === 'en'
@@ -144,9 +144,10 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <button
-            type="button"
-            onClick={onOpenContact}
+          <a
+            href={calendarUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-[#2F3E3A] px-7 py-3.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#1A1F1D] sm:w-auto"
           >
             <span>{t.ctaButton}</span>
@@ -155,7 +156,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
               className="h-4 w-4 shrink-0 text-[#D4E8E1]"
               aria-hidden="true"
             />
-          </button>
+          </a>
 
           <button
             type="button"
