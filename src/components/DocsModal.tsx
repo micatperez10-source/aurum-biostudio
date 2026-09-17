@@ -84,7 +84,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
       case 'informes':
         return (
           <FileCheck
-            className="h-5 w-5 text-[#2F3E3A]"
+            className="h-5 w-5 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -92,7 +92,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
       case 'figuras':
         return (
           <BarChart3
-            className="h-5 w-5 text-[#2F3E3A]"
+            className="h-5 w-5 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -100,7 +100,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
       case 'notas':
         return (
           <FileText
-            className="h-5 w-5 text-[#2F3E3A]"
+            className="h-5 w-5 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -108,7 +108,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
       case 'proximos-pasos':
         return (
           <ListOrdered
-            className="h-5 w-5 text-[#2F3E3A]"
+            className="h-5 w-5 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -116,7 +116,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
       default:
         return (
           <Layers
-            className="h-5 w-5 text-[#2F3E3A]"
+            className="h-5 w-5 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -152,7 +152,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-[#1A1F1D]/70 p-4 backdrop-blur-sm sm:p-6"
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-[#255643]/70 p-4 backdrop-blur-sm sm:p-6"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -160,13 +160,13 @@ export const DocsModal: React.FC<DocsModalProps> = ({
     >
       <div
         id="docs-modal-container"
-        className="my-auto flex max-h-[92vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-[#E6E4DF] bg-[#FFFFFF] shadow-2xl"
+        className="my-auto flex max-h-[92vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-[#E6E4DF] bg-[#DDD6C9] shadow-2xl"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="shrink-0 border-b border-[#1A1F1D] bg-[#2F3E3A] p-6 text-white sm:p-7">
+        <div className="shrink-0 border-b border-[#255643] bg-[#255643] p-6 text-white sm:p-7">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#D4E8E1]">
+              <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-[#DDD6C9]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#827D75]">
                 <Sparkles
                   className="h-3.5 w-3.5"
                   aria-hidden="true"
@@ -181,7 +181,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
                 {t.docsModal.title}
               </h2>
 
-              <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-[#D4E8E1]/90">
+              <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-[#958965]/90">
                 {t.docsModal.subtitle}
               </p>
             </div>
@@ -190,7 +190,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
               id="close-docs-modal-btn"
               type="button"
               onClick={onClose}
-              className="cursor-pointer rounded-xl p-2 text-[#D4E8E1] transition-colors hover:bg-white/10 hover:text-white"
+              className="cursor-pointer rounded-xl p-2 text-[#958965] transition-colors hover:bg-[#DDD6C9]/10 hover:text-white"
               aria-label={t.docsModal.closeBtn}
             >
               <X className="h-6 w-6" aria-hidden="true" />
@@ -198,7 +198,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
           </div>
 
           <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-white/15 pt-4 text-xs">
-            <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-black/20 px-3 py-1.5 font-mono text-[#D4E8E1]">
+            <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-black/20 px-3 py-1.5 font-mono text-[#827D75]">
               <span className="text-[#BFA690]">
                 {lang === 'en' ? 'Folder:' : 'Carpeta:'}
               </span>
@@ -207,7 +207,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
               </span>
             </div>
 
-            <span className="text-[#D4E8E1]/80">
+            <span className="text-[#958965]/80">
               {lang === 'en'
                 ? 'Examples of reports, figures, notes, and next steps.'
                 : 'Ejemplos de reportes, figuras, notas y próximos pasos.'}
@@ -215,8 +215,8 @@ export const DocsModal: React.FC<DocsModalProps> = ({
           </div>
         </div>
 
-        <div className="flex shrink-0 flex-wrap items-center gap-2 border-b border-[#E6E4DF] bg-[#F4F2EE] px-6 py-3 text-xs sm:text-sm">
-          <span className="mr-1 font-medium text-[#5A5A5A]">
+        <div className="flex shrink-0 flex-wrap items-center gap-2 border-b border-[#E6E4DF] bg-[#DDD6C9] px-6 py-3 text-xs sm:text-sm">
+          <span className="mr-1 font-medium text-[#958965]">
             {lang === 'en' ? 'Category:' : 'Categoría:'}
           </span>
 
@@ -226,8 +226,8 @@ export const DocsModal: React.FC<DocsModalProps> = ({
             onClick={() => setSelectedCategory('all')}
             className={`cursor-pointer rounded-lg px-3 py-1.5 font-medium transition-colors ${
               selectedCategory === 'all'
-                ? 'bg-[#2F3E3A] text-white shadow-sm'
-                : 'border border-[#E6E4DF] bg-[#FFFFFF] text-[#1F1F1F] hover:bg-[#E6E4DF]'
+                ? 'bg-[#255643] text-white shadow-sm'
+                : 'border border-[#E6E4DF] bg-[#DDD6C9] text-[#807D75] hover:bg-[#DDD6C9] hover:brightness-95'
             }`}
           >
             {t.docsModal.allCategory} ({docs.length})
@@ -241,8 +241,8 @@ export const DocsModal: React.FC<DocsModalProps> = ({
               onClick={() => setSelectedCategory(category)}
               className={`cursor-pointer rounded-lg px-3 py-1.5 font-medium transition-colors ${
                 selectedCategory === category
-                  ? 'bg-[#2F3E3A] text-white shadow-sm'
-                  : 'border border-[#E6E4DF] bg-[#FFFFFF] text-[#1F1F1F] hover:bg-[#E6E4DF]'
+                  ? 'bg-[#255643] text-white shadow-sm'
+                  : 'border border-[#E6E4DF] bg-[#DDD6C9] text-[#807D75] hover:bg-[#DDD6C9] hover:brightness-95'
               }`}
             >
               {categoryLabel(category)}
@@ -261,54 +261,54 @@ export const DocsModal: React.FC<DocsModalProps> = ({
                 id={`doc-card-${doc.id}`}
                 className={`rounded-xl border p-5 transition-all duration-200 ${
                   isTargeted
-                    ? 'border-[#2F3E3A] bg-[#D4E8E1]/30 shadow-md ring-2 ring-[#2F3E3A]/20'
-                    : 'border-[#E6E4DF] hover:border-[#BFA690] hover:bg-[#F4F2EE]/60'
+                    ? 'border-[#255643] bg-[#255643]/30 shadow-md ring-2 ring-[#255643]/20'
+                    : 'border-[#E6E4DF] hover:border-[#BFA690] hover:bg-[#DDD6C9] hover:brightness-95/60'
                 }`}
               >
                 <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#E6E4DF] bg-[#FFFFFF] shadow-sm">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] shadow-sm">
                       {getDocIcon(doc)}
                     </div>
 
                     <div className="space-y-1.5">
                       <div className="flex flex-wrap items-center gap-2">
-                        <span className="rounded-full border border-[#D4E8E1] bg-[#D4E8E1] px-2.5 py-0.5 text-xs font-semibold text-[#2F3E3A]">
+                        <span className="rounded-full border border-[#255643] bg-[#255643] px-2.5 py-0.5 text-xs font-semibold text-white">
                           {doc.badge}
                         </span>
 
-                        <span className="rounded border border-[#E6E4DF] bg-[#F4F2EE] px-2 py-0.5 font-mono text-[11px] font-semibold text-[#5A5A5A]">
+                        <span className="rounded border border-[#E6E4DF] bg-[#DDD6C9] px-2 py-0.5 font-mono text-xs font-semibold text-[#827D75]">
                           {doc.folderPath}
                         </span>
 
-                        <span className="font-mono text-xs text-[#5A5A5A]">
+                        <span className="font-mono text-xs text-[#827D75]">
                           {doc.fileSize}
                         </span>
                       </div>
 
-                      <h3 className="font-serif text-base font-bold leading-snug text-[#1F1F1F] sm:text-lg">
+                      <h3 className="font-serif text-base font-bold leading-snug text-[#3B5745] sm:text-lg">
                         {doc.title}
                       </h3>
 
-                      <p className="text-sm leading-relaxed text-[#5A5A5A]">
+                      <p className="text-sm leading-relaxed text-[#958965]">
                         {doc.description}
                       </p>
 
-                      <div className="mt-3 grid grid-cols-1 gap-1 border-t border-[#E6E4DF] pt-2.5 text-xs text-[#5A5A5A]">
+                      <div className="mt-3 grid grid-cols-1 gap-1 border-t border-[#E6E4DF] pt-2.5 text-xs text-[#827D75]">
                         {doc.previewSummary.map((point, idx) => (
                           <div
                             key={`${doc.id}-point-${idx}`}
                             className="flex items-center gap-1.5"
                           >
-                            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#2F3E3A]" />
+                            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#255643]" />
                             <span>{point}</span>
                           </div>
                         ))}
                       </div>
 
-                      <div className="pt-1 text-[11px] font-mono text-[#5A5A5A]">
+                      <div className="pt-1 text-xs font-mono text-[#827D75]">
                         {lang === 'en' ? 'File:' : 'Archivo:'}{' '}
-                        <code className="rounded bg-[#F4F2EE] px-1.5 py-0.5 font-bold text-[#2F3E3A]">
+                        <code className="font-serif rounded bg-[#DDD6C9] px-1.5 py-0.5 font-bold text-[#255643]">
                           {doc.folderPath}
                           {doc.filename}
                         </code>
@@ -324,8 +324,8 @@ export const DocsModal: React.FC<DocsModalProps> = ({
                       onClick={() => handleDownloadClick(doc.filename)}
                       className={`inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold shadow-sm transition-all ${
                         isDownloaded
-                          ? 'bg-emerald-600 text-white'
-                          : 'bg-[#2F3E3A] text-white hover:bg-[#1A1F1D] active:scale-[0.98]'
+                          ? 'bg-[#255643] text-white'
+                          : 'bg-[#255643] text-white hover:brightness-110 active:scale-[0.98]'
                       }`}
                     >
                       {isDownloaded ? (
@@ -354,7 +354,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
                       href={doc.webPath}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex cursor-pointer items-center justify-center gap-1.5 rounded-xl border border-[#E6E4DF] bg-[#FFFFFF] px-3 py-2 text-xs font-medium text-[#1F1F1F] transition-colors hover:bg-[#F4F2EE]"
+                      className="inline-flex cursor-pointer items-center justify-center gap-1.5 rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-3 py-2 text-xs font-medium text-[#807D75] transition-colors hover:bg-[#DDD6C9] hover:brightness-95"
                     >
                       <ExternalLink
                         className="h-3.5 w-3.5"
@@ -369,16 +369,16 @@ export const DocsModal: React.FC<DocsModalProps> = ({
           })}
 
           {filteredDocs.length === 0 && (
-            <div className="py-12 text-center text-sm text-[#5A5A5A]">
+            <div className="py-12 text-center text-sm text-[#958965]">
               {t.docsModal.noDocs}
             </div>
           )}
         </div>
 
-        <div className="flex shrink-0 flex-wrap items-center justify-between gap-4 border-t border-[#E6E4DF] bg-[#F4F2EE] px-6 py-4">
-          <p className="flex items-start gap-1.5 text-xs text-[#5A5A5A]">
+        <div className="flex shrink-0 flex-wrap items-center justify-between gap-4 border-t border-[#E6E4DF] bg-[#DDD6C9] px-6 py-4">
+          <p className="flex items-start gap-1.5 text-xs text-[#827D75]">
             <ShieldCheck
-              className="mt-0.5 h-4 w-4 shrink-0 text-[#2F3E3A]"
+              className="mt-0.5 h-4 w-4 shrink-0 text-[#255643]"
               aria-hidden="true"
             />
             <span>
@@ -392,7 +392,7 @@ export const DocsModal: React.FC<DocsModalProps> = ({
             id="footer-close-docs-modal-btn"
             type="button"
             onClick={onClose}
-            className="ml-auto cursor-pointer rounded-xl border border-[#E6E4DF] bg-[#FFFFFF] px-5 py-2 text-xs font-semibold text-[#1F1F1F] transition-colors hover:bg-[#E6E4DF]"
+            className="ml-auto cursor-pointer rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-5 py-2 text-xs font-semibold text-[#807D75] transition-colors hover:bg-[#DDD6C9] hover:brightness-95"
           >
             {t.docsModal.closeBtn}
           </button>

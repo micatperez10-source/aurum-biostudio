@@ -1,27 +1,27 @@
 /* ==========================================================================
    BioIT Clarity - Boutique Stylesheet
    Color Palette:
-   --bg: #F4F2EE;
-   --bg-alt: #FFFFFF;
-   --text: #1F1F1F;
-   --text-light: #5A5A5A;
+   --bg: #DDD6C9;
+   --bg-alt: #DDD6C9;
+   --text: #807D75;
+   --text-light: #958965;
    --border: #E6E4DF;
-   --primary: #2F3E3A;
+   --primary: #255643;
    --accent: #BFA690;
-   --deep: #1A1F1D;
-   --mint: #D4E8E1;
+   --deep: #255643;
+   --mint: #255643;
    ========================================================================== */
 
 :root {
-  --bg: #F4F2EE;
-  --bg-alt: #FFFFFF;
-  --text: #1F1F1F;
-  --text-light: #5A5A5A;
+  --bg: #DDD6C9;
+  --bg-alt: #DDD6C9;
+  --text: #807D75;
+  --text-light: #958965;
   --border: #E6E4DF;
-  --primary: #2F3E3A;
+  --primary: #255643;
   --accent: #BFA690;
-  --deep: #1A1F1D;
-  --mint: #D4E8E1;
+  --deep: #255643;
+  --mint: #255643;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -52,7 +52,24 @@ body {
 }
 
 .font-sans {
-  font-family: var(--font-sans);
+  font-family: 'Calibri', 'Carlito', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: 'Calibri', 'Carlito', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Green letters use the main-title serif (wins over button rule by specificity) */
+.text-\[\#255643\] {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Tertiary text: Calibri (local) with Carlito fallback */
+.text-\[\#827D75\] {
+  font-family: 'Calibri', 'Carlito', 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 .font-mono {
@@ -351,7 +368,7 @@ body {
 }
 
 .card-item:hover {
-  border-color: rgba(47, 62, 58, 0.3);
+  border-color: rgba(37, 86, 67, 0.3);
 }
 
 .card-icon {
@@ -402,7 +419,7 @@ body {
 
 .pricing-card.featured {
   border: 2px solid var(--primary);
-  box-shadow: 0 12px 24px -10px rgba(47, 62, 58, 0.15);
+  box-shadow: 0 12px 24px -10px rgba(37, 86, 67, 0.15);
   transform: translateY(-4px);
 }
 

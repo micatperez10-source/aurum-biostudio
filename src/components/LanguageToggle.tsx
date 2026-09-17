@@ -15,11 +15,11 @@ export const LanguageToggle: React.FC<LanguageToggleProps> = ({
 }) => {
   return (
     <div
-      className={`inline-flex items-center bg-[#E6E4DF]/60 hover:bg-[#E6E4DF] p-0.5 rounded-lg border border-[#E6E4DF] text-xs font-semibold transition-colors ${className}`}
+      className={`inline-flex items-center bg-[#DDD6C9]/60 hover:bg-[#DDD6C9] hover:brightness-95 p-0.5 rounded-lg border border-[#E6E4DF] text-xs font-semibold transition-colors ${className}`}
       role="group"
       aria-label="Language selector / Selector de idioma"
     >
-      <div className="flex items-center pl-2 pr-1 text-[#5A5A5A]">
+      <div className="flex items-center pl-2 pr-1 text-[#958965]">
         <Globe className="w-3.5 h-3.5" aria-hidden="true" />
       </div>
 
@@ -30,8 +30,8 @@ export const LanguageToggle: React.FC<LanguageToggleProps> = ({
         aria-pressed={currentLang === 'en'}
         className={`px-2.5 py-1 rounded-md transition-all cursor-pointer ${
           currentLang === 'en'
-            ? 'bg-[#2F3E3A] text-white shadow-xs font-bold'
-            : 'text-[#5A5A5A] hover:text-[#1F1F1F]'
+            ? 'bg-[#255643] text-white shadow-xs font-bold'
+            : 'text-[#958965] hover:text-[#807D75]'
         }`}
       >
         EN
@@ -44,8 +44,8 @@ export const LanguageToggle: React.FC<LanguageToggleProps> = ({
         aria-pressed={currentLang === 'es'}
         className={`px-2.5 py-1 rounded-md transition-all cursor-pointer ${
           currentLang === 'es'
-            ? 'bg-[#2F3E3A] text-white shadow-xs font-bold'
-            : 'text-[#5A5A5A] hover:text-[#1F1F1F]'
+            ? 'bg-[#255643] text-white shadow-xs font-bold'
+            : 'text-[#958965] hover:text-[#807D75]'
         }`}
       >
         ES

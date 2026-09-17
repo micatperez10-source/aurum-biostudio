@@ -28,7 +28,7 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
       case 'FileCheck':
         return (
           <FileCheck
-            className="h-5 w-5 text-[#2F3E3A]"
+            className="h-5 w-5 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -36,7 +36,7 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
       case 'BarChart3':
         return (
           <BarChart3
-            className="h-5 w-5 text-[#2F3E3A]"
+            className="h-5 w-5 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -44,7 +44,7 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
       case 'FileText':
         return (
           <FileText
-            className="h-5 w-5 text-[#2F3E3A]"
+            className="h-5 w-5 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -52,7 +52,7 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
       case 'ListOrdered':
         return (
           <ListOrdered
-            className="h-5 w-5 text-[#2F3E3A]"
+            className="h-5 w-5 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -60,7 +60,7 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
       default:
         return (
           <Layers
-            className="h-5 w-5 text-[#2F3E3A]"
+            className="h-5 w-5 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -93,19 +93,19 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
   return (
     <section
       id="deliverables"
-      className="border-t border-[#E6E4DF] bg-[#FFFFFF] py-20"
+      className="border-t border-[#E6E4DF] bg-[#DDD6C9] py-20"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex rounded-full border border-[#E6E4DF] bg-[#D4E8E1] px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#2F3E3A]">
+          <span className="inline-flex rounded-full border border-[#E6E4DF] bg-[#255643] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
             {t.tag}
           </span>
 
-          <h2 className="mt-4 font-serif text-3xl font-bold tracking-tight text-[#1F1F1F] sm:text-4xl">
+          <h2 className="mt-4 font-serif text-3xl font-bold tracking-tight text-[#3B5745] sm:text-4xl">
             {t.title}
           </h2>
 
-          <p className="mt-4 text-base leading-relaxed text-[#5A5A5A] sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-[#958965] sm:text-lg">
             {t.subtitle}
           </p>
         </div>
@@ -122,32 +122,32 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
                 aria-pressed={isSelected}
                 className={`flex cursor-pointer flex-col justify-between rounded-2xl border p-6 text-left transition-all ${
                   isSelected
-                    ? 'border-[#2F3E3A] bg-[#D4E8E1]/40 shadow-sm ring-1 ring-[#2F3E3A]'
-                    : 'border-[#E6E4DF] bg-[#F4F2EE] hover:border-[#BFA690] hover:bg-[#FFFFFF]'
+                    ? 'border-[#255643] bg-[#255643]/40 shadow-sm ring-1 ring-[#255643]'
+                    : 'border-[#E6E4DF] bg-[#DDD6C9] hover:border-[#BFA690] hover:bg-[#DDD6C9] hover:brightness-95'
                 }`}
               >
                 <div>
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-[#E6E4DF] bg-[#FFFFFF] shadow-sm">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] shadow-sm">
                     {getIcon(deliverable.iconName)}
                   </div>
 
-                  <h3 className="text-base font-bold text-[#1F1F1F]">
+                  <h3 className="font-serif text-base font-bold text-[#3B5745]">
                     {deliverable.title}
                   </h3>
 
-                  <p className="mt-2 text-xs leading-relaxed text-[#5A5A5A] sm:text-sm">
+                  <p className="mt-2 text-sm leading-relaxed text-[#827D75]">
                     {deliverable.description}
                   </p>
                 </div>
 
                 <div className="mt-6 flex items-center justify-between gap-3 border-t border-[#E6E4DF]/70 pt-4">
-                  <span className="max-w-[170px] truncate text-[11px] font-semibold text-[#5A5A5A]">
+                  <span className="max-w-[170px] truncate text-xs font-semibold text-[#827D75]">
                     {deliverable.format}
                   </span>
 
                   <span
                     className={`text-xs font-bold ${
-                      isSelected ? 'text-[#2F3E3A]' : 'text-[#5A5A5A]'
+                      isSelected ? 'font-serif text-[#255643]' : 'font-serif text-[#958965]'
                     }`}
                   >
                     {isSelected ? t.selectedBadge : t.viewDetail}
@@ -158,25 +158,25 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
           })}
         </div>
 
-        <div className="mx-auto mt-10 max-w-4xl rounded-2xl border border-[#2F3E3A] bg-[#1A1F1D] p-6 font-mono text-xs text-[#E6E4DF] shadow-xl sm:p-8 sm:text-sm">
-          <div className="mb-4 flex items-center justify-between border-b border-[#5A5A5A]/40 pb-4 text-[#BFA690]">
+        <div className="mx-auto mt-10 max-w-4xl rounded-2xl border border-[#255643] bg-[#255643] p-6 font-mono text-xs text-[#E6E4DF] shadow-xl sm:p-8 sm:text-sm">
+          <div className="mb-4 flex items-center justify-between border-b border-[#958965]/40 pb-4 text-[#BFA690]">
             <div className="flex items-center gap-2">
               <span className="h-3 w-3 rounded-full bg-[#BFA690]" />
-              <span className="h-3 w-3 rounded-full bg-[#D4E8E1]" />
-              <span className="h-3 w-3 rounded-full bg-[#FFFFFF]" />
+              <span className="h-3 w-3 rounded-full bg-[#DDD6C9]" />
+              <span className="h-3 w-3 rounded-full bg-[#DDD6C9]" />
               <span className="ml-2 font-sans text-xs text-[#BFA690]">
                 {t.previewHeader}
               </span>
             </div>
 
-            <span className="rounded-md bg-[#2F3E3A] px-2.5 py-1 font-sans text-[11px] font-semibold text-[#D4E8E1]">
+            <span className="rounded-md bg-[#255643] px-2.5 py-1 font-sans text-xs font-semibold text-[#827D75]">
               {t.previewBadge}
             </span>
           </div>
 
           {preview ? (
             <div className="space-y-3">
-              <p className="text-sm font-bold text-[#D4E8E1] sm:text-base">
+              <p className="text-sm font-bold text-[#958965] sm:text-base">
                 {preview.title}
               </p>
 
@@ -188,7 +188,7 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
                 <p>{preview.p3}</p>
               </div>
 
-              <div className="border-t border-[#5A5A5A]/40 pt-3 font-sans font-semibold text-[#D4E8E1]">
+              <div className="border-t border-[#958965]/40 pt-3 font-sans font-semibold text-[#958965]">
                 {preview.highlight}
               </div>
             </div>
@@ -200,7 +200,7 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
             </p>
           )}
 
-          <div className="mt-6 flex flex-col items-start justify-between gap-3 border-t border-[#5A5A5A]/40 pt-4 font-sans sm:flex-row sm:items-center">
+          <div className="mt-6 flex flex-col items-start justify-between gap-3 border-t border-[#958965]/40 pt-4 font-sans sm:flex-row sm:items-center">
             <span className="text-xs text-[#BFA690]">
               {getFolderLabel()}
             </span>
@@ -209,17 +209,17 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
               id="open-docs-from-preview"
               type="button"
               onClick={handleOpenDocs}
-              className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-[#5A5A5A] bg-[#2F3E3A] px-3 py-1.5 text-xs font-semibold text-[#FFFFFF] transition-colors hover:bg-[#1F1F1F]"
+              className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-[#958965] bg-[#255643] px-3 py-1.5 text-xs font-semibold text-[#FFFFFF] transition-colors hover:brightness-110"
             >
               <span>{t.viewDetail}</span>
             </button>
           </div>
         </div>
 
-        <div className="mx-auto mt-12 max-w-4xl rounded-2xl border border-[#2F3E3A]/60 bg-[#2F3E3A] p-6 text-white shadow-lg sm:p-8">
+        <div className="mx-auto mt-12 max-w-4xl rounded-2xl border border-[#255643]/60 bg-[#255643] p-6 text-white shadow-lg sm:p-8">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#D4E8E1]/30 bg-[#D4E8E1]/10 px-2.5 py-1 text-xs font-semibold text-[#D4E8E1]">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#255643]/30 bg-[#255643]/10 px-2.5 py-1 text-xs font-semibold text-[#827D75]">
                 <span>{lang === 'en' ? 'Deliverables' : 'Entregables'}</span>
               </div>
 
@@ -240,7 +240,7 @@ export const DeliverablesSection: React.FC<DeliverablesSectionProps> = ({
               id="deliverables-open-docs-btn"
               type="button"
               onClick={() => onOpenDocs()}
-              className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#D4E8E1] px-5 py-3 text-sm font-bold text-[#1A1F1D] shadow-md transition-all hover:bg-[#FFFFFF] md:w-auto"
+              className="font-serif inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#DDD6C9] px-5 py-3 text-sm font-bold text-[#255643] shadow-md transition-all hover:bg-[#DDD6C9] hover:brightness-95 md:w-auto"
             >
               <span>
                 {lang === 'en'

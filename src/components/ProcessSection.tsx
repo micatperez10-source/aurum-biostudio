@@ -34,7 +34,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
       case 0:
         return (
           <PhoneCall
-            className="h-6 w-6 text-[#2F3E3A]"
+            className="h-6 w-6 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -42,7 +42,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
       case 1:
         return (
           <SearchCode
-            className="h-6 w-6 text-[#2F3E3A]"
+            className="h-6 w-6 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -50,7 +50,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
       case 2:
         return (
           <Presentation
-            className="h-6 w-6 text-[#2F3E3A]"
+            className="h-6 w-6 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -58,7 +58,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
       case 3:
         return (
           <Users
-            className="h-6 w-6 text-[#2F3E3A]"
+            className="h-6 w-6 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -66,7 +66,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
       default:
         return (
           <PhoneCall
-            className="h-6 w-6 text-[#2F3E3A]"
+            className="h-6 w-6 text-[#255643]"
             aria-hidden="true"
           />
         );
@@ -77,22 +77,22 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
     <section
       id="how-i-work"
       aria-labelledby="how-i-work-title"
-      className="border-t border-[#E6E4DF] bg-[#FFFFFF] py-20"
+      className="border-t border-[#E6E4DF] bg-[#DDD6C9] py-20"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex whitespace-nowrap rounded-full border border-[#E6E4DF] bg-[#D4E8E1] px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#2F3E3A]">
+          <span className="inline-flex whitespace-nowrap rounded-full border border-[#E6E4DF] bg-[#255643] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
             {t.tag}
           </span>
 
           <h2
             id="how-i-work-title"
-            className="mt-4 font-serif text-3xl font-bold tracking-tight text-[#1F1F1F] sm:text-4xl"
+            className="mt-4 font-serif text-3xl font-bold tracking-tight text-[#3B5745] sm:text-4xl"
           >
             {t.title}
           </h2>
 
-          <p className="mt-4 text-base leading-relaxed text-[#5A5A5A] sm:text-lg">
+          <p className="mt-4 font-serif font-normal italic text-base leading-relaxed text-[#958965] sm:text-lg">
             {t.subtitle}
           </p>
         </div>
@@ -101,36 +101,36 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
           {t.steps.map((step, idx) => (
             <article
               key={step.number}
-              className="relative flex flex-col justify-between rounded-2xl border border-[#E6E4DF] bg-[#F4F2EE] p-7 shadow-sm transition-colors hover:border-[#BFA690]"
+              className="relative flex flex-col justify-between rounded-2xl border border-[#E6E4DF] bg-[#DDD6C9] p-7 shadow-sm transition-colors hover:border-[#BFA690]"
             >
               <div>
                 <div className="mb-4 flex items-center justify-between gap-3">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#E6E4DF] bg-[#FFFFFF] shadow-sm">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] shadow-sm">
                     {getStepIcon(idx)}
                   </div>
 
-                  <span className="whitespace-nowrap rounded-md bg-[#D4E8E1] px-2.5 py-1 text-xs font-bold text-[#2F3E3A]">
+                  <span className="whitespace-nowrap rounded-md bg-[#255643] px-2.5 py-1 text-xs font-bold text-white">
                     {step.time}
                   </span>
                 </div>
 
                 <div className="mb-2 flex items-center gap-2">
-                  <span className="whitespace-nowrap text-xs font-extrabold uppercase tracking-wider text-[#2F3E3A]">
+                  <span className="font-serif whitespace-nowrap text-xs font-extrabold uppercase tracking-wider text-[#255643]">
                     {t.stepPrefix} {step.number}
                   </span>
                 </div>
 
-                <h3 className="font-serif text-lg font-bold text-[#1F1F1F]">
+                <h3 className="font-serif text-lg font-bold text-[#3B5745]">
                   {step.title}
                 </h3>
 
-                <p className="mt-3 text-xs leading-relaxed text-[#5A5A5A] sm:text-sm">
+                <p className="mt-3 text-sm leading-relaxed text-[#827D75]">
                   {step.description}
                 </p>
               </div>
 
               {idx === 0 && (
-                <div className="mt-6 flex items-start gap-1.5 border-t border-[#E6E4DF] pt-3 text-xs font-semibold text-[#2F3E3A]">
+                <div className="font-serif mt-6 flex items-start gap-1.5 border-t border-[#E6E4DF] pt-3 text-xs font-semibold text-[#255643]">
                   <ShieldCheck
                     className="mt-0.5 h-4 w-4 shrink-0"
                     aria-hidden="true"
@@ -148,12 +148,12 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
             href={calendarUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-[#2F3E3A] px-7 py-3.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#1A1F1D] sm:w-auto"
+            className="inline-flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-[#255643] px-7 py-3.5 text-sm font-bold text-white shadow-sm transition-colors hover:brightness-110 sm:w-auto"
           >
             <span>{t.ctaButton}</span>
 
             <ArrowRight
-              className="h-4 w-4 shrink-0 text-[#D4E8E1]"
+              className="h-4 w-4 shrink-0 text-[#958965]"
               aria-hidden="true"
             />
           </a>
@@ -161,7 +161,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
           <button
             type="button"
             onClick={() => onOpenDocs()}
-            className="inline-flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-[#E6E4DF] bg-[#F4F2EE] px-7 py-3.5 text-sm font-semibold text-[#2F3E3A] transition-colors hover:border-[#BFA690] hover:bg-[#D4E8E1] sm:w-auto"
+            className="font-serif inline-flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-7 py-3.5 text-sm font-semibold text-[#255643] transition-colors hover:border-[#255643] hover:bg-[#255643] hover:text-white sm:w-auto"
           >
             <FolderOpen
               className="h-4 w-4 shrink-0"

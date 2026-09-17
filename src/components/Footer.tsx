@@ -52,7 +52,7 @@ export const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer className="border-t border-[#E6E4DF] bg-[#FFFFFF] font-sans text-xs text-[#5A5A5A]">
+    <footer className="border-t border-[#E6E4DF] bg-[#DDD6C9] font-sans text-sm text-[#827D75]">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4 md:col-span-2">
@@ -62,31 +62,31 @@ export const Footer: React.FC<FooterProps> = ({
               className="group flex cursor-pointer items-center gap-2.5"
               aria-label="BioIT Clarity"
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#2F3E3A] text-white transition-colors group-hover:bg-[#1A1F1D]">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#255643] text-white transition-colors group-hover:brightness-110">
                 <Dna
-                  className="h-4 w-4 text-[#D4E8E1]"
+                  className="h-4 w-4 text-[#958965]"
                   aria-hidden="true"
                 />
               </span>
 
-              <span className="font-serif text-xl font-bold text-[#1F1F1F]">
+              <span className="font-serif text-xl font-bold text-[#3B5745]">
                 BioIT Clarity
               </span>
             </button>
 
-            <p className="max-w-md text-sm leading-relaxed text-[#5A5A5A]">
+            <p className="max-w-md text-sm leading-relaxed text-[#958965]">
               {t.footer.tagline}
             </p>
 
-            <div className="flex items-center gap-2 text-xs text-[#5A5A5A]">
+            <div className="flex items-center gap-2 text-xs text-[#827D75]">
               <Mail
-                className="h-3.5 w-3.5 text-[#2F3E3A]"
+                className="h-3.5 w-3.5 text-[#255643]"
                 aria-hidden="true"
               />
 
               <a
                 href={`mailto:${t.contact.email}`}
-                className="text-[#1F1F1F] hover:underline"
+                className="text-[#807D75] hover:underline"
               >
                 {t.contact.email}
               </a>
@@ -94,7 +94,7 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
 
           <div className="space-y-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#1F1F1F]">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#807D75]">
               {navigationLabel}
             </span>
 
@@ -103,7 +103,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => scrollToSection('services')}
-                  className="cursor-pointer transition-colors hover:text-[#2F3E3A]"
+                  className="font-serif cursor-pointer transition-colors hover:text-[#255643]"
                 >
                   {t.nav.services}
                 </button>
@@ -113,7 +113,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => scrollToSection('how-i-work')}
-                  className="cursor-pointer transition-colors hover:text-[#2F3E3A]"
+                  className="font-serif cursor-pointer transition-colors hover:text-[#255643]"
                 >
                   {t.nav.howIWork}
                 </button>
@@ -123,7 +123,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => scrollToSection('about')}
-                  className="cursor-pointer transition-colors hover:text-[#2F3E3A]"
+                  className="font-serif cursor-pointer transition-colors hover:text-[#255643]"
                 >
                   {t.nav.about}
                 </button>
@@ -133,7 +133,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => scrollToSection('faq')}
-                  className="cursor-pointer transition-colors hover:text-[#2F3E3A]"
+                  className="font-serif cursor-pointer transition-colors hover:text-[#255643]"
                 >
                   {t.nav.faq}
                 </button>
@@ -143,7 +143,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => scrollToSection('contact')}
-                  className="cursor-pointer transition-colors hover:text-[#2F3E3A]"
+                  className="font-serif cursor-pointer transition-colors hover:text-[#255643]"
                 >
                   {t.nav.contact}
                 </button>
@@ -152,7 +152,7 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
 
           <div className="space-y-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#1F1F1F]">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#807D75]">
               {resourcesLabel}
             </span>
 
@@ -161,7 +161,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={onOpenDocs}
-                  className="cursor-pointer font-medium text-[#2F3E3A] transition-colors hover:text-[#1A1F1D]"
+                  className="font-serif cursor-pointer font-medium text-[#255643] transition-colors hover:text-[#255643]"
                 >
                   {t.nav.docsBtn}
                 </button>
@@ -171,7 +171,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => window.alert(privacyUnavailableLabel)}
-                  className="cursor-pointer transition-colors hover:text-[#2F3E3A]"
+                  className="font-serif cursor-pointer transition-colors hover:text-[#255643]"
                 >
                   {t.footer.privacy}
                 </button>
@@ -181,7 +181,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => window.alert(termsUnavailableLabel)}
-                  className="cursor-pointer transition-colors hover:text-[#2F3E3A]"
+                  className="font-serif cursor-pointer transition-colors hover:text-[#255643]"
                 >
                   {t.footer.terms}
                 </button>
@@ -196,7 +196,7 @@ export const Footer: React.FC<FooterProps> = ({
           <button
             type="button"
             onClick={scrollToTop}
-            className="inline-flex cursor-pointer items-center gap-1.5 text-xs text-[#5A5A5A] transition-colors hover:text-[#2F3E3A]"
+            className="font-serif inline-flex cursor-pointer items-center gap-1.5 text-xs text-[#827D75] transition-colors hover:text-[#255643]"
           >
             <span>{backToTopLabel}</span>
 

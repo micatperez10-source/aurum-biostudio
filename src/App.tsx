@@ -62,7 +62,7 @@ export default function App() {
   }, [lang]);
 
   return (
-    <div className="min-h-screen bg-[#F4F2EE] font-['Plus_Jakarta_Sans',sans-serif] text-[#1F1F1F] selection:bg-[#2F3E3A] selection:text-white">
+    <div className="min-h-screen bg-[#DDD6C9] font-sans text-[#807D75] selection:bg-[#255643] selection:text-white">
       <Navbar
         currentLang={lang}
         onLanguageChange={handleLanguageChange}

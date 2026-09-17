@@ -5,7 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: './',
+    // Base para GitHub Pages: https://micatperez10-source.github.io/bioit-clarity/
+    base: '/bioit-clarity/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
