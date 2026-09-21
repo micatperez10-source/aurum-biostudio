@@ -19,7 +19,7 @@ const TRANSLATIONS = {
     hero: {
       eyebrow: "For labs, startups and researchers",
       title: "Turn biological data into clear results.",
-      titleHighlight: "and save time on your next paper, presentation or decision.",
+            titleHighlight: "and I handle the analysis end to end — from raw data to your next clear step.",
       subtitle: "I help research labs and biotech teams analyze their data, create clear visualizations and understand what to do next. No endless reports, just results you can actually use.",
       ctaButton: "Tell me about your project",
       ctaNote: "Initial 20-minute call with no cost or commitment."
@@ -124,11 +124,11 @@ const TRANSLATIONS = {
     },
     about: {
       title: "About BioIT Clarity",
-      text: "BioIT Clarity helps small biotech teams and researchers make their data easier to understand and use. I combine practical data skills with clear communication, so you get results you can actually work with.",
+      text: "BioIT Clarity helps  biotech teams and researchers make their data easier to understand and use. I combine practical data skills with clear communication, so you get results you can actually work with.",
       bullets: [
         "Clear language, no unnecessary jargon",
         "Practical outputs, not long technical reports",
-        "Focused on small, well-defined projects"
+        "Focused on , well-defined projects"
       ]
     },
     faq: {
@@ -138,7 +138,6 @@ const TRANSLATIONS = {
       title: "Tell me about your data",
       text: "Book a free 20-minute call. Tell me what data you have and what you need, and I will tell you honestly whether I can help.",
       button: "Book a free call",
-      note: "No pressure. If I'm not the right fit, I'll try to point you in the right direction.",
       emailLabel: "Or send an email directly to:",
       email: "micaela.bioinformatics@gmail.com"
     },
@@ -161,8 +160,8 @@ const TRANSLATIONS = {
     hero: {
       eyebrow: "Para labs, startups e investigadores",
       title: "Convertí datos biológicos en resultados claros.",
-      titleHighlight: "y ahorrá tiempo en tu próximo paper, presentación o decisión.",
-      subtitle: "Ayudo a laboratorios y equipos biotech a analizar sus datos, crear visualizaciones claras y entender qué hacer después.",
+      titleHighlight: "Analizo tus datos de principio a fin: del archivo crudo al próximo paso claro.",
+      subtitle: "Ayudo a laboratorios de investigación y equipos biotech a analizar sus datos, crear visualizaciones claras y entender cuál es el próximo paso. Nada de reportes interminables, solo resultados que realmente podés usar.",
       ctaNote: "Llamada inicial de 20 minutos sin costo."
     },
     whatIDo: {
@@ -279,7 +278,6 @@ const TRANSLATIONS = {
       title: "Contame sobre tus datos",
       text: "Agendá una llamada gratuita de 20 minutos. Contame qué datos tenés y qué necesitás, y te voy a decir con honestidad si te puedo ayudar.",
       button: "Agendá una llamada gratuita",
-      note: "Sin presión. Si no soy la persona indicada, voy a intentar orientarte en la dirección correcta.",
       emailLabel: "O escribime directamente por correo a:",
       email: "micaela.bioinformatics@gmail.com"
     },

@@ -1,6 +1,6 @@
 """
 Concrete implementation of Service Overview One-Pager.
-Positioned for bioinformatics and data analysis for small biotech teams and labs.
+Positioned for bioinformatics and data analysis for biotech teams and labs.
 """
 
 from typing import List

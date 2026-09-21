@@ -19,7 +19,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
     <section id="faq" className="py-16 sm:py-24 bg-[#DDD6C9] border-y border-[#E6E4DF]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <div className="font-serif inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DDD6C9] border border-[#E6E4DF] text-[#255643] text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="font-serif inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#DDD6C9] border border-[#E6E4DF] text-[#255643] text-sm font-semibold uppercase tracking-wider mb-4">
             <HelpCircle className="w-3.5 h-3.5 text-[#255643]" />
             <span>FAQ</span>
           </div>
@@ -27,7 +27,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#3B5745] tracking-tight">
             {t.faq.title}
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-[#958965] font-sans">
+          <p className="mt-4 text-base sm:text-lg text-[#958965] font-sans font-medium">
             {lang === 'en'
               ? 'Honest, straightforward answers about data requirements, formats, and scope.'
               : 'Respuestas directas y honestas sobre requisitos de datos, formatos y alcance.'}
@@ -49,7 +49,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
                   className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base sm:text-lg font-serif font-bold text-[#3B5745] leading-snug">
+                  <span className="text-lg sm:text-xl font-serif font-bold text-[#3B5745] leading-snug">
                     {item.question}
                   </span>
                   <div
@@ -62,7 +62,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ lang }) => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#827D75] font-sans leading-relaxed border-t border-[#E6E4DF]/60 animate-in fade-in duration-150">
+                  <div className="px-6 pb-6 pt-1 text-base sm:text-lg text-[#827D75] font-sans font-medium leading-relaxed border-t border-[#E6E4DF]/60 animate-in fade-in duration-150">
                     <p>{item.answer}</p>
                   </div>
                 )}

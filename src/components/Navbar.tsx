@@ -76,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               event.preventDefault();
               scrollToTop();
             }}
-            aria-label="BioIT Clarity"
+            aria-label="Aurum BioStudio"
           >
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#255643] text-white shadow-sm transition-colors group-hover:brightness-110 sm:h-10 sm:w-10">
               <Dna
@@ -87,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <div className="flex min-w-0 flex-col">
               <span className="whitespace-nowrap font-serif text-xl font-bold tracking-tight text-[#3B5745] sm:text-2xl">
-                BioIT Clarity
+                Aurum BioStudio
               </span>
 
               <span className="whitespace-nowrap font-sans text-xs font-medium uppercase tracking-wider text-[#827D75]">

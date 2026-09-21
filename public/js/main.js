@@ -19,7 +19,7 @@ const TRANSLATIONS = {
     hero: {
       eyebrow: "For labs, startups and researchers",
       title: "Turn biological data into clear results.",
-      titleHighlight: "and save time on your next paper, presentation or decision.",
+      titleHighlight: "I handle your analysis, start to finish.",
       subtitle: "I help research labs and biotech teams analyze their data, create clear visualizations and understand what to do next. No endless reports, just results you can actually use.",
       ctaButton: "Tell me about your data",
       ctaNote: "Initial 20-minute call with no cost or commitment."
@@ -124,11 +124,11 @@ const TRANSLATIONS = {
     },
     about: {
       title: "About BioIT Clarity",
-      text: "BioIT Clarity helps small biotech teams and researchers make their data easier to understand and use. I combine practical data skills with clear communication, so you get results you can actually work with.",
+      text: "BioIT Clarity helps biotech teams and researchers make their data easier to understand and use. I combine practical data skills with clear communication, so you get results you can actually work with.",
       bullets: [
         "Clear language, no unnecessary jargon",
         "Practical outputs, not long technical reports",
-        "Focused on small, well-defined projects"
+        "Focused on  well-defined projects"
       ]
     },
     faq: {

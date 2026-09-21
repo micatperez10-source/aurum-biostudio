@@ -27,7 +27,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
     <section id="about" className="bg-[#DDD6C9] py-16 sm:py-24">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-[#E6E4DF] bg-[#DDD6C9] p-8 shadow-sm sm:p-12">
-          <div className="font-serif mb-6 inline-flex items-center gap-2 rounded-full border border-[#255643] bg-[#255643]/40 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#255643]">
+          <div className="font-serif mb-6 inline-flex items-center gap-2 rounded-full border border-[#255643] bg-[#255643]/40 px-4 py-1.5 text-sm font-semibold uppercase tracking-wider text-[#255643]">
             <UserCheck
               className="h-3.5 w-3.5 text-[#255643]"
               aria-hidden="true"
@@ -39,12 +39,12 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
             {t.about.title}
           </h2>
 
-          <p className="mt-6 font-sans text-base leading-relaxed text-[#958965] sm:text-lg">
+          <p className="mt-6 font-sans text-lg font-medium leading-relaxed text-[#958965] sm:text-xl">
             {t.about.text}
           </p>
 
           <div className="mt-8 border-t border-[#E6E4DF] pt-8">
-            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#827D75]">
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-[#827D75]">
               {principlesLabel}
             </h3>
 
@@ -59,7 +59,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
                     aria-hidden="true"
                   />
 
-                  <span className="text-xs font-medium leading-snug text-[#807D75] sm:text-sm">
+                  <span className="text-sm font-medium leading-relaxed text-[#807D75] sm:text-base">
                     {bullet}
                   </span>
                 </div>
@@ -67,7 +67,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-[#E6E4DF]/60 pt-6 text-xs text-[#827D75]">
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-[#E6E4DF]/60 pt-6 text-sm font-medium text-[#827D75]">
             <div className="flex items-start gap-2">
               <ShieldCheck
                 className="mt-0.5 h-4 w-4 shrink-0 text-[#255643]"
@@ -78,7 +78,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
             </div>
 
             <span className="font-serif text-[11px] text-[#255643]">
-              BioIT Clarity
+              Aurum BioStudio
             </span>
           </div>
         </div>

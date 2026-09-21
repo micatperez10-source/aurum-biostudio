@@ -27,7 +27,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-serif text-xs font-semibold uppercase tracking-[0.18em] text-[#255643] sm:text-sm">
+          <p className="font-serif text-sm font-semibold uppercase tracking-[0.18em] text-[#255643] sm:text-base">
             {t.services.tag}
           </p>
 
@@ -38,7 +38,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             {t.services.title}
           </h2>
 
-          <p className="mt-4 font-serif font-normal italic text-base leading-relaxed text-[#958965] sm:text-lg">
+          <p className="mt-4 font-serif font-normal italic text-lg leading-relaxed text-[#958965] sm:text-xl">
             {t.services.intro}
           </p>
         </div>
@@ -59,7 +59,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
               >
                 {isFeatured && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#255643] px-3.5 py-1 text-xs font-semibold tracking-wide text-white shadow-sm">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#255643] px-3.5 py-1 text-sm font-semibold tracking-wide text-white shadow-sm">
                       <Sparkles
                         className="h-3 w-3 text-[#958965]"
                         aria-hidden="true"
@@ -71,11 +71,11 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                 )}
 
                 <div className="flex flex-1 flex-col">
-                  <h3 className="font-serif text-2xl font-bold text-[#3B5745]">
+                  <h3 className="font-serif text-3xl font-bold text-[#3B5745]">
                     {pkg.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-relaxed text-[#958965]">
+                  <p className="mt-3 text-lg font-medium leading-relaxed text-[#958965]">
                     {pkg.description}
                   </p>
 
@@ -85,18 +85,18 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                     </span>
 
                     {pkg.timeline && (
-                      <span className="mt-2 block text-xs text-[#827D75]">
+                      <span className="mt-2 block text-sm font-semibold text-[#827D75]">
                         {pkg.timeline}
                       </span>
                     )}
                   </div>
 
                   <div className="mt-6">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[#827D75]">
+                    <span className="text-sm font-bold uppercase tracking-wider text-[#827D75]">
                       {includesLabel}
                     </span>
 
-                    <ul className="mt-3 space-y-3 text-sm text-[#807D75]">
+                    <ul className="mt-3 space-y-3 text-base font-medium text-[#807D75]">
                       {pkg.features.map((feature, idx) => (
                         <li
                           key={`${pkg.id}-feature-${idx}`}
@@ -107,7 +107,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                             aria-hidden="true"
                           />
 
-                          <span className="leading-snug">
+                          <span className="leading-relaxed">
                             {feature}
                           </span>
                         </li>
@@ -120,7 +120,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           })}
         </div>
 
-        <div className="mx-auto mt-8 flex max-w-3xl items-start gap-2.5 rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] p-4 text-xs text-[#827D75] shadow-sm">
+        <div className="mx-auto mt-8 flex max-w-3xl items-start gap-2.5 rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] p-4 text-sm font-medium text-[#827D75] shadow-sm sm:text-base">
           <Info
             className="mt-0.5 h-4 w-4 shrink-0 text-[#255643]"
             aria-hidden="true"

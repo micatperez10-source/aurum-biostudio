@@ -3,7 +3,6 @@ import {
   Calendar,
   Mail,
   ExternalLink,
-  Clock,
   Copy,
   Check,
 } from 'lucide-react';
@@ -44,10 +43,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
     <section id="contact" className="bg-[#DDD6C9] py-20 sm:py-28">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl border border-[#E6E4DF] bg-[#DDD6C9] p-8 shadow-md sm:p-14">
-          <div className="pointer-events-none absolute right-0 top-0 h-48 w-48 rounded-full bg-[#255643]/30 blur-2xl" />
-
           <div className="relative z-10 mx-auto max-w-2xl">
-            <div className="font-serif mb-6 inline-flex items-center gap-2 rounded-full border border-[#E6E4DF] bg-[#DDD6C9] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#255643]">
+            <div className="font-serif mb-6 inline-flex items-center gap-2 rounded-full border border-[#E6E4DF] bg-[#DDD6C9] px-4 py-1.5 text-sm font-semibold uppercase tracking-wider text-[#255643]">
               <Calendar
                 className="h-3.5 w-3.5 text-[#255643]"
                 aria-hidden="true"
@@ -59,7 +56,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
               {t.contact.title}
             </h2>
 
-            <p className="mt-5 font-serif font-normal italic text-base leading-relaxed text-[#958965] sm:text-lg">
+            <p className="mt-5 font-serif font-normal italic text-lg leading-relaxed text-[#958965] sm:text-xl">
               {t.contact.text}
             </p>
 
@@ -69,7 +66,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                 href={scheduleCallUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full transform cursor-pointer items-center justify-center gap-3 rounded-xl bg-[#255643] px-8 py-4 text-base font-semibold text-[#E6E4DF] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg sm:w-auto"
+                className="inline-flex w-full transform cursor-pointer items-center justify-center gap-3 rounded-xl bg-[#255643] px-8 py-4 text-lg font-semibold text-[#E6E4DF] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg sm:w-auto"
               >
                 <Calendar
                   className="h-5 w-5 text-[#958965]"
@@ -82,19 +79,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                 />
               </a>
 
-              <p className="flex items-center justify-center gap-1.5 font-sans text-xs text-[#827D75] sm:text-sm">
-                <Clock
-                  className="h-4 w-4 text-[#BFA690]"
-                  aria-hidden="true"
-                />
-                <span>{t.contact.note}</span>
-              </p>
             </div>
 
-            <div className="mt-10 border-t border-[#E6E4DF] pt-8 text-xs text-[#827D75] sm:text-sm">
-              <p className="mb-3 font-medium">{t.contact.emailLabel}</p>
+            <div className="mt-10 border-t border-[#E6E4DF] pt-8 text-sm text-[#827D75] sm:text-base">
+              <p className="mb-3 font-semibold">{t.contact.emailLabel}</p>
 
-              <div className="inline-flex max-w-full items-center gap-2 rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-4 py-2 font-mono text-sm text-[#807D75]">
+              <div className="inline-flex max-w-full items-center gap-2 rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-4 py-2 font-mono text-base text-[#807D75]">
                 <Mail
                   className="h-3.5 w-3.5 shrink-0 text-[#255643]"
                   aria-hidden="true"

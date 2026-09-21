@@ -68,13 +68,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
     const subject = encodeURIComponent(
       lang === 'es'
-        ? `Consulta sobre análisis de datos - BioIT Clarity (${nameCompany || 'Consulta'})`
-        : `Biological data analysis inquiry - BioIT Clarity (${nameCompany || 'Inquiry'})`,
+        ? `Consulta sobre análisis de datos - Aurum BioStudio (${nameCompany || 'Consulta'})`
+        : `Biological data analysis inquiry - Aurum BioStudio (${nameCompany || 'Inquiry'})`,
     );
 
     const bodyText =
       lang === 'es'
-        ? `Hola Micaela / BioIT Clarity,
+        ? `Hola Micaela / Aurum BioStudio,
 
 Nombre o institución: ${nameCompany || '[Nombre o institución]'}
 
@@ -86,7 +86,7 @@ ${
 
 Saludos,
 ${nameCompany || '[Nombre]'}`
-        : `Hello Micaela / BioIT Clarity,
+        : `Hello Micaela / Aurum BioStudio,
 
 Name or institution: ${nameCompany || '[Name or institution]'}
 
@@ -131,7 +131,7 @@ ${nameCompany || '[Name]'}`;
               className="h-3.5 w-3.5 text-[#255643]"
               aria-hidden="true"
             />
-            <span>BioIT Clarity</span>
+            <span>Aurum BioStudio</span>
           </div>
 
           <h3

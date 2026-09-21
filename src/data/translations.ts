@@ -3,7 +3,7 @@ import { Language, TranslationContent } from '../types';
 export const TRANSLATIONS: Record<Language, TranslationContent> = {
   en: {
     nav: {
-      brand: 'BioIT Clarity',
+      brand: 'Aurum BioStudio',
       subbrand: 'Clear biological data analysis',
       badge: 'Clear explanations and practical results',
       home: 'Home',
@@ -21,9 +21,9 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       eyebrow: 'FOR LABS, STARTUPS AND RESEARCHERS',
       title: 'Turn biological data into clear results.',
       titleHighlight:
-        'Make your next paper, presentation, or research decision easier.',
+        'and I handle your analysis, start to finish.',
       subtitle:
-        'I help labs, researchers, and small biotech teams analyze biological data, create useful visualizations, and understand what to do next.',
+        'I help research labs and biotech teams analyze their data, create clear visualizations and understand what to do next. No endless reports, just results you can actually use.',
       ctaButton: 'Tell me about your project',
       ctaNote: 'Free 20-minute call. No commitment required.',
     },
@@ -192,9 +192,9 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
     },
 
     about: {
-      title: 'About BioIT Clarity',
+      title: 'About Aurum BioStudio',
       text:
-        'BioIT Clarity helps labs, researchers, and small biotech teams make biological data easier to understand and use. I combine practical data skills with clear communication so you receive results you can actually work with.',
+        'Aurum BioStudio helps labs, researchers, and biotech teams make biological data easier to understand and use. I combine practical data skills with clear communication so you receive results you can actually work with.',
       bullets: [
         'Clear explanations and thoughtful analysis',
         'Practical results for papers, presentations, and research decisions',
@@ -356,9 +356,9 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
     },
 
     footer: {
-      copyright: '© 2026 BioIT Clarity. All rights reserved.',
+      copyright: '© 2026 Aurum BioStudio. All rights reserved.',
       tagline:
-        'Clear biological data analysis for labs, researchers, and small biotech teams.',
+        'Clear biological data analysis for labs, researchers, and biotech teams.',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
     },
@@ -380,7 +380,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
 
   es: {
     nav: {
-      brand: 'BioIT Clarity',
+      brand: 'Aurum BioStudio',
       subbrand: 'Análisis claro de datos biológicos',
       badge: 'Explicaciones claras y resultados prácticos',
       home: 'Inicio',
@@ -398,9 +398,9 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       eyebrow: 'PARA LABORATORIOS, STARTUPS E INVESTIGADORES',
       title: 'Convertí datos biológicos en resultados claros.',
       titleHighlight:
-        'Hacé más fácil tu próximo paper, presentación o decisión de investigación.',
+        'y me encargo de tu análisis, de principio a fin.',
       subtitle:
-        'Ayudo a laboratorios, investigadores y pequeños equipos biotech a analizar datos biológicos, crear visualizaciones útiles y entender cuál es el próximo paso.',
+        'Ayudo a laboratorios de investigación y equipos biotech a analizar sus datos, crear visualizaciones claras y entender qué hacer después. Sin reportes interminables, solo resultados que realmente podés usar.',
       ctaButton: 'Contame sobre tu proyecto',
       ctaNote: 'Llamada gratuita de 20 minutos. Sin compromiso.',
     },
@@ -569,9 +569,9 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
     },
 
     about: {
-      title: 'Sobre BioIT Clarity',
+      title: 'Sobre Aurum BioStudio',
       text:
-        'BioIT Clarity ayuda a laboratorios, investigadores y pequeños equipos biotech a hacer que sus datos biológicos sean más fáciles de entender y usar. Combino habilidades prácticas de análisis con una comunicación clara para que recibas resultados con los que realmente puedas trabajar.',
+        'Aurum BioStudio ayuda a laboratorios, investigadores y pequeños equipos biotech a hacer que sus datos biológicos sean más fáciles de entender y usar. Combino habilidades prácticas de análisis con una comunicación clara para que recibas resultados con los que realmente puedas trabajar.',
       bullets: [
         'Explicaciones claras y análisis cuidadoso',
         'Resultados prácticos para papers, presentaciones y decisiones de investigación',
@@ -733,7 +733,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
     },
 
     footer: {
-      copyright: '© 2026 BioIT Clarity. Todos los derechos reservados.',
+      copyright: '© 2026 Aurum BioStudio. Todos los derechos reservados.',
       tagline:
         'Análisis claro de datos biológicos para laboratorios, investigadores y pequeños equipos biotech.',
       privacy: 'Política de privacidad',

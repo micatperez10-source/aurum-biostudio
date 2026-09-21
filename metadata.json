@@ -1,6 +1,6 @@
 {
-  "name": "BioIT Clarity",
-  "description": "Bioinformatics and biological data analysis for small biotech teams, research labs, and individual researchers. Turn biological data into clear results.",
+  "name": "Aurum BioStudio",
+  "description": "Bioinformatics and biological data analysis for  biotech teams, research labs, and individual researchers. Turn biological data into clear results.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

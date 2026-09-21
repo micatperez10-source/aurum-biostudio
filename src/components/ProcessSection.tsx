@@ -81,7 +81,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex whitespace-nowrap rounded-full border border-[#E6E4DF] bg-[#255643] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+          <span className="inline-flex whitespace-nowrap rounded-full border border-[#E6E4DF] bg-[#255643] px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-white">
             {t.tag}
           </span>
 
@@ -92,7 +92,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
             {t.title}
           </h2>
 
-          <p className="mt-4 font-serif font-normal italic text-base leading-relaxed text-[#958965] sm:text-lg">
+          <p className="mt-4 font-serif font-normal italic text-lg leading-relaxed text-[#958965] sm:text-xl">
             {t.subtitle}
           </p>
         </div>
@@ -109,28 +109,28 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
                     {getStepIcon(idx)}
                   </div>
 
-                  <span className="whitespace-nowrap rounded-md bg-[#255643] px-2.5 py-1 text-xs font-bold text-white">
+                  <span className="whitespace-nowrap rounded-md bg-[#255643] px-2.5 py-1 text-sm font-bold text-white">
                     {step.time}
                   </span>
                 </div>
 
                 <div className="mb-2 flex items-center gap-2">
-                  <span className="font-serif whitespace-nowrap text-xs font-extrabold uppercase tracking-wider text-[#255643]">
+                    <span className="font-serif whitespace-nowrap text-sm font-extrabold uppercase tracking-wider text-[#255643]">
                     {t.stepPrefix} {step.number}
                   </span>
                 </div>
 
-                <h3 className="font-serif text-lg font-bold text-[#3B5745]">
+                <h3 className="font-serif text-xl font-bold text-[#3B5745]">
                   {step.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-[#827D75]">
+                <p className="mt-3 text-base font-medium leading-relaxed text-[#827D75]">
                   {step.description}
                 </p>
               </div>
 
               {idx === 0 && (
-                <div className="font-serif mt-6 flex items-start gap-1.5 border-t border-[#E6E4DF] pt-3 text-xs font-semibold text-[#255643]">
+                <div className="font-serif mt-6 flex items-start gap-1.5 border-t border-[#E6E4DF] pt-3 text-sm font-semibold text-[#255643]">
                   <ShieldCheck
                     className="mt-0.5 h-4 w-4 shrink-0"
                     aria-hidden="true"
@@ -148,7 +148,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
             href={calendarUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-[#255643] px-7 py-3.5 text-sm font-bold text-white shadow-sm transition-colors hover:brightness-110 sm:w-auto"
+            className="inline-flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-[#255643] px-7 py-3.5 text-base font-bold text-white shadow-sm transition-colors hover:brightness-110 sm:w-auto"
           >
             <span>{t.ctaButton}</span>
 
@@ -161,7 +161,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
           <button
             type="button"
             onClick={() => onOpenDocs()}
-            className="font-serif inline-flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-7 py-3.5 text-sm font-semibold text-[#255643] transition-colors hover:border-[#255643] hover:bg-[#255643] hover:text-white sm:w-auto"
+            className="font-serif inline-flex w-full cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-7 py-3.5 text-base font-semibold text-[#255643] transition-colors hover:border-[#255643] hover:bg-[#255643] hover:text-white sm:w-auto"
           >
             <FolderOpen
               className="h-4 w-4 shrink-0"

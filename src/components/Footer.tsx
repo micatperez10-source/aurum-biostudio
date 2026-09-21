@@ -60,7 +60,7 @@ export const Footer: React.FC<FooterProps> = ({
               type="button"
               onClick={scrollToTop}
               className="group flex cursor-pointer items-center gap-2.5"
-              aria-label="BioIT Clarity"
+              aria-label="Aurum BioStudio"
             >
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#255643] text-white transition-colors group-hover:brightness-110">
                 <Dna
@@ -70,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({
               </span>
 
               <span className="font-serif text-xl font-bold text-[#3B5745]">
-                BioIT Clarity
+                Aurum BioStudio
               </span>
             </button>
 

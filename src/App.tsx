@@ -13,7 +13,7 @@ import { Language } from './types';
 
 export default function App() {
   const [lang, setLang] = useState<Language>(() => {
-    const saved = localStorage.getItem('bioit_clarity_lang');
+    const saved = localStorage.getItem('aurum_biostudio_lang');
 
     if (saved === 'en' || saved === 'es') {
       return saved;
@@ -35,7 +35,7 @@ export default function App() {
 
   const handleLanguageChange = (newLang: Language) => {
     setLang(newLang);
-    localStorage.setItem('bioit_clarity_lang', newLang);
+    localStorage.setItem('aurum_biostudio_lang', newLang);
     document.documentElement.lang = newLang;
   };
 
