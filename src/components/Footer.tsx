@@ -157,6 +157,7 @@ export const Footer: React.FC<FooterProps> = ({
             </span>
 
             <ul className="space-y-2 text-xs">
+              {/* TEMPORALMENTE OCULTO - ENTREGABLES no listo todavía. Descomentar cuando esté listo.
               <li>
                 <button
                   type="button"
@@ -166,6 +167,7 @@ export const Footer: React.FC<FooterProps> = ({
                   {t.nav.docsBtn}
                 </button>
               </li>
+              */}
 
               <li>
                 <button

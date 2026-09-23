@@ -24,10 +24,11 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
   const t = TRANSLATIONS[lang].process;
   const calendarUrl = TRANSLATIONS[lang].contact.calendarUrl;
 
-  const viewDeliverablesLabel =
-    lang === 'en'
-      ? 'View sample deliverables'
-      : 'Ver entregables de ejemplo';
+  // TEMPORALMENTE OCULTO - ENTREGABLES no listo todavía. Descomentar cuando esté listo.
+  // const viewDeliverablesLabel =
+  //   lang === 'en'
+  //     ? 'View sample deliverables'
+  //     : 'Ver entregables de ejemplo';
 
   const getStepIcon = (idx: number) => {
     switch (idx) {
@@ -158,6 +159,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
             />
           </a>
 
+          {/* TEMPORALMENTE OCULTO - ENTREGABLES no listo todavía. Descomentar cuando esté listo.
           <button
             type="button"
             onClick={() => onOpenDocs()}
@@ -170,6 +172,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({
 
             <span>{viewDeliverablesLabel}</span>
           </button>
+          */}
         </div>
       </div>
     </section>

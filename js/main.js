@@ -19,7 +19,7 @@ const TRANSLATIONS = {
     hero: {
       eyebrow: "For labs, startups and researchers",
       title: "Turn biological data into clear results.",
-            titleHighlight: "and I handle the analysis end to end — from raw data to your next clear step.",
+            titleHighlight: "And I handle the analysis end to end — from raw data to your next clear step.",
       subtitle: "I help research labs and biotech teams analyze their data, create clear visualizations and understand what to do next. No endless reports, just results you can actually use.",
       ctaButton: "Tell me about your project",
       ctaNote: "Initial 20-minute call with no cost or commitment."
@@ -71,7 +71,7 @@ const TRANSLATIONS = {
           title: "Analysis + Report",
           badge: "Most popular",
           description: "For teams that need actual analysis and clear results.",
-          price: "From US$ 500",
+          price: "From US$ 250",
           features: [
             "Agreed analysis (exploratory, statistical, visualization)",
             "Graphs and tables ready to use in papers",
@@ -145,6 +145,8 @@ const TRANSLATIONS = {
       copyright: "© 2026 BioIT Clarity. All rights reserved."
     }
   },
+
+                          ///Espanol////
   es: {
     nav: {
       badge: "Explicación clara, sin sobrecarga técnica",
@@ -161,7 +163,7 @@ const TRANSLATIONS = {
       eyebrow: "Para labs, startups e investigadores",
       title: "Convertí datos biológicos en resultados claros.",
       titleHighlight: "Analizo tus datos de principio a fin: del archivo crudo al próximo paso claro.",
-      subtitle: "Ayudo a laboratorios de investigación y equipos biotech a analizar sus datos, crear visualizaciones claras y entender cuál es el próximo paso. Nada de reportes interminables, solo resultados que realmente podés usar.",
+      subtitle: "Ayudo a laboratorios de investigación y equipos biotech a analizar sus datos, crear visualizaciones claras Y entender cuál es el próximo paso. Nada de reportes interminables, solo resultados que realmente podés usar.",
       ctaNote: "Llamada inicial de 20 minutos sin costo."
     },
     whatIDo: {
@@ -211,7 +213,7 @@ const TRANSLATIONS = {
           title: "Analysis + Report",
           badge: "Más elegido",
           description: "Para equipos que necesitan análisis concreto y resultados claros.",
-          price: "Desde US$ 500",
+          price: "Desde US$ 250",
           features: [
             "Análisis acordado (exploratorio, estadístico, visualización)",
             "Gráficos y tablas listos para usar en publicaciones",

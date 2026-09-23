@@ -8,7 +8,9 @@ import { FaqSection } from './components/FaqSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ContactModal } from './components/ContactModal';
-import { DocsModal } from './components/DocsModal';
+// TEMPORALMENTE OCULTO - ENTREGABLES no listo todavía. Descomentar cuando esté listo.
+// import { DocsModal } from './components/DocsModal';
+// import { DeliverablesSection } from './components/DeliverablesSection';
 import { Language } from './types';
 
 export default function App() {
@@ -80,6 +82,13 @@ export default function App() {
 
         <ServicesSection lang={lang} />
 
+        {/* TEMPORALMENTE OCULTO - ENTREGABLES no listo todavía. Descomentar cuando esté listo.
+        <DeliverablesSection
+          lang={lang}
+          onOpenDocs={handleOpenDocs}
+        />
+        */}
+
         <AboutSection lang={lang} />
 
         <FaqSection lang={lang} />
@@ -98,12 +107,14 @@ export default function App() {
         lang={lang}
       />
 
+      {/* TEMPORALMENTE OCULTO - ENTREGABLES no listo todavía. Descomentar cuando esté listo.
       <DocsModal
         isOpen={isDocsOpen}
         onClose={handleCloseDocs}
         lang={lang}
         initialDocId={activeDocId}
       />
+      */}
     </div>
   );
 }

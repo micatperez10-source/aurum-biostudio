@@ -88,7 +88,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           badge: 'Most popular',
           description:
             'A complete analysis with visualizations, tables, and a concise report explaining the results.',
-          price: 'From US$ 500',
+          price: 'From US$ 250',
           timeline: '5–10 business days',
           features: [
             'Data review and agreed analysis',
@@ -398,7 +398,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       eyebrow: 'PARA LABORATORIOS, STARTUPS E INVESTIGADORES',
       title: 'Convertí datos biológicos en resultados claros.',
       titleHighlight:
-        'y me encargo de tu análisis, de principio a fin.',
+        'Y me encargo de tu análisis, de principio a fin.',
       subtitle:
         'Ayudo a laboratorios de investigación y equipos biotech a analizar sus datos, crear visualizaciones claras y entender qué hacer después. Sin reportes interminables, solo resultados que realmente podés usar.',
       ctaButton: 'Contame sobre tu proyecto',
@@ -465,7 +465,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           badge: 'Más elegido',
           description:
             'Un análisis completo con visualizaciones, tablas y un reporte breve que explica los resultados.',
-          price: 'Desde US$ 500',
+          price: 'Desde US$ 250',
           timeline: '5–10 días hábiles',
           features: [
             'Revisión de datos y análisis acordado',

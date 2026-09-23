@@ -146,6 +146,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
 
           <div className="hidden shrink-0 items-center gap-2 xl:flex">
+            {/* TEMPORALMENTE OCULTO - ENTREGABLES no listo todavía. Descomentar cuando esté listo.
             <button
               id="nav-open-docs-btn"
               type="button"
@@ -159,6 +160,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               <span>{t.nav.docsBtn}</span>
             </button>
+            */}
 
             <LanguageToggle
               currentLang={currentLang}
@@ -255,6 +257,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               {t.nav.contact}
             </button>
 
+            {/* TEMPORALMENTE OCULTO - ENTREGABLES no listo todavía. Descomentar cuando esté listo.
             <button
               id="mobile-nav-open-docs-btn"
               type="button"
@@ -271,6 +274,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               <span>{t.nav.docsBtn}</span>
             </button>
+            */}
           </div>
 
           <div className="border-t border-[#E6E4DF] pt-2">
