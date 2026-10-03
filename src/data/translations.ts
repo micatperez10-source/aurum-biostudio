@@ -25,7 +25,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       subtitle:
         'I help research labs and biotech teams analyze their data, create clear visualizations and understand what to do next. No endless reports, just results you can actually use.',
       ctaButton: 'Tell me about your project',
-      ctaNote: 'Free 20-minute call. No commitment required.',
+      ctaNote: 'Free call. No commitment required.',
     },
 
     whatIDo: {
@@ -38,7 +38,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           id: 'review',
           title: 'Data review',
           description:
-            'A first look at your dataset, your question, and the best way to approach the analysis.',
+            'A first look at your dataset, your questions and the best way to approach the analysis.',
         },
         {
           id: 'analysis',
@@ -71,12 +71,12 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           id: 'data-review',
           title: 'Data Review',
           description:
-            'A focused review to understand your project, your dataset, and the best way to approach the analysis.',
+            'A focused review to understand your project, the dataset and the best way to approach the analysis.',
           price: 'From US$ 100',
           timeline: '2–3 business days',
           features: [
             'Review of the dataset structure',
-            'Short call to understand your project',
+            'Call to understand your project',
             'Main questions or missing information',
             'Clear plan for the next analysis',
           ],
@@ -93,8 +93,8 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           features: [
             'Data review and agreed analysis',
             'Graphs and tables ready to use',
-            'Three-to-six-page report',
-            'Call to present and discuss the results',
+            'Reports',
+            'Calls to present and discuss the results',
           ],
           ctaText: '',
         },
@@ -109,7 +109,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
             'Support for agreed monthly tasks',
             'Help with new datasets',
             'Review of graphs and reports',
-            'Monthly call and practical guidance',
+            'Follow-up and practical guidance',
           ],
           ctaText: '',
         },
@@ -133,7 +133,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           time: 'Step 1',
           title: 'You tell me about your project',
           description:
-            'We discuss your project, your dataset, your scientific question, your goals, and the result you need.',
+            'We discuss your project, your dataset, your questions, your goals, and the result you need.',
         },
         {
           number: 2,
@@ -402,7 +402,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       subtitle:
         'Ayudo a laboratorios de investigación y equipos biotech a analizar sus datos, crear visualizaciones claras y entender qué hacer después. Sin reportes interminables, solo resultados que realmente podés usar.',
       ctaButton: 'Contame sobre tu proyecto',
-      ctaNote: 'Llamada gratuita de 20 minutos. Sin compromiso.',
+      ctaNote: 'Llamada gratuita. Sin compromiso.',
     },
 
     whatIDo: {
@@ -415,7 +415,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           id: 'review',
           title: 'Revisión de datos',
           description:
-            'Una primera mirada a tu dataset, tu pregunta y la mejor forma de abordar el análisis.',
+            'Una primera mirada a tu dataset, tus preguntas y la mejor forma de abordar el análisis.',
         },
         {
           id: 'analysis',
@@ -448,12 +448,12 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           id: 'data-review',
           title: 'Revisión de datos',
           description:
-            'Una revisión enfocada para entender tu proyecto, tu dataset y la mejor forma de abordar el análisis.',
+            'Una revisión enfocada para entender tu proyecto, el dataset y la mejor forma de abordar el análisis.',
           price: 'Desde US$ 100',
           timeline: '2–3 días hábiles',
           features: [
             'Revisión de la estructura del dataset',
-            'Llamada corta para entender tu proyecto',
+            'Llamada para entender tu proyecto',
             'Preguntas principales o información faltante',
             'Plan claro para el próximo análisis',
           ],
@@ -470,8 +470,8 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           features: [
             'Revisión de datos y análisis acordado',
             'Gráficos y tablas listos para usar',
-            'Reporte de tres a seis páginas',
-            'Llamada para presentar y conversar sobre los resultados',
+            'Reportes',
+            'Llamadas para presentar y conversar sobre los resultados',
           ],
           ctaText: '',
         },
@@ -486,7 +486,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
             'Apoyo para tareas mensuales acordadas',
             'Ayuda con nuevos datasets',
             'Revisión de gráficos y reportes',
-            'Llamada mensual y orientación práctica',
+            'Seguimiento y orientación práctica',
           ],
           ctaText: '',
         },
@@ -510,7 +510,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           time: 'Paso 1',
           title: 'Me contás sobre tu proyecto',
           description:
-            'Hablamos sobre tu proyecto, tu dataset, tu pregunta científica, tus objetivos y el resultado que necesitás.',
+            'Hablamos sobre tu proyecto, tu dataset, tus dudas, tus objetivos y el resultado que necesitás.',
         },
         {
           number: 2,
