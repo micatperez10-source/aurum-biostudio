@@ -197,21 +197,27 @@ export const OngoingSupportModal: React.FC<OngoingSupportModalProps> = ({
                   {t.toolsTitle}
                 </h3>
 
-                <ul className="mt-3 space-y-3 text-base leading-relaxed text-[#807D75]">
+                <p className="mt-2 text-base leading-relaxed text-[#807D75]">
+                  {t.toolsIntro}
+                </p>
+
+                <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
                   {t.tools.map((tool) => (
                     <li
                       key={tool.name}
-                      className="flex flex-wrap items-baseline gap-x-2 gap-y-1"
+                      className="rounded-xl border border-[#E6E4DF] bg-[#E6E4DF]/40 px-4 py-3.5"
                     >
-                      <span className="rounded-full border border-[#E6E4DF] bg-[#E6E4DF]/60 px-2.5 py-0.5 font-mono text-xs font-semibold text-[#255643]">
+                      <span className="font-mono text-xs font-semibold uppercase tracking-wider text-[#255643]">
                         {tool.name}
                       </span>
-                      <span className="font-medium">{tool.text}</span>
+                      <p className="mt-1.5 text-sm leading-relaxed text-[#807D75]">
+                        {tool.text}
+                      </p>
                     </li>
                   ))}
                 </ul>
 
-                <p className="mt-3 text-sm leading-relaxed text-[#827D75] sm:text-base">
+                <p className="mt-4 border-l-2 border-[#BFA690] pl-4 text-sm leading-relaxed text-[#827D75]">
                   {t.toolsNote}
                 </p>
               </section>

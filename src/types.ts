@@ -248,6 +248,7 @@ export interface OngoingSupportContent {
   howTitle: string;
   howSteps: AnalysisReportStep[];
   toolsTitle: string;
+  toolsIntro: string;
   tools: DataReviewTool[];
   toolsNote: string;
   scopeTitle: string;

@@ -103,14 +103,14 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           id: 'ongoing-support',
           title: 'Ongoing Support',
           description:
-            'Regular help with new datasets, analysis questions, graphs, and reports.',
+            'Monthly support to review new data, update analyses, and keep graphs, reports, and documentation current.',
           price: 'From US$ 300 / month',
-          timeline: 'Flexible monthly support',
+          timeline: 'Agreed monthly scope',
           features: [
-            'Support for agreed monthly tasks',
-            'Help with new datasets',
-            'Review of graphs and reports',
-            'Follow-up and practical guidance',
+            'Agreed monthly tasks and priorities',
+            'Review of new data and updating of results',
+            'Updates to graphs, tables, and reports',
+            'Follow-up and documentation of the work',
           ],
           ctaText: 'Explore ongoing support',
         },
@@ -277,28 +277,29 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       closeBtn: 'Close',
       title: 'Ongoing Support',
       lead:
-        'Support for the data needs that come up throughout your project.',
+        'Continuity for your data, your results, and the next steps.',
       description:
-        'A monthly workspace to review new files, update results, and handle previously agreed analysis tasks.',
+        'Monthly support to work on the data needs that come up during your project: reviewing new files, updating analyses, and keeping results and documentation organized.',
       price: 'From US$ 300/month · Agreed monthly scope',
       forYouTitle: 'This service is for you if…',
       forYou: [
         'Your team generates new data regularly.',
-        'You need to review or update figures and reports.',
-        'You want support to address data needs as the project moves forward.',
+        'You need to update analyses, figures, or reports as the project moves forward.',
+        'You want continuity in the work and a clear record of what has been done.',
       ],
       receiveTitle: 'What you would receive',
       receive: [
-        'A list of priorities and agreed tasks for the period.',
-        'The files or results corresponding to those tasks.',
-        'Follow-up on progress and pending items.',
+        'Priorities and deliverables defined for each period.',
+        'Review of new files and updates to the agreed analyses.',
+        'Graphs, tables, or reports updated according to the contracted tasks.',
+        'A record of progress, decisions, and pending items.',
         'Consultation and review sessions according to the agreed arrangement.',
       ],
       sample: {
         label: 'Illustrative view of ongoing support',
-        title: 'Monthly planning example',
+        title: 'How a working period could be organized',
         intro:
-          'Priorities and deliverables are agreed according to the needs of the project and the working capacity agreed for the period.',
+          'Tasks are prioritized according to the needs of the project and the agreed working capacity.',
         taskLabel: 'Agreed task',
         outcomeLabel: 'Expected result',
         rows: [
@@ -307,48 +308,59 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
             outcome: 'Observations on structure and pending information.',
           },
           {
-            task: 'Update a figure.',
-            outcome: 'Revised figure using the agreed data.',
+            task: 'Update an analysis and its figures.',
+            outcome: 'Updated results using the agreed data.',
           },
           {
-            task: 'Review progress.',
-            outcome: 'Summary of decisions and next steps.',
+            task: 'Update the report and document changes.',
+            outcome:
+              'A new version of the report and a summary of the changes made.',
           },
         ],
         disclaimer:
-          'Illustrative example of organization. It does not represent a fixed number of tasks included in the starting price.',
+          'Illustrative example. It does not represent a fixed number of tasks included in the starting price.',
       },
       howTitle: 'How I work',
       howSteps: [
         {
-          title: 'We define the needs',
-          text: 'We discuss recurring tasks and agree on the working capacity for the period.',
+          title: 'We define the priorities',
+          text: 'We agree on the needs for the period, the deliverables, and the working capacity.',
         },
         {
-          title: 'We prioritize and move forward',
-          text: 'We organize tasks and deliverables according to the defined priorities.',
+          title: 'We move forward on the tasks',
+          text: 'I review new data, update the agreed results, and document relevant changes.',
         },
         {
           title: 'We review continuity',
-          text: 'We discuss progress, pending items, and the needs of the next period.',
+          text: 'We discuss progress, pending items, and priorities for the next period.',
         },
       ],
-      toolsTitle: 'Tools depending on the project',
+      toolsTitle: 'Tools that support continuity',
+      toolsIntro:
+        'I select tools according to the agreed tasks, aiming to keep analyses organized, results updateable, and changes documented.',
       tools: [
         {
-          name: 'R and Python',
-          text: 'for the agreed data and analysis tasks.',
+          name: 'R',
+          text: 'Analysis and updates to graphs and tables.',
         },
         {
-          name: 'Reports and shared files',
-          text: 'to deliver results and keep track of progress.',
+          name: 'Python',
+          text: 'Data preparation and automation of repetitive tasks when appropriate.',
+        },
+        {
+          name: 'Quarto',
+          text: 'Reports that integrate methods, code, and results, and can be regenerated when the data are updated.',
+        },
+        {
+          name: 'Git',
+          text: 'A record of changes in scripts and documentation to maintain a history of the work.',
         },
       ],
       toolsNote:
-        'Tools and the collaboration format are defined according to the needs of the project.',
-      scopeTitle: 'Scope',
+        'Not every project requires every tool. Automation, deliverable code, and any additional development are defined in the scope.',
+      scopeTitle: 'Scope of ongoing support',
       scopeText:
-        'The service covers the tasks and working capacity agreed for each period. It does not imply unlimited availability. New projects or major expansions are quoted separately.',
+        'The service covers the tasks and working capacity agreed for each period. It does not imply unlimited availability or automatically include all Aurum services. New projects, major expansions, and additional development are quoted separately.',
       scopeNote:
         'Before we begin, we define the priorities, deliverables, and follow-up arrangement.',
       ctaBtn: 'Ask about monthly support',
@@ -720,14 +732,14 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           id: 'ongoing-support',
           title: 'Apoyo continuo',
           description:
-            'Ayuda regular con nuevos datasets, preguntas de análisis, gráficos y reportes.',
+            'Acompañamiento mensual para revisar nuevos datos, actualizar análisis y mantener gráficos, reportes y documentación al día.',
           price: 'Desde US$ 300 / mes',
-          timeline: 'Apoyo mensual flexible',
+          timeline: 'Alcance mensual acordado',
           features: [
-            'Apoyo para tareas mensuales acordadas',
-            'Ayuda con nuevos datasets',
-            'Revisión de gráficos y reportes',
-            'Seguimiento y orientación práctica',
+            'Tareas y prioridades mensuales acordadas',
+            'Revisión de nuevos datos y actualización de resultados',
+            'Actualización de gráficos, tablas y reportes',
+            'Seguimiento y documentación del trabajo',
           ],
           ctaText: 'Ver el acompañamiento',
         },
@@ -893,28 +905,29 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       closeBtn: 'Cerrar',
       title: 'Apoyo continuo',
       lead:
-        'Acompañamiento para las necesidades de datos que aparecen durante tu proyecto.',
+        'Continuidad para tus datos, tus resultados y los próximos pasos.',
       description:
-        'Un espacio de trabajo mensual para revisar nuevos archivos, actualizar resultados y resolver tareas de análisis previamente acordadas.',
+        'Un acompañamiento mensual para trabajar sobre las necesidades de datos que aparecen durante tu proyecto: revisar nuevos archivos, actualizar análisis y mantener los resultados y la documentación organizados.',
       price: 'Desde US$ 300/mes · Alcance mensual acordado',
       forYouTitle: 'Este servicio es para vos si…',
       forYou: [
         'Tu equipo genera nuevos datos de manera recurrente.',
-        'Necesitás revisar o actualizar figuras y reportes.',
-        'Buscás acompañamiento para resolver necesidades de datos a medida que avanza el proyecto.',
+        'Necesitás actualizar análisis, figuras o reportes a medida que avanza el proyecto.',
+        'Buscás continuidad en el trabajo y un registro claro de lo realizado.',
       ],
       receiveTitle: 'Qué recibirías',
       receive: [
-        'Una lista de prioridades y tareas acordadas para el período.',
-        'Los archivos o resultados correspondientes a esas tareas.',
-        'Seguimiento de avances y pendientes.',
-        'Instancias de consulta y revisión según la modalidad contratada.',
+        'Prioridades y entregables definidos para cada período.',
+        'Revisión de nuevos archivos y actualización de los análisis acordados.',
+        'Gráficos, tablas o reportes actualizados según las tareas contratadas.',
+        'Un registro de avances, decisiones y pendientes.',
+        'Instancias de consulta y revisión según la modalidad acordada.',
       ],
       sample: {
         label: 'Vista ilustrativa del acompañamiento',
-        title: 'Ejemplo de organización mensual',
+        title: 'Así podría organizarse un período de trabajo',
         intro:
-          'Las prioridades y los entregables se acuerdan según las necesidades del proyecto y la capacidad de trabajo contratada.',
+          'Las tareas se priorizan según las necesidades del proyecto y la capacidad de trabajo acordada.',
         taskLabel: 'Tarea acordada',
         outcomeLabel: 'Resultado previsto',
         rows: [
@@ -924,48 +937,59 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
               'Observaciones sobre estructura e información pendiente.',
           },
           {
-            task: 'Actualizar una figura.',
-            outcome: 'Figura revisada con los datos acordados.',
+            task: 'Actualizar un análisis y sus figuras.',
+            outcome: 'Resultados actualizados con los datos acordados.',
           },
           {
-            task: 'Revisar avances.',
-            outcome: 'Resumen de decisiones y próximos pasos.',
+            task: 'Actualizar el reporte y documentar cambios.',
+            outcome:
+              'Una nueva versión del reporte y un resumen de las modificaciones realizadas.',
           },
         ],
         disclaimer:
-          'Ejemplo ilustrativo de organización. No representa una cantidad fija de tareas incluida en el precio inicial.',
+          'Ejemplo ilustrativo. No representa una cantidad fija de tareas incluida en el precio inicial.',
       },
       howTitle: 'Cómo trabajo',
       howSteps: [
         {
-          title: 'Definimos las necesidades',
-          text: 'Conversamos sobre las tareas recurrentes y acordamos la capacidad de trabajo del período.',
+          title: 'Definimos las prioridades',
+          text: 'Acordamos las necesidades del período, los entregables y la capacidad de trabajo.',
         },
         {
-          title: 'Priorizamos y avanzamos',
-          text: 'Organizamos las tareas y los entregables según las prioridades definidas.',
+          title: 'Avanzamos sobre las tareas',
+          text: 'Reviso nuevos datos, actualizo los resultados acordados y documento los cambios relevantes.',
         },
         {
           title: 'Revisamos la continuidad',
-          text: 'Conversamos sobre los avances, los pendientes y las necesidades del siguiente período.',
+          text: 'Conversamos sobre avances, pendientes y prioridades para el siguiente período.',
         },
       ],
-      toolsTitle: 'Herramientas según el proyecto',
+      toolsTitle: 'Herramientas para dar continuidad al trabajo',
+      toolsIntro:
+        'Selecciono las herramientas según las tareas acordadas, buscando mantener los análisis organizados, los resultados actualizables y los cambios documentados.',
       tools: [
         {
-          name: 'R y Python',
-          text: 'para las tareas de datos y análisis acordadas.',
+          name: 'R',
+          text: 'Análisis y actualización de gráficos y tablas.',
         },
         {
-          name: 'Reportes y archivos compartidos',
-          text: 'para entregar resultados y mantener el seguimiento.',
+          name: 'Python',
+          text: 'Preparación de datos y automatización de tareas repetitivas cuando corresponde.',
+        },
+        {
+          name: 'Quarto',
+          text: 'Reportes que integran métodos, código y resultados, y pueden volver a generarse al actualizar los datos.',
+        },
+        {
+          name: 'Git',
+          text: 'Registro de cambios en scripts y documentación para mantener un historial del trabajo.',
         },
       ],
       toolsNote:
-        'Las herramientas y el formato de colaboración se definen según las necesidades del proyecto.',
-      scopeTitle: 'Alcance',
+        'No todos los proyectos requieren todas las herramientas. La automatización, el código entregable y cualquier desarrollo adicional se definen en el alcance.',
+      scopeTitle: 'Alcance del acompañamiento',
       scopeText:
-        'El servicio cubre las tareas y la capacidad de trabajo acordadas para cada período. No implica disponibilidad ilimitada. Los proyectos nuevos o las ampliaciones importantes se presupuestan por separado.',
+        'El servicio cubre las tareas y la capacidad de trabajo acordadas para cada período. No implica disponibilidad ilimitada ni incluye automáticamente todos los servicios de Aurum. Los proyectos nuevos, las ampliaciones importantes y los desarrollos adicionales se presupuestan por separado.',
       scopeNote:
         'Antes de comenzar, definimos las prioridades, los entregables y la modalidad de seguimiento.',
       ctaBtn: 'Consultar por apoyo mensual',
