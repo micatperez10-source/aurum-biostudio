@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
+import { buildPlainMailto } from '../data/contact';
 
 interface ContactSectionProps {
   lang: Language;
@@ -16,8 +17,6 @@ interface ContactSectionProps {
 export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
   const t = TRANSLATIONS[lang];
   const [copied, setCopied] = useState(false);
-
-  const scheduleCallUrl = t.contact.calendarUrl;
 
   const consultationLabel =
     lang === 'en'
@@ -63,7 +62,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:mt-10">
               <a
                 id="book-call-btn"
-                href={scheduleCallUrl}
+                href={t.contact.calendarUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex w-full transform cursor-pointer items-center justify-center gap-3 rounded-xl bg-[#255643] px-8 py-4 text-lg font-semibold text-[#E6E4DF] shadow-md transition-all hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg sm:w-auto"
@@ -78,7 +77,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                   aria-hidden="true"
                 />
               </a>
-
             </div>
 
             <div className="mt-10 border-t border-[#E6E4DF] pt-8 text-sm text-[#827D75] sm:text-base">
@@ -91,7 +89,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                 />
 
                 <a
-                  href={`mailto:${t.contact.email}`}
+                  href={buildPlainMailto(lang)}
                   className="font-serif break-all font-semibold text-[#255643] hover:underline"
                 >
                   {t.contact.email}

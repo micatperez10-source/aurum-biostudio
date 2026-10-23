@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   X,
   Mail,
@@ -7,47 +7,57 @@ import {
   Send,
   ShieldCheck,
   Sparkles,
+  Calendar,
 } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
+import {
+  CONTACT_EMAIL,
+  CALENDAR_URL,
+  buildPlainMailto,
+} from '../data/contact';
+import { useModalA11y } from '../hooks/useModalA11y';
 
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
   lang: Language;
+  serviceInterestId?: string | null;
 }
 
 export const ContactModal: React.FC<ContactModalProps> = ({
   isOpen,
   onClose,
   lang,
+  serviceInterestId,
 }) => {
   const [copied, setCopied] = useState(false);
   const [nameCompany, setNameCompany] = useState('');
   const [message, setMessage] = useState('');
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  const t = TRANSLATIONS[lang].contactModal;
-  const targetEmail = TRANSLATIONS[lang].contact.email;
+  const translations = TRANSLATIONS[lang];
+  const t = translations.contactModal;
+  const targetEmail = CONTACT_EMAIL;
+  const calendarLinkLabel = translations.contact.calendarLinkLabel;
+  const serviceName = serviceInterestId
+    ? translations.services.packages.find(
+        (pkg) => pkg.id === serviceInterestId,
+      )?.title
+    : undefined;
+  const serviceLine = serviceName
+    ? `${
+        lang === 'es' ? 'Servicio de interés' : 'Service of interest'
+      }: ${serviceName}\n\n`
+    : '';
 
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onClose();
-      }
-    };
-
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      window.addEventListener('keydown', handleKeyDown);
-    } else {
-      document.body.style.overflow = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isOpen, onClose]);
+  useModalA11y({
+    isOpen,
+    onClose,
+    dialogRef,
+    initialFocusRef: closeButtonRef,
+  });
 
   if (!isOpen) {
     return null;
@@ -76,7 +86,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
       lang === 'es'
         ? `Hola Micaela / Aurum BioStudio,
 
-Nombre o institución: ${nameCompany || '[Nombre o institución]'}
+${serviceLine}Nombre o institución: ${nameCompany || '[Nombre o institución]'}
 
 Necesito ayuda con los siguientes datos o análisis:
 ${
@@ -84,17 +94,23 @@ ${
   'Me gustaría agendar una llamada de 20 minutos para conversar sobre mi proyecto.'
 }
 
+Para reservar el horario de la llamada, elegí día y hora disponible en el calendario:
+${CALENDAR_URL}
+
 Saludos,
 ${nameCompany || '[Nombre]'}`
         : `Hello Micaela / Aurum BioStudio,
 
-Name or institution: ${nameCompany || '[Name or institution]'}
+${serviceLine}Name or institution: ${nameCompany || '[Name or institution]'}
 
 I need help with the following data or analysis:
 ${
   message ||
   'I would like to schedule a 20-minute call to discuss my project.'
 }
+
+To reserve a call slot, pick an available date and time in the calendar:
+${CALENDAR_URL}
 
 Best regards,
 ${nameCompany || '[Name]'}`;
@@ -108,15 +124,19 @@ ${nameCompany || '[Name]'}`;
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-[#255643]/70 p-4 backdrop-blur-sm"
       onClick={onClose}
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modal-title"
+      role="presentation"
     >
       <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        tabIndex={-1}
         className="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-[#E6E4DF] bg-[#DDD6C9] p-6 text-[#807D75] shadow-2xl sm:p-8"
         onClick={(event) => event.stopPropagation()}
       >
         <button
+          ref={closeButtonRef}
           type="button"
           onClick={onClose}
           className="absolute right-4 top-4 cursor-pointer rounded-lg p-2 text-[#958965] transition-colors hover:bg-[#DDD6C9] hover:brightness-95 hover:text-[#807D75]"
@@ -142,6 +162,13 @@ ${nameCompany || '[Name]'}`;
           </h3>
 
           <p className="mt-1 text-sm text-[#958965]">{t.subtitle}</p>
+
+          {serviceName && (
+            <div className="mt-3 inline-flex flex-wrap items-center gap-1.5 rounded-full border border-[#255643] bg-[#E6E4DF]/60 px-3 py-1 text-xs font-semibold text-[#255643]">
+              <span>{t.serviceInterestLabel}:</span>
+              <span>{serviceName}</span>
+            </div>
+          )}
         </div>
 
         <div className="mt-5 rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] p-4">
@@ -151,7 +178,7 @@ ${nameCompany || '[Name]'}`;
 
           <div className="flex flex-wrap items-center justify-between gap-2 sm:flex-nowrap">
             <a
-              href={`mailto:${targetEmail}`}
+              href={buildPlainMailto(lang)}
               className="font-serif break-all text-sm font-bold text-[#255643] hover:underline"
             >
               {targetEmail}
@@ -174,6 +201,20 @@ ${nameCompany || '[Name]'}`;
               <span>{copied ? t.copiedEmail : t.copyEmail}</span>
             </button>
           </div>
+
+          <a
+            href={CALENDAR_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-serif mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[#255643] hover:underline"
+          >
+            <Calendar
+              className="h-3.5 w-3.5 shrink-0"
+              aria-hidden="true"
+            />
+
+            <span>{calendarLinkLabel}</span>
+          </a>
         </div>
 
         <form onSubmit={handleSendMail} className="mt-5 space-y-3.5">

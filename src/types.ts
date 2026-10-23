@@ -106,6 +106,7 @@ export interface ContactContent {
   text: string;
   button: string;
   calendarUrl: string;
+  calendarLinkLabel: string;
   note: string;
   emailLabel: string;
   email: string;
@@ -125,6 +126,135 @@ export interface ContactModalContent {
   messagePlaceholder: string;
   sendBtn: string;
   securityNote: string;
+  serviceInterestLabel: string;
+}
+
+export interface DataReviewTool {
+  name: string;
+  text: string;
+}
+
+export interface DataReviewSampleContent {
+  title: string;
+  materialLabel: string;
+  materialText: string;
+  clarifyLabel: string;
+  clarifyText: string;
+  nextLabel: string;
+  nextText: string;
+  disclaimer: string;
+}
+
+export interface DataReviewContent {
+  closeBtn: string;
+  title: string;
+  lead: string;
+  description: string;
+  price: string;
+  forYouTitle: string;
+  forYou: string[];
+  receiveTitle: string;
+  receiveIntro: string;
+  receive: string[];
+  receiveNote: string;
+  sampleTitle: string;
+  sample: DataReviewSampleContent;
+  howTitle: string;
+  howSteps: string[];
+  toolsTitle: string;
+  tools: DataReviewTool[];
+  scopeTitle: string;
+  scopeText: string;
+  ctaBtn: string;
+  ctaNote: string;
+}
+
+export interface AnalysisReportSampleContent {
+  label: string;
+  title: string;
+  subtitle: string;
+  questionLabel: string;
+  questionText: string;
+  visualizationLabel: string;
+  figureSimulatedLabel: string;
+  figureTitle: string;
+  axisLabel: string;
+  conditionA: string;
+  conditionB: string;
+  figureAlt: string;
+  figureDescription: string;
+  interpretationLabel: string;
+  interpretationText: string;
+  methodsLabel: string;
+  methodsText: string;
+  disclaimer: string;
+}
+
+export interface AnalysisReportStep {
+  title: string;
+  text: string;
+}
+
+export interface AnalysisReportContent {
+  closeBtn: string;
+  title: string;
+  lead: string;
+  description: string;
+  price: string;
+  forYouTitle: string;
+  forYou: string[];
+  receiveTitle: string;
+  receive: string[];
+  receiveNote: string;
+  sample: AnalysisReportSampleContent;
+  howTitle: string;
+  howSteps: AnalysisReportStep[];
+  toolsTitle: string;
+  tools: DataReviewTool[];
+  toolsNote: string;
+  scopeTitle: string;
+  scopeText: string;
+  scopeNote: string;
+  ctaBtn: string;
+  ctaNote: string;
+}
+
+export interface OngoingSupportSampleRow {
+  task: string;
+  outcome: string;
+}
+
+export interface OngoingSupportSampleContent {
+  label: string;
+  title: string;
+  intro: string;
+  taskLabel: string;
+  outcomeLabel: string;
+  rows: OngoingSupportSampleRow[];
+  disclaimer: string;
+}
+
+export interface OngoingSupportContent {
+  closeBtn: string;
+  title: string;
+  lead: string;
+  description: string;
+  price: string;
+  forYouTitle: string;
+  forYou: string[];
+  receiveTitle: string;
+  receive: string[];
+  sample: OngoingSupportSampleContent;
+  howTitle: string;
+  howSteps: AnalysisReportStep[];
+  toolsTitle: string;
+  tools: DataReviewTool[];
+  toolsNote: string;
+  scopeTitle: string;
+  scopeText: string;
+  scopeNote: string;
+  ctaBtn: string;
+  ctaNote: string;
 }
 
 export interface DeliverableItem {
@@ -161,6 +291,7 @@ export interface FooterContent {
   tagline: string;
   privacy: string;
   terms: string;
+  backToTop: string;
 }
 
 export interface DocsModalContent {
@@ -199,6 +330,9 @@ export interface TranslationContent {
   faq: FAQContent;
   contact: ContactContent;
   contactModal: ContactModalContent;
+  dataReview: DataReviewContent;
+  analysisReport: AnalysisReportContent;
+  ongoingSupport: OngoingSupportContent;
   deliverables: DeliverablesContent;
   footer: FooterContent;
   docsModal: DocsModalContent;
