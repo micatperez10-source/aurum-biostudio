@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useRef } from 'react';
 import {
   ArrowRight,
   Calendar,
-  Check,
   Info,
   X,
 } from 'lucide-react';
@@ -116,136 +115,33 @@ export const OngoingSupportModal: React.FC<OngoingSupportModalProps> = ({
         </header>
 
         <div className="flex-1 overflow-y-auto overscroll-contain px-5 py-6 sm:px-7 sm:py-8">
-          <p className="max-w-3xl text-base leading-relaxed text-[#807D75] sm:text-lg">
-            {t.description}
-          </p>
+          <div className="space-y-8">
+            <section aria-labelledby="ongoing-support-how">
+              <h3
+                id="ongoing-support-how"
+                className="font-serif text-2xl font-bold text-[#3B5745]"
+              >
+                {t.howTitle}
+              </h3>
 
-          <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-10">
-            <div className="order-2 min-w-0 space-y-8 lg:order-1">
-              <section aria-labelledby="ongoing-support-for-you">
-                <h3
-                  id="ongoing-support-for-you"
-                  className="font-serif text-2xl font-bold text-[#3B5745]"
-                >
-                  {t.forYouTitle}
-                </h3>
-
-                <ul className="mt-3 space-y-3 text-base font-medium leading-relaxed text-[#807D75]">
-                  {t.forYou.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <Check
-                        className="mt-1 h-4 w-4 shrink-0 text-[#255643]"
-                        aria-hidden="true"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-
-              <section aria-labelledby="ongoing-support-receive">
-                <h3
-                  id="ongoing-support-receive"
-                  className="font-serif text-2xl font-bold text-[#3B5745]"
-                >
-                  {t.receiveTitle}
-                </h3>
-
-                <ul className="mt-3 space-y-3 text-base font-medium leading-relaxed text-[#807D75]">
-                  {t.receive.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <Check
-                        className="mt-1 h-4 w-4 shrink-0 text-[#255643]"
-                        aria-hidden="true"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-
-              <section aria-labelledby="ongoing-support-how">
-                <h3
-                  id="ongoing-support-how"
-                  className="font-serif text-2xl font-bold text-[#3B5745]"
-                >
-                  {t.howTitle}
-                </h3>
-
-                <ol className="mt-3 space-y-4 text-base font-medium leading-relaxed text-[#807D75]">
-                  {t.howSteps.map((step, index) => (
-                    <li key={step.title} className="flex items-start gap-3">
-                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#255643] text-xs font-bold text-[#255643]">
-                        {index + 1}
-                      </span>
-                      <span>
-                        <span className="block font-semibold text-[#3B5745]">
-                          {step.title}
-                        </span>
-                        <span className="mt-0.5 block">{step.text}</span>
-                      </span>
-                    </li>
-                  ))}
-                </ol>
-              </section>
-
-              <section aria-labelledby="ongoing-support-tools">
-                <h3
-                  id="ongoing-support-tools"
-                  className="font-serif text-2xl font-bold text-[#3B5745]"
-                >
-                  {t.toolsTitle}
-                </h3>
-
-                <p className="mt-2 text-base leading-relaxed text-[#807D75]">
-                  {t.toolsIntro}
-                </p>
-
-                <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {t.tools.map((tool) => (
-                    <li
-                      key={tool.name}
-                      className="rounded-xl border border-[#E6E4DF] bg-[#E6E4DF]/40 px-4 py-3.5"
-                    >
-                      <span className="font-mono text-xs font-semibold uppercase tracking-wider text-[#255643]">
-                        {tool.name}
-                      </span>
-                      <p className="mt-1.5 text-sm leading-relaxed text-[#807D75]">
-                        {tool.text}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-
-                <p className="mt-4 border-l-2 border-[#BFA690] pl-4 text-sm leading-relaxed text-[#827D75]">
-                  {t.toolsNote}
-                </p>
-              </section>
-
-              <section aria-labelledby="ongoing-support-scope">
-                <h3
-                  id="ongoing-support-scope"
-                  className="font-serif text-2xl font-bold text-[#3B5745]"
-                >
-                  {t.scopeTitle}
-                </h3>
-
-                <div className="mt-3 flex items-start gap-2.5 rounded-xl border border-[#E6E4DF] bg-[#E6E4DF]/40 p-4 text-sm font-medium leading-relaxed text-[#827D75] sm:text-base">
-                  <Info
-                    className="mt-0.5 h-4 w-4 shrink-0 text-[#255643]"
-                    aria-hidden="true"
-                  />
-                  <span>
-                    <span className="block">{t.scopeText}</span>
-                    <span className="mt-2 block font-serif italic text-[#958965]">
-                      {t.scopeNote}
+              <ol className="mt-3 space-y-4 text-base font-medium leading-relaxed text-[#807D75]">
+                {t.howSteps.map((step, index) => (
+                  <li key={step.title} className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#255643] text-xs font-bold text-[#255643]">
+                      {index + 1}
                     </span>
-                  </span>
-                </div>
-              </section>
-            </div>
+                    <span>
+                      <span className="block font-semibold text-[#3B5745]">
+                        {step.title}
+                      </span>
+                      <span className="mt-0.5 block">{step.text}</span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </section>
 
-            <div className="order-1 min-w-0 lg:order-2">
+            <div className="min-w-0 max-w-3xl">
               <section
                 aria-labelledby="ongoing-support-sample-title"
                 className="overflow-hidden rounded-xl border border-[#BFA690] bg-[#E6E4DF] shadow-sm"
@@ -330,6 +226,55 @@ export const OngoingSupportModal: React.FC<OngoingSupportModalProps> = ({
                 </div>
               </section>
             </div>
+
+            <section aria-labelledby="ongoing-support-tools">
+              <h3
+                id="ongoing-support-tools"
+                className="font-serif text-2xl font-bold text-[#3B5745]"
+              >
+                {t.toolsTitle}
+              </h3>
+
+              <ul className="mt-3 space-y-3 text-base leading-relaxed text-[#807D75]">
+                {t.tools.map((tool) => (
+                  <li
+                    key={tool.name}
+                    className="flex flex-wrap items-baseline gap-x-2 gap-y-1"
+                  >
+                    <span className="rounded-full border border-[#E6E4DF] bg-[#E6E4DF]/60 px-2.5 py-0.5 font-mono text-xs font-semibold text-[#255643]">
+                      {tool.name}
+                    </span>
+                    <span className="font-medium">{tool.text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="mt-3 text-sm leading-relaxed text-[#827D75] sm:text-base">
+                {t.toolsNote}
+              </p>
+            </section>
+
+            <section aria-labelledby="ongoing-support-scope">
+              <h3
+                id="ongoing-support-scope"
+                className="font-serif text-2xl font-bold text-[#3B5745]"
+              >
+                {t.scopeTitle}
+              </h3>
+
+              <div className="mt-3 flex items-start gap-2.5 rounded-xl border border-[#E6E4DF] bg-[#E6E4DF]/40 p-4 text-sm font-medium leading-relaxed text-[#827D75] sm:text-base">
+                <Info
+                  className="mt-0.5 h-4 w-4 shrink-0 text-[#255643]"
+                  aria-hidden="true"
+                />
+                <span>
+                  <span className="block">{t.scopeText}</span>
+                  <span className="mt-2 block font-serif italic text-[#958965]">
+                    {t.scopeNote}
+                  </span>
+                </span>
+              </div>
+            </section>
           </div>
         </div>
 

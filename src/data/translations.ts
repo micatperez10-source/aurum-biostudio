@@ -72,14 +72,14 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           id: 'data-review',
           title: 'Data Review',
           description:
-            'A focused review to understand your project, the dataset and the best way to approach the analysis.',
+            'We review how your data are organized, what information is missing, and how to move your project forward.',
           price: 'From US$ 100',
           timeline: '2–3 business days',
           features: [
-            'Review of the dataset structure',
-            'Call to understand your project',
-            'Main questions or missing information',
-            'Clear plan for the next analysis',
+            'Review of your files and how they are organized',
+            'Call to learn about your project and your needs',
+            'Identification of missing information and points to clarify',
+            'Summary with recommendations and next steps',
           ],
           ctaText: 'See how it works',
         },
@@ -88,14 +88,14 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           title: 'Analysis + Report',
           badge: 'Most popular',
           description:
-            'A complete analysis with visualizations, tables, and a concise report explaining the results.',
+            'I analyze your data according to your project goals and deliver graphs, tables, and a brief report to help you understand the results.',
           price: 'From US$ 250',
           timeline: '5–10 business days',
           features: [
-            'Data review and agreed analysis',
-            'Graphs and tables ready to use',
-            'Reports',
-            'Calls to present and discuss the results',
+            'Initial data review and development of the agreed analysis',
+            'Graphs and tables in the agreed formats',
+            'A brief report with methods, results, and limitations',
+            'Presentation and consultation meetings as agreed',
           ],
           ctaText: 'See deliverables and example',
         },
@@ -103,14 +103,14 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           id: 'ongoing-support',
           title: 'Ongoing Support',
           description:
-            'Monthly support to review new data, update analyses, and keep graphs, reports, and documentation current.',
-          price: 'From US$ 300 / month',
-          timeline: 'Agreed monthly scope',
+            'Monthly support to review data, develop or update analyses, and keep your results organized.',
+          price: 'From US$ 300/month',
+          timeline: 'Agreed monthly work plan',
           features: [
-            'Agreed monthly tasks and priorities',
-            'Review of new data and updating of results',
-            'Updates to graphs, tables, and reports',
-            'Follow-up and documentation of the work',
+            'Support with data and analysis according to your project needs',
+            'Creation or updating of graphs, tables, and reports',
+            'Record of progress, changes, and next steps',
+            'Consultation and review sessions as agreed',
           ],
           ctaText: 'Explore ongoing support',
         },
@@ -123,92 +123,59 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       closeBtn: 'Close',
       title: 'Data Review',
       lead:
-        'Understand what you have, what is missing, and how to move forward.',
-      description:
-        'An initial review to understand your project, assess the structure of your data, and define a concrete next step.',
+        'Understand where your data stand and what you need to move forward.',
       price: 'From US$100 · 2–3 business days',
-      forYouTitle: 'This service is for you if…',
-      forYou: [
-        'You have data but are not sure where to start.',
-        'You need to know what information is missing before analyzing.',
-        'You want to define a question and a scope before commissioning a full analysis.',
-      ],
-      receiveTitle: 'What you would receive',
-      receiveIntro: 'A review summary with:',
-      receive: [
-        'A description of the files and how they are organized.',
-        'Observations on structure, sample identification, and missing information.',
-        'Questions worth resolving before the analysis.',
-        'A plan for next steps.',
-      ],
-      receiveNote:
-        'Includes a call to understand the context of your project.',
-      sampleTitle: 'A sample of the deliverable',
+      sampleTitle: 'A sample of what you receive',
       sample: {
         title: 'Example review summary',
-        materialLabel: 'Material received',
+        materialLabel: 'Files reviewed',
         materialText:
-          'Measurement table and a file with sample information.',
-        clarifyLabel: 'Points to clarify',
+          'A measurement table and a file with sample information.',
+        clarifyLabel: 'Information to complete',
         clarifyText:
-          'Measurement units, replicate identification, and exclusion criteria.',
-        nextLabel: 'Proposed next step',
+          'Measurement units, sample identification, and the distinction between repeated measurements and independent samples.',
+        nextLabel: 'Recommended next steps',
         nextText:
-          'Complete the metadata and agree on the primary comparison before starting the analysis.',
+          'Complete the sample information and review the project goals to propose an analysis approach.',
         disclaimer:
           'Demonstration example. It does not correspond to a client project.',
       },
       howTitle: 'How I work',
       howSteps: [
-        'You share the files and project context through the agreed channel.',
-        'We review the data structure and the question you want to answer.',
-        'You receive the observations and a proposal for next steps.',
+        'You tell me about your project and share the files through the agreed channel.',
+        'I review how the data are organized and identify missing information and points to clarify.',
+        'You receive the review document with observations and next steps.',
       ],
       toolsTitle: 'Tools depending on the project',
       tools: [
         {
           name: 'R',
-          text: 'exploration and review of tables.',
+          text: 'Initial exploration of tables and review of their structure.',
         },
         {
           name: 'Python',
-          text: 'review and preparation of files when needed.',
+          text: 'Review of files and initial checks when appropriate.',
         },
       ],
-      scopeTitle: 'Scope',
+      toolsNote:
+        'Tools are chosen according to the files and the needs of the project.',
+      scopeTitle: 'What this stage includes',
       scopeText:
-        'This stage focuses on reviewing and planning. Extensive cleaning, statistical analysis, and figure preparation are quoted separately.',
+        'This review includes observations and recommendations. It does not include correcting or reorganizing your files, performing statistical analysis, or creating graphs. If you need those services, they are agreed on and quoted separately.',
       ctaBtn: 'Ask about a review',
       ctaNote:
-        'Tell me what data you have and what you would like to solve.',
+        'Tell me about your project and the data you have, even if you don’t know where to start yet.',
     },
 
     analysisReport: {
       closeBtn: 'Close',
       title: 'Analysis + Report',
-      lead: 'From a focused question to results you can interpret.',
-      description:
-        'An analysis agreed for your project, with visualizations, tables, and a concise report explaining the approach, the results, and their limitations.',
+      lead: 'From your data to clear, well-documented results.',
       price: 'From US$ 250 · 5–10 business days',
-      forYouTitle: 'This service is for you if…',
-      forYou: [
-        'You already have data and a question you want to answer.',
-        'You need to turn results into clear graphs and tables.',
-        'You want an explanation of what the data show and what they do not allow you to conclude.',
-      ],
-      receiveTitle: 'What you would receive',
-      receive: [
-        'A concise report with the question, the approach used, the results, and their limitations.',
-        'Graphs and tables in the agreed formats.',
-        'The files corresponding to the deliverables defined for your project.',
-        'Agreed calls to present the results and discuss them.',
-      ],
-      receiveNote:
-        'If you need code or editable files, their inclusion is defined when agreeing on the scope.',
       sample: {
         label: 'Illustrative report view',
         title: 'Analysis of a biological assay',
-        subtitle: 'Example of structure and presentation of results.',
+        subtitle: 'Simulated data to show the structure of the deliverable.',
         questionLabel: 'Question',
         questionText:
           'How does the measured response change between conditions?',
@@ -219,129 +186,112 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
         conditionA: 'Condition A',
         conditionB: 'Condition B',
         figureAlt:
-          'Dot plot with simulated individual observations from two conditions. Each point is one observation; Condition A is shown with circles and Condition B with squares. The response values fall in a similar, overlapping range. This is an illustration, not an experimental result.',
+          'Dot plot with simulated observations from two conditions. Condition A is shown with circles and Condition B with squares. The response values fall in a similar, overlapping range.',
         figureDescription:
-          'Illustration with simulated data. Condition A is shown with circles and Condition B with squares. Observations from both groups overlap across the displayed range.',
+          'Condition A is shown with circles and Condition B with squares. Observations from both groups overlap across the displayed range.',
         interpretationLabel: 'Interpretation',
         interpretationText:
-          'Observations from both conditions fall within overlapping ranges. The figure allows comparison of the position and spread of each group; no statistical test is presented and no difference between conditions is claimed.',
-        methodsLabel: 'Methods and limitations',
+          'Measurements from both conditions overlap. The figure allows exploring their distribution, but on its own it does not allow concluding that a statistical difference exists.',
+        methodsLabel: 'About this example',
         methodsText:
-          'The sample illustrates how the question, visualization, and interpretation could be organized. In a real project, the approach, tests, and limitations are defined by the experimental design, the number of observations, and the nature of the data.',
+          'Individual observations from two conditions are shown using simulated data. No statistical test was performed. In a real project, methods and limitations are documented according to the experimental design and the available data.',
         disclaimer:
-          'Illustrative example with simulated data. The approach and deliverables are defined for each project.',
+          'Demonstration example. It does not correspond to a client project.',
       },
       howTitle: 'How I work',
       howSteps: [
         {
-          title: 'We define the question',
-          text: 'We agree on what you want to resolve, which files are needed, and what the deliverables will be.',
+          title: 'We talk about your project',
+          text: 'We review your goals, the available data, and your analysis needs. We agree on the work and the deliverables.',
         },
         {
           title: 'I develop the analysis',
-          text: 'I review the data and work on the agreed approach.',
+          text: 'I review the data and carry out the agreed work, documenting the methods and relevant decisions.',
         },
         {
           title: 'We review the results',
-          text: 'You receive the report, graphs, and tables, and we discuss their interpretation and possible next steps.',
+          text: 'You receive the report, graphs, and tables. We discuss their interpretation, any questions that come up, and next steps.',
         },
       ],
       toolsTitle: 'Tools depending on the project',
       tools: [
         {
           name: 'R',
-          text: 'statistical analysis and visualization.',
+          text: 'Statistical analysis and visualization.',
         },
         {
           name: 'Python',
-          text: 'data preparation and automation when the project requires it.',
+          text: 'Data preparation and automation when the project requires it.',
         },
         {
           name: 'Quarto',
-          text: 'reports that integrate text, code, and results.',
+          text: 'Reports that integrate text, code, and results.',
         },
       ],
       toolsNote:
-        'Tools are selected according to the data, the question, and the delivery format.',
-      scopeTitle: 'Scope',
+        'Tools are selected according to the data, the project goals, and the delivery format.',
+      scopeTitle: 'What we agree on before we begin',
       scopeText:
-        'The final budget depends on the number and state of the files, the complexity of the analysis, and the agreed deliverables. New questions or expansions are quoted separately.',
+        'We define the work, deliverables, budget, and timeline according to the available data and the needs of the project. If new analyses, data, or deliverables are later added that expand the agreed work, we review the budget before moving forward.',
       scopeNote:
-        'The timeline is confirmed when the scope is defined and the available material is reviewed.',
+        'The timeline is confirmed after reviewing the material and defining the work.',
       ctaBtn: 'Ask about my analysis',
       ctaNote:
-        'Tell me what you want to investigate and what state your data are in.',
+        'Tell me about your project and what you need to analyze, even if you don’t have everything defined yet.',
     },
 
     ongoingSupport: {
       closeBtn: 'Close',
       title: 'Ongoing Support',
       lead:
-        'Continuity for your data, your results, and the next steps.',
-      description:
-        'Monthly support to work on the data needs that come up during your project: reviewing new files, updating analyses, and keeping results and documentation organized.',
-      price: 'From US$ 300/month · Agreed monthly scope',
-      forYouTitle: 'This service is for you if…',
-      forYou: [
-        'Your team generates new data regularly.',
-        'You need to update analyses, figures, or reports as the project moves forward.',
-        'You want continuity in the work and a clear record of what has been done.',
-      ],
-      receiveTitle: 'What you would receive',
-      receive: [
-        'Priorities and deliverables defined for each period.',
-        'Review of new files and updates to the agreed analyses.',
-        'Graphs, tables, or reports updated according to the contracted tasks.',
-        'A record of progress, decisions, and pending items.',
-        'Consultation and review sessions according to the agreed arrangement.',
-      ],
+        'Support to move forward with your data as your project grows.',
+      price: 'From US$ 300/month · Agreed monthly work plan',
       sample: {
         label: 'Illustrative view of ongoing support',
-        title: 'How a working period could be organized',
+        title: 'Example of a monthly plan',
         intro:
-          'Tasks are prioritized according to the needs of the project and the agreed working capacity.',
-        taskLabel: 'Agreed task',
-        outcomeLabel: 'Expected result',
+          'Tasks and deliverables are defined according to the needs of the project.',
+        taskLabel: 'Task',
+        outcomeLabel: 'Expected deliverable',
         rows: [
           {
             task: 'Review new files.',
-            outcome: 'Observations on structure and pending information.',
+            outcome:
+              'Observations on the available information and what remains to be completed.',
           },
           {
             task: 'Update an analysis and its figures.',
-            outcome: 'Updated results using the agreed data.',
+            outcome: 'Updated results and graphs.',
           },
           {
-            task: 'Update the report and document changes.',
+            task: 'Review the report and record changes.',
             outcome:
-              'A new version of the report and a summary of the changes made.',
+              'A new version of the report and a summary of modifications.',
           },
         ],
         disclaimer:
-          'Illustrative example. It does not represent a fixed number of tasks included in the starting price.',
+          'Demonstration example. The tasks included are defined in each proposal.',
       },
       howTitle: 'How I work',
       howSteps: [
         {
-          title: 'We define the priorities',
-          text: 'We agree on the needs for the period, the deliverables, and the working capacity.',
+          title: 'We organize the work',
+          text: 'We discuss your needs and define the tasks, deliverables, and priorities for the month.',
         },
         {
-          title: 'We move forward on the tasks',
-          text: 'I review new data, update the agreed results, and document relevant changes.',
+          title: 'We move forward with the data',
+          text: 'I carry out the agreed tasks and document relevant changes in the analyses and results.',
         },
         {
-          title: 'We review continuity',
-          text: 'We discuss progress, pending items, and priorities for the next period.',
+          title: 'We review progress',
+          text: 'We discuss what was done, resolve questions, and adjust priorities for the next steps.',
         },
       ],
-      toolsTitle: 'Tools that support continuity',
-      toolsIntro:
-        'I select tools according to the agreed tasks, aiming to keep analyses organized, results updateable, and changes documented.',
+      toolsTitle: 'Tools depending on the project',
       tools: [
         {
           name: 'R',
-          text: 'Analysis and updates to graphs and tables.',
+          text: 'Analysis and creation or updating of graphs and tables.',
         },
         {
           name: 'Python',
@@ -349,23 +299,23 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
         },
         {
           name: 'Quarto',
-          text: 'Reports that integrate methods, code, and results, and can be regenerated when the data are updated.',
+          text: 'Reports that integrate methods, code, and results.',
         },
         {
           name: 'Git',
-          text: 'A record of changes in scripts and documentation to maintain a history of the work.',
+          text: 'History of changes in scripts and documentation.',
         },
       ],
       toolsNote:
-        'Not every project requires every tool. Automation, deliverable code, and any additional development are defined in the scope.',
-      scopeTitle: 'Scope of ongoing support',
+        'Not every project requires every tool. Automation, code delivery, and additional development are agreed before they are carried out.',
+      scopeTitle: 'What we agree on before we begin',
       scopeText:
-        'The service covers the tasks and working capacity agreed for each period. It does not imply unlimited availability or automatically include all Aurum services. New projects, major expansions, and additional development are quoted separately.',
+        'We define which tasks and deliverables the monthly plan includes, how the deliverables will be organized, and how consultation and follow-up will work.',
       scopeNote:
-        'Before we begin, we define the priorities, deliverables, and follow-up arrangement.',
+        'If work comes up that is outside the plan, I propose the corresponding budget adjustment before moving forward.',
       ctaBtn: 'Ask about monthly support',
       ctaNote:
-        'Tell me which tasks repeat and what kind of support you need.',
+        'Tell me about your project and where you need support.',
     },
 
     process: {
@@ -701,14 +651,14 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           id: 'data-review',
           title: 'Revisión de datos',
           description:
-            'Una revisión enfocada para entender tu proyecto, el dataset y la mejor forma de abordar el análisis.',
+            'Revisamos cómo están organizados tus datos, qué información falta y cómo avanzar con tu proyecto.',
           price: 'Desde US$ 100',
           timeline: '2–3 días hábiles',
           features: [
-            'Revisión de la estructura del dataset',
-            'Llamada para entender tu proyecto',
-            'Preguntas principales o información faltante',
-            'Plan claro para el próximo análisis',
+            'Revisión de tus archivos y de cómo están organizados.',
+            'Llamada para conocer tu proyecto y tus necesidades.',
+            'Identificación de información faltante y puntos por aclarar.',
+            'Resumen con recomendaciones y próximos pasos.',
           ],
           ctaText: 'Ver cómo funciona',
         },
@@ -717,14 +667,14 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           title: 'Análisis + Reporte',
           badge: 'Más elegido',
           description:
-            'Un análisis completo con visualizaciones, tablas y un reporte breve que explica los resultados.',
+            'Analizo tus datos según los objetivos de tu proyecto y te entrego gráficos, tablas y un reporte breve para entender los resultados.',
           price: 'Desde US$ 250',
           timeline: '5–10 días hábiles',
           features: [
-            'Revisión de datos y análisis acordado',
-            'Gráficos y tablas listos para usar',
-            'Reportes',
-            'Llamadas para presentar y conversar sobre los resultados',
+            'Revisión inicial de los datos y desarrollo del análisis acordado.',
+            'Gráficos y tablas en los formatos acordados.',
+            'Un reporte breve con métodos, resultados y limitaciones.',
+            'Reuniones de presentación y consulta según lo acordado.',
           ],
           ctaText: 'Ver entregables y ejemplo',
         },
@@ -732,14 +682,14 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           id: 'ongoing-support',
           title: 'Apoyo continuo',
           description:
-            'Acompañamiento mensual para revisar nuevos datos, actualizar análisis y mantener gráficos, reportes y documentación al día.',
-          price: 'Desde US$ 300 / mes',
-          timeline: 'Alcance mensual acordado',
+            'Acompañamiento mensual para revisar datos, desarrollar o actualizar análisis y mantener tus resultados organizados.',
+          price: 'Desde US$ 300/mes',
+          timeline: 'Plan de trabajo mensual acordado',
           features: [
-            'Tareas y prioridades mensuales acordadas',
-            'Revisión de nuevos datos y actualización de resultados',
-            'Actualización de gráficos, tablas y reportes',
-            'Seguimiento y documentación del trabajo',
+            'Apoyo con datos y análisis según las necesidades del proyecto.',
+            'Elaboración o actualización de gráficos, tablas y reportes.',
+            'Registro de avances, cambios y próximos pasos.',
+            'Espacios de consulta y revisión según lo acordado.',
           ],
           ctaText: 'Ver el acompañamiento',
         },
@@ -751,92 +701,59 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
     dataReview: {
       closeBtn: 'Cerrar',
       title: 'Revisión de datos',
-      lead: 'Entendé qué tenés, qué falta y cómo avanzar.',
-      description:
-        'Una revisión inicial para conocer tu proyecto, evaluar la estructura de tus datos y definir un próximo paso concreto.',
+      lead: 'Entendé cómo están tus datos y qué necesitás para avanzar.',
       price: 'Desde US$100 · 2–3 días hábiles',
-      forYouTitle: 'Este servicio es para vos si…',
-      forYou: [
-        'Tenés datos, pero no sabés por dónde empezar.',
-        'Necesitás saber qué información falta antes de analizar.',
-        'Querés definir una pregunta y un alcance antes de encargar un análisis completo.',
-      ],
-      receiveTitle: 'Qué recibirías',
-      receiveIntro: 'Un resumen de revisión con:',
-      receive: [
-        'Una descripción de los archivos y su organización.',
-        'Observaciones sobre estructura, identificación de muestras e información faltante.',
-        'Preguntas que conviene resolver antes del análisis.',
-        'Un plan de próximos pasos.',
-      ],
-      receiveNote:
-        'Incluye una llamada para entender el contexto de tu proyecto.',
-      sampleTitle: 'Una muestra del entregable',
+      sampleTitle: 'Una muestra de lo que recibís',
       sample: {
         title: 'Ejemplo de resumen de revisión',
-        materialLabel: 'Material recibido',
+        materialLabel: 'Archivos revisados',
         materialText:
-          'Tabla de mediciones y archivo con información de las muestras.',
-        clarifyLabel: 'Puntos por aclarar',
+          'Una tabla de mediciones y un archivo con información de las muestras.',
+        clarifyLabel: 'Información por completar',
         clarifyText:
-          'Unidades de medición, identificación de réplicas y criterios de exclusión.',
-        nextLabel: 'Próximo paso propuesto',
+          'Unidades de medición, identificación de las muestras y distinción entre mediciones repetidas y muestras independientes.',
+        nextLabel: 'Próximos pasos recomendados',
         nextText:
-          'Completar los metadatos y acordar la comparación principal antes de iniciar el análisis.',
+          'Completar la información de las muestras y revisar los objetivos del proyecto para proponer un enfoque de análisis.',
         disclaimer:
           'Ejemplo demostrativo. No corresponde a un proyecto de cliente.',
       },
       howTitle: 'Cómo trabajo',
       howSteps: [
-        'Me compartís los archivos y el contexto del proyecto por el canal acordado.',
-        'Revisamos la estructura de los datos y la pregunta que querés responder.',
-        'Recibís las observaciones y una propuesta de próximos pasos.',
+        'Me contás sobre tu proyecto y compartís los archivos por el canal acordado.',
+        'Reviso cómo están organizados los datos e identifico información faltante y puntos por aclarar.',
+        'Recibís el documento de revisión con observaciones y próximos pasos.',
       ],
       toolsTitle: 'Herramientas según el proyecto',
       tools: [
         {
           name: 'R',
-          text: 'exploración y revisión de tablas.',
+          text: 'Exploración inicial de tablas y revisión de su estructura.',
         },
         {
           name: 'Python',
-          text: 'revisión y preparación de archivos cuando sea necesario.',
+          text: 'Revisión de archivos y comprobaciones iniciales cuando corresponde.',
         },
       ],
-      scopeTitle: 'Alcance',
+      toolsNote:
+        'Las herramientas se eligen según los archivos y las necesidades del proyecto.',
+      scopeTitle: 'Qué incluye esta etapa',
       scopeText:
-        'Esta etapa se enfoca en revisar y planificar. La limpieza extensa, el análisis estadístico y la elaboración de figuras se presupuestan por separado.',
+        'Esta revisión incluye observaciones y recomendaciones. No incluye corregir o reorganizar los archivos, realizar el análisis estadístico ni elaborar gráficos. Si necesitás esos trabajos, se acuerdan y presupuestan por separado.',
       ctaBtn: 'Consultar por una revisión',
       ctaNote:
-        'Contame qué datos tenés y qué te gustaría resolver.',
+        'Contame sobre tu proyecto y los datos que tenés, aunque todavía no sepas por dónde empezar.',
     },
 
     analysisReport: {
       closeBtn: 'Cerrar',
       title: 'Análisis + Reporte',
-      lead: 'De una pregunta concreta a resultados que podés interpretar.',
-      description:
-        'Un análisis acordado según tu proyecto, con visualizaciones, tablas y un reporte breve que explica el enfoque, los resultados y sus limitaciones.',
+      lead: 'De tus datos a resultados claros y bien documentados.',
       price: 'Desde US$ 250 · 5–10 días hábiles',
-      forYouTitle: 'Este servicio es para vos si…',
-      forYou: [
-        'Ya tenés datos y una pregunta que querés responder.',
-        'Necesitás transformar resultados en gráficos y tablas claros.',
-        'Buscás una explicación de qué muestran los datos y qué no permiten concluir.',
-      ],
-      receiveTitle: 'Qué recibirías',
-      receive: [
-        'Un reporte breve con la pregunta, el enfoque utilizado, los resultados y sus limitaciones.',
-        'Gráficos y tablas en los formatos acordados.',
-        'Los archivos correspondientes a los entregables definidos para tu proyecto.',
-        'Llamadas acordadas para presentar los resultados y conversar sobre ellos.',
-      ],
-      receiveNote:
-        'Si necesitás código o archivos editables, su inclusión se define al acordar el alcance.',
       sample: {
         label: 'Vista ilustrativa de un reporte',
         title: 'Análisis de un ensayo biológico',
-        subtitle: 'Ejemplo de estructura y presentación de resultados.',
+        subtitle: 'Datos simulados para mostrar la estructura del entregable.',
         questionLabel: 'Pregunta',
         questionText:
           '¿Cómo cambia la respuesta medida entre las condiciones?',
@@ -847,130 +764,112 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
         conditionA: 'Condición A',
         conditionB: 'Condición B',
         figureAlt:
-          'Gráfico de puntos con observaciones individuales simuladas de dos condiciones. Cada punto representa una observación; la condición A se muestra con círculos y la condición B con cuadrados. Los valores de respuesta se distribuyen en un rango similar y se superponen. Es una ilustración, no un resultado experimental.',
+          'Gráfico de puntos con observaciones simuladas de dos condiciones. La condición A se muestra con círculos y la condición B con cuadrados. Los valores de respuesta se distribuyen en un rango similar y se superponen.',
         figureDescription:
-          'Ilustración con datos simulados. La condición A se representa con círculos y la condición B con cuadrados. Las observaciones de ambos grupos se superponen en el rango mostrado.',
+          'La condición A se representa con círculos y la condición B con cuadrados. Las observaciones de ambos grupos se superponen en el rango mostrado.',
         interpretationLabel: 'Interpretación',
         interpretationText:
-          'Las observaciones de ambas condiciones se distribuyen en rangos que se superponen. La figura permite comparar la posición y la dispersión de cada grupo; no se presenta una prueba estadística ni se afirma una diferencia entre las condiciones.',
-        methodsLabel: 'Métodos y limitaciones',
+          'Las mediciones de ambas condiciones se superponen. La figura permite explorar su distribución, pero por sí sola no permite concluir que exista una diferencia estadística.',
+        methodsLabel: 'Sobre este ejemplo',
         methodsText:
-          'La muestra ilustra cómo se organizarían la pregunta, la visualización y la interpretación. En un proyecto real, el enfoque, las pruebas y las limitaciones se definen según el diseño experimental, la cantidad de observaciones y la naturaleza de los datos.',
+          'Se muestran observaciones individuales de dos condiciones con datos simulados. No se realizó una prueba estadística. En un proyecto real, los métodos y las limitaciones se documentan según el diseño experimental y los datos disponibles.',
         disclaimer:
-          'Ejemplo ilustrativo con datos simulados. El enfoque y los entregables se definen según cada proyecto.',
+          'Ejemplo demostrativo. No corresponde a un proyecto de cliente.',
       },
       howTitle: 'Cómo trabajo',
       howSteps: [
         {
-          title: 'Definimos la pregunta',
-          text: 'Acordamos qué querés resolver, qué archivos se necesitan y cuáles serán los entregables.',
+          title: 'Conversamos sobre tu proyecto',
+          text: 'Revisamos tus objetivos, los datos disponibles y las necesidades de análisis. Acordamos el trabajo y los entregables.',
         },
         {
           title: 'Desarrollo el análisis',
-          text: 'Reviso los datos y trabajo sobre el enfoque acordado.',
+          text: 'Reviso los datos y realizo el trabajo acordado, documentando los métodos y las decisiones relevantes.',
         },
         {
           title: 'Revisamos los resultados',
-          text: 'Recibís el reporte, los gráficos y las tablas, y conversamos sobre su interpretación y los próximos pasos.',
+          text: 'Recibís el reporte, los gráficos y las tablas. Conversamos sobre su interpretación, las dudas que surjan y los próximos pasos.',
         },
       ],
       toolsTitle: 'Herramientas según el proyecto',
       tools: [
         {
           name: 'R',
-          text: 'análisis estadístico y visualización.',
+          text: 'Análisis estadístico y visualización.',
         },
         {
           name: 'Python',
-          text: 'preparación de datos y automatización cuando el proyecto lo requiere.',
+          text: 'Preparación de datos y automatización cuando el proyecto lo requiere.',
         },
         {
           name: 'Quarto',
-          text: 'elaboración de reportes que integran texto, código y resultados.',
+          text: 'Elaboración de reportes que integran texto, código y resultados.',
         },
       ],
       toolsNote:
-        'Las herramientas se seleccionan según los datos, la pregunta y el formato de entrega.',
-      scopeTitle: 'Alcance',
+        'Las herramientas se seleccionan según los datos, los objetivos del proyecto y el formato de entrega.',
+      scopeTitle: 'Qué se acuerda antes de comenzar',
       scopeText:
-        'El presupuesto final depende de la cantidad y el estado de los archivos, la complejidad del análisis y los entregables acordados. Las nuevas preguntas o ampliaciones se cotizan por separado.',
+        'Definimos el trabajo, los entregables, el presupuesto y el plazo según los datos disponibles y las necesidades del proyecto. Si después se incorporan nuevos análisis, datos o entregables que amplíen el trabajo acordado, revisamos el presupuesto antes de avanzar.',
       scopeNote:
-        'El plazo se confirma al definir el alcance y revisar el material disponible.',
+        'El plazo se confirma al revisar el material y definir el trabajo.',
       ctaBtn: 'Consultar por mi análisis',
       ctaNote:
-        'Contame qué querés investigar y en qué estado están tus datos.',
+        'Contame sobre tu proyecto y lo que necesitás analizar, aunque todavía no tengas todo definido.',
     },
 
     ongoingSupport: {
       closeBtn: 'Cerrar',
       title: 'Apoyo continuo',
       lead:
-        'Continuidad para tus datos, tus resultados y los próximos pasos.',
-      description:
-        'Un acompañamiento mensual para trabajar sobre las necesidades de datos que aparecen durante tu proyecto: revisar nuevos archivos, actualizar análisis y mantener los resultados y la documentación organizados.',
-      price: 'Desde US$ 300/mes · Alcance mensual acordado',
-      forYouTitle: 'Este servicio es para vos si…',
-      forYou: [
-        'Tu equipo genera nuevos datos de manera recurrente.',
-        'Necesitás actualizar análisis, figuras o reportes a medida que avanza el proyecto.',
-        'Buscás continuidad en el trabajo y un registro claro de lo realizado.',
-      ],
-      receiveTitle: 'Qué recibirías',
-      receive: [
-        'Prioridades y entregables definidos para cada período.',
-        'Revisión de nuevos archivos y actualización de los análisis acordados.',
-        'Gráficos, tablas o reportes actualizados según las tareas contratadas.',
-        'Un registro de avances, decisiones y pendientes.',
-        'Instancias de consulta y revisión según la modalidad acordada.',
-      ],
+        'Acompañamiento para avanzar con tus datos a medida que crece tu proyecto.',
+      price: 'Desde US$ 300/mes · Plan de trabajo mensual acordado',
       sample: {
         label: 'Vista ilustrativa del acompañamiento',
-        title: 'Así podría organizarse un período de trabajo',
+        title: 'Ejemplo de un plan mensual',
         intro:
-          'Las tareas se priorizan según las necesidades del proyecto y la capacidad de trabajo acordada.',
-        taskLabel: 'Tarea acordada',
-        outcomeLabel: 'Resultado previsto',
+          'Las tareas y los entregables se definen según las necesidades del proyecto.',
+        taskLabel: 'Tarea',
+        outcomeLabel: 'Entregable previsto',
         rows: [
           {
             task: 'Revisar nuevos archivos.',
             outcome:
-              'Observaciones sobre estructura e información pendiente.',
+              'Observaciones sobre la información disponible y lo que falta completar.',
           },
           {
             task: 'Actualizar un análisis y sus figuras.',
-            outcome: 'Resultados actualizados con los datos acordados.',
+            outcome: 'Resultados y gráficos actualizados.',
           },
           {
-            task: 'Actualizar el reporte y documentar cambios.',
+            task: 'Revisar el reporte y registrar cambios.',
             outcome:
-              'Una nueva versión del reporte y un resumen de las modificaciones realizadas.',
+              'Nueva versión del reporte y resumen de modificaciones.',
           },
         ],
         disclaimer:
-          'Ejemplo ilustrativo. No representa una cantidad fija de tareas incluida en el precio inicial.',
+          'Ejemplo demostrativo. Las tareas incluidas se definen en cada propuesta.',
       },
       howTitle: 'Cómo trabajo',
       howSteps: [
         {
-          title: 'Definimos las prioridades',
-          text: 'Acordamos las necesidades del período, los entregables y la capacidad de trabajo.',
+          title: 'Organizamos el trabajo',
+          text: 'Conversamos sobre tus necesidades y definimos las tareas, los entregables y las prioridades del mes.',
         },
         {
-          title: 'Avanzamos sobre las tareas',
-          text: 'Reviso nuevos datos, actualizo los resultados acordados y documento los cambios relevantes.',
+          title: 'Avanzamos con los datos',
+          text: 'Realizo las tareas acordadas y documento los cambios relevantes en los análisis y resultados.',
         },
         {
-          title: 'Revisamos la continuidad',
-          text: 'Conversamos sobre avances, pendientes y prioridades para el siguiente período.',
+          title: 'Revisamos los avances',
+          text: 'Conversamos sobre lo realizado, resolvemos dudas y ajustamos las prioridades para los próximos pasos.',
         },
       ],
-      toolsTitle: 'Herramientas para dar continuidad al trabajo',
-      toolsIntro:
-        'Selecciono las herramientas según las tareas acordadas, buscando mantener los análisis organizados, los resultados actualizables y los cambios documentados.',
+      toolsTitle: 'Herramientas según el proyecto',
       tools: [
         {
           name: 'R',
-          text: 'Análisis y actualización de gráficos y tablas.',
+          text: 'Análisis y elaboración o actualización de gráficos y tablas.',
         },
         {
           name: 'Python',
@@ -978,23 +877,23 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
         },
         {
           name: 'Quarto',
-          text: 'Reportes que integran métodos, código y resultados, y pueden volver a generarse al actualizar los datos.',
+          text: 'Reportes que integran métodos, código y resultados.',
         },
         {
           name: 'Git',
-          text: 'Registro de cambios en scripts y documentación para mantener un historial del trabajo.',
+          text: 'Historial de cambios en scripts y documentación.',
         },
       ],
       toolsNote:
-        'No todos los proyectos requieren todas las herramientas. La automatización, el código entregable y cualquier desarrollo adicional se definen en el alcance.',
-      scopeTitle: 'Alcance del acompañamiento',
+        'No todos los proyectos requieren todas las herramientas. La automatización, la entrega de código y los desarrollos adicionales se acuerdan antes de realizarlos.',
+      scopeTitle: 'Qué se acuerda antes de comenzar',
       scopeText:
-        'El servicio cubre las tareas y la capacidad de trabajo acordadas para cada período. No implica disponibilidad ilimitada ni incluye automáticamente todos los servicios de Aurum. Los proyectos nuevos, las ampliaciones importantes y los desarrollos adicionales se presupuestan por separado.',
+        'Definimos qué tareas y entregables incluye el plan mensual, cómo se organizarán las entregas y cuál será la modalidad de consulta y seguimiento.',
       scopeNote:
-        'Antes de comenzar, definimos las prioridades, los entregables y la modalidad de seguimiento.',
+        'Si surge trabajo que queda fuera del plan, te propongo el ajuste de presupuesto correspondiente antes de avanzar.',
       ctaBtn: 'Consultar por apoyo mensual',
       ctaNote:
-        'Contame qué tareas se repiten y qué tipo de acompañamiento necesitás.',
+        'Contame sobre tu proyecto y en qué necesitás acompañamiento.',
     },
 
     process: {

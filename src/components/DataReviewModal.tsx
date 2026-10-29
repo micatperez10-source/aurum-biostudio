@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import {
   ArrowRight,
   Calendar,
-  Check,
   Info,
   X,
 } from 'lucide-react';
@@ -98,124 +97,28 @@ export const DataReviewModal: React.FC<DataReviewModalProps> = ({
         </header>
 
         <div className="flex-1 overflow-y-auto overscroll-contain px-5 py-6 sm:px-7 sm:py-8">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-10">
-            <div className="min-w-0 space-y-8">
-              <p className="text-base leading-relaxed text-[#807D75] sm:text-lg">
-                {t.description}
-              </p>
+          <div className="space-y-8">
+            <section aria-labelledby="data-review-how">
+              <h3
+                id="data-review-how"
+                className="font-serif text-2xl font-bold text-[#3B5745]"
+              >
+                {t.howTitle}
+              </h3>
 
-              <section aria-labelledby="data-review-for-you">
-                <h3
-                  id="data-review-for-you"
-                  className="font-serif text-2xl font-bold text-[#3B5745]"
-                >
-                  {t.forYouTitle}
-                </h3>
+              <ol className="mt-3 space-y-3 text-base font-medium leading-relaxed text-[#807D75]">
+                {t.howSteps.map((step, index) => (
+                  <li key={step} className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#255643] text-xs font-bold text-[#255643]">
+                      {index + 1}
+                    </span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
+            </section>
 
-                <ul className="mt-3 space-y-3 text-base font-medium leading-relaxed text-[#807D75]">
-                  {t.forYou.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <Check
-                        className="mt-1 h-4 w-4 shrink-0 text-[#255643]"
-                        aria-hidden="true"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-
-              <section aria-labelledby="data-review-receive">
-                <h3
-                  id="data-review-receive"
-                  className="font-serif text-2xl font-bold text-[#3B5745]"
-                >
-                  {t.receiveTitle}
-                </h3>
-
-                <p className="mt-2 text-base leading-relaxed text-[#807D75]">
-                  {t.receiveIntro}
-                </p>
-
-                <ul className="mt-3 space-y-3 text-base font-medium leading-relaxed text-[#807D75]">
-                  {t.receive.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <Check
-                        className="mt-1 h-4 w-4 shrink-0 text-[#255643]"
-                        aria-hidden="true"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <p className="mt-4 border-l-2 border-[#BFA690] pl-4 font-serif text-base font-normal italic leading-relaxed text-[#958965]">
-                  {t.receiveNote}
-                </p>
-              </section>
-
-              <section aria-labelledby="data-review-how">
-                <h3
-                  id="data-review-how"
-                  className="font-serif text-2xl font-bold text-[#3B5745]"
-                >
-                  {t.howTitle}
-                </h3>
-
-                <ol className="mt-3 space-y-3 text-base font-medium leading-relaxed text-[#807D75]">
-                  {t.howSteps.map((step, index) => (
-                    <li key={step} className="flex items-start gap-3">
-                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#255643] text-xs font-bold text-[#255643]">
-                        {index + 1}
-                      </span>
-                      <span>{step}</span>
-                    </li>
-                  ))}
-                </ol>
-              </section>
-
-              <section aria-labelledby="data-review-tools">
-                <h3
-                  id="data-review-tools"
-                  className="font-serif text-2xl font-bold text-[#3B5745]"
-                >
-                  {t.toolsTitle}
-                </h3>
-
-                <ul className="mt-3 space-y-3 text-base leading-relaxed text-[#807D75]">
-                  {t.tools.map((tool) => (
-                    <li
-                      key={tool.name}
-                      className="flex flex-wrap items-baseline gap-x-2 gap-y-1"
-                    >
-                      <span className="rounded-full border border-[#E6E4DF] bg-[#E6E4DF]/60 px-2.5 py-0.5 font-mono text-xs font-semibold text-[#255643]">
-                        {tool.name}
-                      </span>
-                      <span className="font-medium">{tool.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-
-              <section aria-labelledby="data-review-scope">
-                <h3
-                  id="data-review-scope"
-                  className="font-serif text-2xl font-bold text-[#3B5745]"
-                >
-                  {t.scopeTitle}
-                </h3>
-
-                <div className="mt-3 flex items-start gap-2.5 rounded-xl border border-[#E6E4DF] bg-[#E6E4DF]/40 p-4 text-sm font-medium leading-relaxed text-[#827D75] sm:text-base">
-                  <Info
-                    className="mt-0.5 h-4 w-4 shrink-0 text-[#255643]"
-                    aria-hidden="true"
-                  />
-                  <span>{t.scopeText}</span>
-                </div>
-              </section>
-            </div>
-
-            <div className="min-w-0">
+            <div className="min-w-0 max-w-3xl">
               <h3 className="font-serif text-2xl font-bold text-[#3B5745]">
                 {t.sampleTitle}
               </h3>
@@ -268,6 +171,50 @@ export const DataReviewModal: React.FC<DataReviewModalProps> = ({
                 </figcaption>
               </figure>
             </div>
+
+            <section aria-labelledby="data-review-tools">
+              <h3
+                id="data-review-tools"
+                className="font-serif text-2xl font-bold text-[#3B5745]"
+              >
+                {t.toolsTitle}
+              </h3>
+
+              <ul className="mt-3 space-y-3 text-base leading-relaxed text-[#807D75]">
+                {t.tools.map((tool) => (
+                  <li
+                    key={tool.name}
+                    className="flex flex-wrap items-baseline gap-x-2 gap-y-1"
+                  >
+                    <span className="rounded-full border border-[#E6E4DF] bg-[#E6E4DF]/60 px-2.5 py-0.5 font-mono text-xs font-semibold text-[#255643]">
+                      {tool.name}
+                    </span>
+                    <span className="font-medium">{tool.text}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="mt-3 text-sm leading-relaxed text-[#827D75] sm:text-base">
+                {t.toolsNote}
+              </p>
+            </section>
+
+            <section aria-labelledby="data-review-scope">
+              <h3
+                id="data-review-scope"
+                className="font-serif text-2xl font-bold text-[#3B5745]"
+              >
+                {t.scopeTitle}
+              </h3>
+
+              <div className="mt-3 flex items-start gap-2.5 rounded-xl border border-[#E6E4DF] bg-[#E6E4DF]/40 p-4 text-sm font-medium leading-relaxed text-[#827D75] sm:text-base">
+                <Info
+                  className="mt-0.5 h-4 w-4 shrink-0 text-[#255643]"
+                  aria-hidden="true"
+                />
+                <span>{t.scopeText}</span>
+              </div>
+            </section>
           </div>
         </div>
 
