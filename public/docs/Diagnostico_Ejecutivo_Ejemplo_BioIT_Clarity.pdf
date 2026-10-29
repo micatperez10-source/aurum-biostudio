@@ -12,7 +12,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 5 0 obj
-<< /Length 2078 >>
+<< /Length 2071 >>
 stream
 BT /F1 18 Tf 50 770 Td (Informe de Analisis de Datos - BioIT Clarity \(Muestra\)) Tj ET
 BT /F1 11 Tf 50 748 Td (Ejemplo de reporte sintetico en lenguaje claro para laboratorio) Tj ET
@@ -34,7 +34,7 @@ BT /F1 12 Tf 50 481 Td (4. Pasos Sugeridos y Documentacion Reproducible) Tj ET
 BT /F1 10 Tf 55 463 Td (- Scripts en Python / R adjuntos con instrucciones claras para replicar el analisis.) Tj ET
 BT /F1 10 Tf 55 448 Td (- Recomendacion de validar los 3 biomarcadores prioritarios en la proxima tanda experimental.) Tj ET
 0.2 w 50 60 m 545 60 l S
-BT /F1 8 Tf 50 48 Td (BioIT Clarity - Procesos Claros para Biotecnología | Contacto: micaela.bioinformatics@gmail.com) Tj ET
+BT /F1 8 Tf 50 48 Td (BioIT Clarity - Procesos Claros para Biotecnología | Contacto: aurum.biostudio@gmail.com) Tj ET
 endstream
 endobj
 xref
@@ -48,5 +48,5 @@ xref
 trailer
 << /Size 6 /Root 1 0 R >>
 startxref
-2446
+2439
 %%EOF

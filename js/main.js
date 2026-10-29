@@ -139,7 +139,7 @@ const TRANSLATIONS = {
       text: "Book a free 20-minute call. Tell me what data you have and what you need, and I will tell you honestly whether I can help.",
       button: "Book a free call",
       emailLabel: "Or send an email directly to:",
-      email: "micaela.bioinformatics@gmail.com"
+      email: "aurum.biostudio@gmail.com"
     },
     footer: {
       copyright: "© 2026 BioIT Clarity. All rights reserved."
@@ -281,7 +281,7 @@ const TRANSLATIONS = {
       text: "Agendá una llamada gratuita de 20 minutos. Contame qué datos tenés y qué necesitás, y te voy a decir con honestidad si te puedo ayudar.",
       button: "Agendá una llamada gratuita",
       emailLabel: "O escribime directamente por correo a:",
-      email: "micaela.bioinformatics@gmail.com"
+      email: "aurum.biostudio@gmail.com"
     },
     footer: {
       copyright: "© 2026 BioIT Clarity. Todos los derechos reservados."

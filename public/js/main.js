@@ -140,7 +140,7 @@ const TRANSLATIONS = {
       button: "Book a free call",
       note: "No pressure. If I'm not the right fit, I'll try to point you in the right direction.",
       emailLabel: "Or send an email directly to:",
-      email: "micaela.bioinformatics@gmail.com"
+      email: "aurum.biostudio@gmail.com"
     },
     footer: {
       copyright: "© 2026 BioIT Clarity. All rights reserved."
@@ -282,7 +282,7 @@ const TRANSLATIONS = {
       button: "Agendá una llamada gratuita",
       note: "Sin presión. Si no soy la persona indicada, voy a intentar orientarte en la dirección correcta.",
       emailLabel: "O escribime directamente por correo a:",
-      email: "micaela.bioinformatics@gmail.com"
+      email: "aurum.biostudio@gmail.com"
     },
     footer: {
       copyright: "© 2026 BioIT Clarity. Todos los derechos reservados."
