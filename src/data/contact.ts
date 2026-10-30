@@ -4,6 +4,8 @@ export const CONTACT_EMAIL = 'aurum.biostudio@gmail.com';
 
 export const CALENDAR_URL = 'https://calendar.app.google/WYif7SfN72mDywPE7';
 
+export const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mdeedrnk';
+
 const buildMailto = (email: string, subject: string, body: string) =>
   `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 

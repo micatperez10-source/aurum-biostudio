@@ -462,12 +462,23 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       formTitle: 'Quick inquiry',
       nameLabel: 'Name or institution',
       namePlaceholder: 'Your name or lab/company name',
+      emailFieldLabel: 'Your email',
+      emailPlaceholder: 'you@example.com',
       messageLabel: 'What project or analysis do you need help with?',
       messagePlaceholder:
         'Briefly describe your project, research question, available data, or deadline.',
       sendBtn: 'Send inquiry',
-      securityNote:
-        'Your project information is confidential and used only to assess whether the service is a good fit.',
+      sendingBtn: 'Sending…',
+      successMessage: 'Your inquiry was sent. Thank you for reaching out.',
+      errorMessage:
+        'We couldn’t send your inquiry. Please try again or email aurum.biostudio@gmail.com.',
+      uncertainMessage:
+        'We couldn’t confirm whether your inquiry was sent. Please email aurum.biostudio@gmail.com to make sure.',
+      emailValidationError: 'Enter a valid email address.',
+      messageValidationError: 'Write a message.',
+      privacyNote:
+        'Use this form for a general description. Do not include patients’ personal data, experimental files, or confidential information.',
+      formspreeNote: 'Inquiries are processed through Formspree.',
       serviceInterestLabel: 'Service of interest',
     },
 
@@ -1040,12 +1051,24 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       formTitle: 'Consulta rápida',
       nameLabel: 'Nombre o institución',
       namePlaceholder: 'Tu nombre o el de tu laboratorio/empresa',
+      emailFieldLabel: 'Tu email',
+      emailPlaceholder: 'tu@ejemplo.com',
       messageLabel: '¿En qué proyecto o análisis necesitás ayuda?',
       messagePlaceholder:
         'Describí brevemente tu proyecto, pregunta de investigación, datos disponibles o plazo.',
       sendBtn: 'Enviar consulta',
-      securityNote:
-        'La información de tu proyecto es confidencial y se utiliza únicamente para evaluar si el servicio encaja con lo que necesitás.',
+      sendingBtn: 'Enviando…',
+      successMessage:
+        'Tu consulta fue enviada. Gracias por contactarme.',
+      errorMessage:
+        'No pudimos enviar tu consulta. Intentá nuevamente o escribime a aurum.biostudio@gmail.com.',
+      uncertainMessage:
+        'No pudimos confirmar si tu consulta se envió. Escribime a aurum.biostudio@gmail.com para asegurarte.',
+      emailValidationError: 'Ingresá un email válido.',
+      messageValidationError: 'Escribí un mensaje.',
+      privacyNote:
+        'Usá este formulario para una descripción general. No incluyas datos personales de pacientes, archivos experimentales ni información confidencial.',
+      formspreeNote: 'Las consultas se procesan mediante Formspree.',
       serviceInterestLabel: 'Servicio de interés',
     },
 

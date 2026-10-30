@@ -1,19 +1,23 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   X,
-  Mail,
   Copy,
   Check,
   Send,
   ShieldCheck,
   Sparkles,
   Calendar,
+  AlertCircle,
+  CheckCircle2,
+  Info,
+  Loader2,
 } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
 import {
   CONTACT_EMAIL,
   CALENDAR_URL,
+  FORMSPREE_ENDPOINT,
   buildPlainMailto,
 } from '../data/contact';
 import { useModalA11y } from '../hooks/useModalA11y';
@@ -25,6 +29,20 @@ interface ContactModalProps {
   serviceInterestId?: string | null;
 }
 
+type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error' | 'uncertain';
+
+interface FieldErrors {
+  email?: string;
+  message?: string;
+}
+
+interface FormspreeResponse {
+  ok?: boolean;
+  errors?: Array<{ field?: string }>;
+}
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export const ContactModal: React.FC<ContactModalProps> = ({
   isOpen,
   onClose,
@@ -33,9 +51,18 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 }) => {
   const [copied, setCopied] = useState(false);
   const [nameCompany, setNameCompany] = useState('');
+  const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [status, setStatus] = useState<SubmitStatus>('idle');
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  const [announcement, setAnnouncement] = useState('');
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const emailInputRef = useRef<HTMLInputElement>(null);
+  const messageInputRef = useRef<HTMLTextAreaElement>(null);
+  const feedbackRef = useRef<HTMLDivElement>(null);
+  const requestIdRef = useRef(0);
 
   const translations = TRANSLATIONS[lang];
   const t = translations.contactModal;
@@ -46,11 +73,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
         (pkg) => pkg.id === serviceInterestId,
       )?.title
     : undefined;
-  const serviceLine = serviceName
-    ? `${
-        lang === 'es' ? 'Servicio de interés' : 'Service of interest'
-      }: ${serviceName}\n\n`
-    : '';
+  const isSubmitting = status === 'submitting';
 
   useModalA11y({
     isOpen,
@@ -58,6 +81,31 @@ export const ContactModal: React.FC<ContactModalProps> = ({
     dialogRef,
     initialFocusRef: closeButtonRef,
   });
+
+  useEffect(() => {
+    requestIdRef.current += 1;
+    setStatus('idle');
+    setFieldErrors({});
+    setAnnouncement('');
+    setCopied(false);
+  }, [isOpen]);
+
+  useEffect(
+    () => () => {
+      requestIdRef.current += 1;
+    },
+    [],
+  );
+
+  useEffect(() => {
+    if (
+      status === 'success' ||
+      status === 'error' ||
+      status === 'uncertain'
+    ) {
+      feedbackRef.current?.focus();
+    }
+  }, [status]);
 
   if (!isOpen) {
     return null;
@@ -73,51 +121,129 @@ export const ContactModal: React.FC<ContactModalProps> = ({
     }
   };
 
-  const handleSendMail = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const subject = encodeURIComponent(
-      lang === 'es'
-        ? `Consulta sobre análisis de datos - Aurum BioStudio (${nameCompany || 'Consulta'})`
-        : `Biological data analysis inquiry - Aurum BioStudio (${nameCompany || 'Inquiry'})`,
+    if (isSubmitting) {
+      return;
+    }
+
+    const trimmedName = nameCompany.trim();
+    const trimmedEmail = email.trim();
+    const trimmedMessage = message.trim();
+
+    const nextErrors: FieldErrors = {};
+
+    if (!EMAIL_PATTERN.test(trimmedEmail)) {
+      nextErrors.email = t.emailValidationError;
+    }
+
+    if (!trimmedMessage) {
+      nextErrors.message = t.messageValidationError;
+    }
+
+    if (nextErrors.email || nextErrors.message) {
+      setFieldErrors(nextErrors);
+      setStatus('idle');
+      setAnnouncement(
+        [nextErrors.email, nextErrors.message].filter(Boolean).join(' '),
+      );
+
+      if (nextErrors.email) {
+        emailInputRef.current?.focus();
+      } else if (nextErrors.message) {
+        messageInputRef.current?.focus();
+      }
+
+      return;
+    }
+
+    setFieldErrors({});
+    setStatus('submitting');
+    setAnnouncement(t.sendingBtn);
+
+    const requestId = requestIdRef.current;
+
+    const formData = new FormData();
+    formData.append('name', trimmedName);
+    formData.append('email', trimmedEmail);
+    formData.append('message', trimmedMessage);
+
+    if (serviceName) {
+      formData.append('service', serviceName);
+    }
+
+    const honeypot = formRef.current?.querySelector<HTMLInputElement>(
+      'input[name="_gotcha"]',
     );
+    formData.append('_gotcha', honeypot?.value ?? '');
 
-    const bodyText =
-      lang === 'es'
-        ? `Hola Micaela / Aurum BioStudio,
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
 
-${serviceLine}Nombre o institución: ${nameCompany || '[Nombre o institución]'}
+      if (requestId !== requestIdRef.current) {
+        return;
+      }
 
-Necesito ayuda con los siguientes datos o análisis:
-${
-  message ||
-  'Me gustaría agendar una llamada de 20 minutos para conversar sobre mi proyecto.'
-}
+      let result: FormspreeResponse | null = null;
 
-Para reservar el horario de la llamada, elegí día y hora disponible en el calendario:
-${CALENDAR_URL}
+      try {
+        result = (await response.json()) as FormspreeResponse;
+      } catch {
+        result = null;
+      }
 
-Saludos,
-${nameCompany || '[Nombre]'}`
-        : `Hello Micaela / Aurum BioStudio,
+      if (requestId !== requestIdRef.current) {
+        return;
+      }
 
-${serviceLine}Name or institution: ${nameCompany || '[Name or institution]'}
+      if (response.ok && result?.ok === true) {
+        setNameCompany('');
+        setEmail('');
+        setMessage('');
+        setFieldErrors({});
+        setStatus('success');
+        setAnnouncement(t.successMessage);
+        return;
+      }
 
-I need help with the following data or analysis:
-${
-  message ||
-  'I would like to schedule a 20-minute call to discuss my project.'
-}
+      if (!response.ok) {
+        const serverErrors: FieldErrors = {};
 
-To reserve a call slot, pick an available date and time in the calendar:
-${CALENDAR_URL}
+        if (Array.isArray(result?.errors)) {
+          result.errors.forEach((error) => {
+            if (error.field === 'email') {
+              serverErrors.email = t.emailValidationError;
+            }
 
-Best regards,
-${nameCompany || '[Name]'}`;
+            if (error.field === 'message') {
+              serverErrors.message = t.messageValidationError;
+            }
+          });
+        }
 
-    const body = encodeURIComponent(bodyText);
+        setFieldErrors(serverErrors);
+        setStatus('error');
+        setAnnouncement(t.errorMessage);
+        return;
+      }
 
-    window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+      setStatus('uncertain');
+      setAnnouncement(t.uncertainMessage);
+    } catch {
+      if (requestId !== requestIdRef.current) {
+        return;
+      }
+
+      setStatus('error');
+      setAnnouncement(t.errorMessage);
+    }
   };
 
   return (
@@ -144,6 +270,15 @@ ${nameCompany || '[Name]'}`;
         >
           <X className="h-6 w-6" aria-hidden="true" />
         </button>
+
+        <div
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          className="sr-only"
+        >
+          {announcement}
+        </div>
 
         <div className="pr-10">
           <div className="font-serif mb-3 inline-flex items-center gap-2 rounded-full border border-[#255643] bg-[#255643]/40 px-3 py-1.5 text-sm font-bold uppercase tracking-wider text-[#255643]">
@@ -216,62 +351,207 @@ ${nameCompany || '[Name]'}`;
           </a>
         </div>
 
-        <form onSubmit={handleSendMail} className="mt-6 space-y-4">
-          <span className="block text-sm font-bold uppercase tracking-wider text-[#827D75]">
-            {t.formTitle}
-          </span>
+        {status === 'success' ? (
+          <div
+            ref={feedbackRef}
+            tabIndex={-1}
+            role="group"
+            aria-labelledby="contact-success-message"
+            className="mt-6 flex items-start gap-3 rounded-xl border border-[#255643]/40 bg-[#E6E4DF]/60 p-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#255643] focus-visible:ring-offset-2 focus-visible:ring-offset-[#DDD6C9]"
+          >
+            <CheckCircle2
+              className="mt-0.5 h-5 w-5 shrink-0 text-[#255643]"
+              aria-hidden="true"
+            />
 
-          <div>
-            <label
-              htmlFor="modal-name-company"
-              className="mb-1.5 block text-base font-semibold text-[#807D75]"
+            <p
+              id="contact-success-message"
+              className="text-base font-semibold leading-relaxed text-[#3B5745]"
             >
-              {t.nameLabel}
-            </label>
+              {t.successMessage}
+            </p>
+          </div>
+        ) : (
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            noValidate
+            className="mt-6 space-y-4"
+          >
+            <span className="block text-sm font-bold uppercase tracking-wider text-[#827D75]">
+              {t.formTitle}
+            </span>
 
             <input
-              id="modal-name-company"
               type="text"
-              value={nameCompany}
-              onChange={(event) => setNameCompany(event.target.value)}
-              placeholder={t.namePlaceholder}
-              className="w-full rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-3.5 py-3 text-base text-[#807D75] placeholder-[#827D75] transition-colors focus:border-[#255643] focus:bg-[#DDD6C9] focus:outline-none"
+              name="_gotcha"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="pointer-events-none absolute left-0 top-0 h-0 w-0 overflow-hidden opacity-0"
             />
-          </div>
 
-          <div>
-            <label
-              htmlFor="modal-message"
-              className="mb-1.5 block text-base font-semibold text-[#807D75]"
+            <div>
+              <label
+                htmlFor="modal-name-company"
+                className="mb-1.5 block text-base font-semibold text-[#807D75]"
+              >
+                {t.nameLabel}
+              </label>
+
+              <input
+                id="modal-name-company"
+                name="name"
+                type="text"
+                autoComplete="name"
+                value={nameCompany}
+                onChange={(event) => setNameCompany(event.target.value)}
+                placeholder={t.namePlaceholder}
+                className="w-full rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-3.5 py-3 text-base text-[#807D75] placeholder-[#827D75] transition-colors focus:border-[#255643] focus:bg-[#DDD6C9] focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="modal-email"
+                className="mb-1.5 block text-base font-semibold text-[#807D75]"
+              >
+                {t.emailFieldLabel}
+                <span className="ml-0.5 text-[#958965]" aria-hidden="true">
+                  *
+                </span>
+              </label>
+
+              <input
+                ref={emailInputRef}
+                id="modal-email"
+                name="email"
+                type="email"
+                inputMode="email"
+                autoComplete="email"
+                required
+                aria-required="true"
+                aria-invalid={fieldErrors.email ? true : undefined}
+                aria-describedby={
+                  fieldErrors.email ? 'contact-email-error' : undefined
+                }
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                placeholder={t.emailPlaceholder}
+                className="w-full rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-3.5 py-3 text-base text-[#807D75] placeholder-[#827D75] transition-colors focus:border-[#255643] focus:bg-[#DDD6C9] focus:outline-none"
+              />
+
+              {fieldErrors.email && (
+                <p
+                  id="contact-email-error"
+                  className="mt-1.5 flex items-start gap-1.5 text-sm font-medium text-[#8B3A2E]"
+                >
+                  <AlertCircle
+                    className="mt-0.5 h-4 w-4 shrink-0"
+                    aria-hidden="true"
+                  />
+                  <span>{fieldErrors.email}</span>
+                </p>
+              )}
+            </div>
+
+            <div>
+              <label
+                htmlFor="modal-message"
+                className="mb-1.5 block text-base font-semibold text-[#807D75]"
+              >
+                {t.messageLabel}
+                <span className="ml-0.5 text-[#958965]" aria-hidden="true">
+                  *
+                </span>
+              </label>
+
+              <textarea
+                ref={messageInputRef}
+                id="modal-message"
+                name="message"
+                rows={5}
+                required
+                aria-required="true"
+                aria-invalid={fieldErrors.message ? true : undefined}
+                aria-describedby={
+                  fieldErrors.message ? 'contact-message-error' : undefined
+                }
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                placeholder={t.messagePlaceholder}
+                className="w-full resize-y rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-3.5 py-3 text-base leading-relaxed text-[#807D75] placeholder-[#827D75] transition-colors focus:border-[#255643] focus:bg-[#DDD6C9] focus:outline-none"
+              />
+
+              {fieldErrors.message && (
+                <p
+                  id="contact-message-error"
+                  className="mt-1.5 flex items-start gap-1.5 text-sm font-medium text-[#8B3A2E]"
+                >
+                  <AlertCircle
+                    className="mt-0.5 h-4 w-4 shrink-0"
+                    aria-hidden="true"
+                  />
+                  <span>{fieldErrors.message}</span>
+                </p>
+              )}
+            </div>
+
+            {(status === 'error' || status === 'uncertain') && (
+              <div
+                ref={feedbackRef}
+                tabIndex={-1}
+                className="flex items-start gap-2.5 rounded-xl border border-[#8B3A2E]/40 bg-[#8B3A2E]/5 p-4 text-sm font-medium leading-relaxed text-[#8B3A2E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B3A2E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#DDD6C9]"
+              >
+                <AlertCircle
+                  className="mt-0.5 h-4 w-4 shrink-0"
+                  aria-hidden="true"
+                />
+
+                <p>
+                  {status === 'uncertain'
+                    ? t.uncertainMessage
+                    : t.errorMessage}
+                </p>
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              aria-disabled={isSubmitting}
+              className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#255643] px-4 py-3.5 text-base font-bold text-white shadow-sm transition-colors hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:brightness-100"
             >
-              {t.messageLabel}
-            </label>
+              {isSubmitting ? (
+                <Loader2
+                  className="h-5 w-5 animate-spin"
+                  aria-hidden="true"
+                />
+              ) : (
+                <Send className="h-5 w-5" aria-hidden="true" />
+              )}
 
-            <textarea
-              id="modal-message"
-              rows={5}
-              value={message}
-              onChange={(event) => setMessage(event.target.value)}
-              placeholder={t.messagePlaceholder}
-              className="w-full resize-y rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-3.5 py-3 text-base leading-relaxed text-[#807D75] placeholder-[#827D75] transition-colors focus:border-[#255643] focus:bg-[#DDD6C9] focus:outline-none"
+              <span>{isSubmitting ? t.sendingBtn : t.sendBtn}</span>
+            </button>
+          </form>
+        )}
+
+        <div className="mt-5 space-y-2 border-t border-[#E6E4DF] pt-4 text-sm leading-relaxed text-[#827D75]">
+          <p className="flex items-start gap-2.5">
+            <ShieldCheck
+              className="mt-0.5 h-4 w-4 shrink-0 text-[#255643]"
+              aria-hidden="true"
             />
-          </div>
+            <span>{t.privacyNote}</span>
+          </p>
 
-          <button
-            type="submit"
-            className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#255643] px-4 py-3.5 text-base font-bold text-white shadow-sm transition-colors hover:brightness-110"
-          >
-            <Send className="h-5 w-5" aria-hidden="true" />
-            <span>{t.sendBtn}</span>
-          </button>
-        </form>
-
-        <div className="mt-5 flex items-start gap-2.5 border-t border-[#E6E4DF] pt-4 text-sm leading-relaxed text-[#827D75]">
-          <ShieldCheck
-            className="mt-0.5 h-5 w-5 shrink-0 text-[#255643]"
-            aria-hidden="true"
-          />
-          <span>{t.securityNote}</span>
+          <p className="flex items-start gap-2.5">
+            <Info
+              className="mt-0.5 h-4 w-4 shrink-0 text-[#255643]"
+              aria-hidden="true"
+            />
+            <span>{t.formspreeNote}</span>
+          </p>
         </div>
       </div>
     </div>

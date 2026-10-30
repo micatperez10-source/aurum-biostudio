@@ -122,10 +122,19 @@ export interface ContactModalContent {
   formTitle: string;
   nameLabel: string;
   namePlaceholder: string;
+  emailFieldLabel: string;
+  emailPlaceholder: string;
   messageLabel: string;
   messagePlaceholder: string;
   sendBtn: string;
-  securityNote: string;
+  sendingBtn: string;
+  successMessage: string;
+  errorMessage: string;
+  uncertainMessage: string;
+  emailValidationError: string;
+  messageValidationError: string;
+  privacyNote: string;
+  formspreeNote: string;
   serviceInterestLabel: string;
 }
 
