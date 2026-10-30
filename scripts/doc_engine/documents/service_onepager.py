@@ -64,9 +64,10 @@ class ServiceOnePagerDocument(BaseDocument):
             Section.create(
                 "Contacto Directo y Confidencialidad",
                 [
-                    "Email: micaela.bioinformatics@gmail.com",
-                    "Confidencialidad: Modelo de NDA mutuo disponible previo al envio de archivos.",
-                    "Agenda tu llamada inicial gratuita de 20 minutos para conversar sobre tus datos."
+                    "Email: aurum.biostudio@gmail.com",
+                    "Agenda tu llamada inicial gratuita de 20 minutos en el calendario:",
+                    "https://calendar.app.google/WYif7SfN72mDywPE7",
+                    "Confidencialidad: Modelo de NDA mutuo disponible previo al envio de archivos."
                 ]
             )
         ]

@@ -27,7 +27,7 @@ class PdfRenderer(IDocumentRenderer):
     PAGE_WIDTH = 595
     PAGE_HEIGHT = 842
 
-    def __init__(self, contact_email: str = "micaela.bioinformatics@gmail.com"):
+    def __init__(self, contact_email: str = "aurum.biostudio@gmail.com"):
         self.contact_email = contact_email
 
     def _sanitize(self, text: str) -> str:

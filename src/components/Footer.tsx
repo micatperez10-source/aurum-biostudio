@@ -1,7 +1,8 @@
 import React from 'react';
-import { Dna, Mail, ArrowUp } from 'lucide-react';
+import { Dna, Mail } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../data/translations';
+import { buildPlainMailto } from '../data/contact';
 
 interface FooterProps {
   lang: Language;
@@ -19,9 +20,6 @@ export const Footer: React.FC<FooterProps> = ({
 
   const resourcesLabel =
     lang === 'en' ? 'Resources' : 'Recursos';
-
-  const backToTopLabel =
-    lang === 'en' ? 'Back to top' : 'Volver arriba';
 
   const privacyUnavailableLabel =
     lang === 'en'
@@ -53,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({
 
   return (
     <footer className="border-t border-[#E6E4DF] bg-[#DDD6C9] font-sans text-sm text-[#827D75]">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 pt-12 pb-24 sm:px-6 sm:pt-16 sm:pb-16 lg:px-8">
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4 md:col-span-2">
             <button
@@ -85,7 +83,7 @@ export const Footer: React.FC<FooterProps> = ({
               />
 
               <a
-                href={`mailto:${t.contact.email}`}
+                href={buildPlainMailto(lang)}
                 className="text-[#807D75] hover:underline"
               >
                 {t.contact.email}
@@ -194,19 +192,6 @@ export const Footer: React.FC<FooterProps> = ({
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-[#E6E4DF] pt-8 text-xs sm:flex-row">
           <p>{t.footer.copyright}</p>
-
-          <button
-            type="button"
-            onClick={scrollToTop}
-            className="font-serif inline-flex cursor-pointer items-center gap-1.5 text-xs text-[#827D75] transition-colors hover:text-[#255643]"
-          >
-            <span>{backToTopLabel}</span>
-
-            <ArrowUp
-              className="h-3.5 w-3.5"
-              aria-hidden="true"
-            />
-          </button>
         </div>
       </div>
     </footer>

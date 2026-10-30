@@ -24,7 +24,7 @@ def main():
     print(f"Directorio de destino: {root_dir}\n")
 
     folder_manager = FolderManager(root_docs_dir=root_dir)
-    renderer = PdfRenderer(contact_email="micaela.bioinformatics@gmail.com")
+    renderer = PdfRenderer(contact_email="aurum.biostudio@gmail.com")
     orchestrator = DocumentOrchestrator(folder_manager=folder_manager, renderer=renderer)
 
     manifest = orchestrator.execute_build()

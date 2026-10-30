@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  ArrowRight,
   Check,
   Sparkles,
   Info,
@@ -9,10 +10,16 @@ import { TRANSLATIONS } from '../data/translations';
 
 interface ServicesSectionProps {
   lang: Language;
+  onOpenDataReview: () => void;
+  onOpenAnalysisReport: () => void;
+  onOpenOngoingSupport: () => void;
 }
 
 export const ServicesSection: React.FC<ServicesSectionProps> = ({
   lang,
+  onOpenDataReview,
+  onOpenAnalysisReport,
+  onOpenOngoingSupport,
 }) => {
   const t = TRANSLATIONS[lang];
 
@@ -46,6 +53,29 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
         <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 items-stretch gap-6 sm:mt-16 md:grid-cols-3">
           {t.services.packages.map((pkg) => {
             const isFeatured = Boolean(pkg.badge);
+            const isDataReview = pkg.id === 'data-review';
+            const isAnalysisReport = pkg.id === 'analysis-report';
+            const isOngoingSupport = pkg.id === 'ongoing-support';
+
+            const modalTrigger = isDataReview
+              ? {
+                  id: 'open-data-review-btn',
+                  controls: 'data-review-modal',
+                  onClick: onOpenDataReview,
+                }
+              : isAnalysisReport
+                ? {
+                    id: 'open-analysis-report-btn',
+                    controls: 'analysis-report-modal',
+                    onClick: onOpenAnalysisReport,
+                  }
+                : isOngoingSupport
+                  ? {
+                      id: 'open-ongoing-support-btn',
+                      controls: 'ongoing-support-modal',
+                      onClick: onOpenOngoingSupport,
+                    }
+                  : null;
 
             return (
               <article
@@ -114,6 +144,25 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                       ))}
                     </ul>
                   </div>
+
+                  {modalTrigger && pkg.ctaText && (
+                    <div className="mt-auto pt-6">
+                      <button
+                        id={modalTrigger.id}
+                        type="button"
+                        onClick={modalTrigger.onClick}
+                        aria-haspopup="dialog"
+                        aria-controls={modalTrigger.controls}
+                        className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#255643] px-4 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:brightness-110"
+                      >
+                        <span>{pkg.ctaText}</span>
+                        <ArrowRight
+                          className="h-4 w-4"
+                          aria-hidden="true"
+                        />
+                      </button>
+                    </div>
+                  )}
                 </div>
               </article>
             );
