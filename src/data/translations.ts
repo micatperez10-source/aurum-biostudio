@@ -73,7 +73,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           title: 'Data Review',
           description:
             'We review how your data are organized, what information is missing, and how to move your project forward.',
-          price: 'From US$ 100',
+          price: 'From US$ 90',
           timeline: '2–3 business days',
           features: [
             'Review of your files and how they are organized',
@@ -89,7 +89,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           badge: 'Most popular',
           description:
             'I analyze your data according to your project goals and deliver graphs, tables, and a brief report to help you understand the results.',
-          price: 'From US$ 250',
+          price: 'From US$ 108',
           timeline: '5–10 business days',
           features: [
             'Initial data review and development of the agreed analysis',
@@ -124,7 +124,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       title: 'Data Review',
       lead:
         'Understand where your data stand and what you need to move forward.',
-      price: 'From US$100 · 2–3 business days',
+      price: 'From US$90 · 2–3 business days',
       sampleTitle: 'A sample of what you receive',
       sample: {
         title: 'Example review summary',
@@ -161,7 +161,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
         'Tools are chosen according to the files and the needs of the project.',
       scopeTitle: 'What this stage includes',
       scopeText:
-        'This review includes observations and recommendations. It does not include correcting or reorganizing your files, performing statistical analysis, or creating graphs. If you need those services, they are agreed on and quoted separately.',
+        'This review includes observations and recommendations, as well as correcting and reorganizing your files. It does not include performing statistical analysis or creating graphs. If you need those services, they are agreed on and quoted separately.',
       ctaBtn: 'Ask about a review',
       ctaNote:
         'Tell me about your project and the data you have, even if you don’t know where to start yet.',
@@ -171,7 +171,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       closeBtn: 'Close',
       title: 'Analysis + Report',
       lead: 'From your data to clear, well-documented results.',
-      price: 'From US$ 250 · 5–10 business days',
+      price: 'From US$ 108 · 5–10 business days',
       sample: {
         label: 'Illustrative report view',
         title: 'Analysis of a biological assay',
@@ -652,7 +652,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           title: 'Revisión de datos',
           description:
             'Revisamos cómo están organizados tus datos, qué información falta y cómo avanzar con tu proyecto.',
-          price: 'Desde US$ 100',
+          price: 'Desde US$ 90',
           timeline: '2–3 días hábiles',
           features: [
             'Revisión de tus archivos y de cómo están organizados.',
@@ -668,7 +668,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
           badge: 'Más elegido',
           description:
             'Analizo tus datos según los objetivos de tu proyecto y te entrego gráficos, tablas y un reporte breve para entender los resultados.',
-          price: 'Desde US$ 250',
+          price: 'Desde US$ 108',
           timeline: '5–10 días hábiles',
           features: [
             'Revisión inicial de los datos y desarrollo del análisis acordado.',
@@ -702,7 +702,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       closeBtn: 'Cerrar',
       title: 'Revisión de datos',
       lead: 'Entendé cómo están tus datos y qué necesitás para avanzar.',
-      price: 'Desde US$100 · 2–3 días hábiles',
+      price: 'Desde US$90 · 2–3 días hábiles',
       sampleTitle: 'Una muestra de lo que recibís',
       sample: {
         title: 'Ejemplo de resumen de revisión',
@@ -739,7 +739,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
         'Las herramientas se eligen según los archivos y las necesidades del proyecto.',
       scopeTitle: 'Qué incluye esta etapa',
       scopeText:
-        'Esta revisión incluye observaciones y recomendaciones. No incluye corregir o reorganizar los archivos, realizar el análisis estadístico ni elaborar gráficos. Si necesitás esos trabajos, se acuerdan y presupuestan por separado.',
+        'Esta revisión incluye observaciones y recomendaciones, y también corregir y reorganizar los archivos. No incluye realizar el análisis estadístico ni elaborar gráficos. Si necesitás esos trabajos, se acuerdan y presupuestan por separado.',
       ctaBtn: 'Consultar por una revisión',
       ctaNote:
         'Contame sobre tu proyecto y los datos que tenés, aunque todavía no sepas por dónde empezar.',
@@ -749,7 +749,7 @@ export const TRANSLATIONS: Record<Language, TranslationContent> = {
       closeBtn: 'Cerrar',
       title: 'Análisis + Reporte',
       lead: 'De tus datos a resultados claros y bien documentados.',
-      price: 'Desde US$ 250 · 5–10 días hábiles',
+      price: 'Desde US$ 108 · 5–10 días hábiles',
       sample: {
         label: 'Vista ilustrativa de un reporte',
         title: 'Análisis de un ensayo biológico',
