@@ -376,11 +376,23 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             ref={formRef}
             onSubmit={handleSubmit}
             noValidate
-            className="mt-6 space-y-4"
+            className="mt-6 rounded-2xl border border-[#BFA690]/60 bg-[#E6E4DF]/50 p-5 shadow-sm sm:p-6"
           >
-            <span className="block text-sm font-bold uppercase tracking-wider text-[#827D75]">
-              {t.formTitle}
-            </span>
+            <div className="flex items-start gap-3 border-b border-[#BFA690]/40 pb-4">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#255643] text-[#E6E4DF] shadow-sm">
+                <Send className="h-5 w-5" aria-hidden="true" />
+              </span>
+
+              <div className="min-w-0">
+                <span className="font-serif block text-2xl font-bold text-[#3B5745]">
+                  {t.formTitle}
+                </span>
+
+                <p className="mt-1 text-sm leading-relaxed text-[#827D75]">
+                  {t.formHint}
+                </p>
+              </div>
+            </div>
 
             <input
               type="text"
@@ -391,117 +403,129 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               className="pointer-events-none absolute left-0 top-0 h-0 w-0 overflow-hidden opacity-0"
             />
 
-            <div>
-              <label
-                htmlFor="modal-name-company"
-                className="mb-1.5 block text-base font-semibold text-[#807D75]"
-              >
-                {t.nameLabel}
-              </label>
-
-              <input
-                id="modal-name-company"
-                name="name"
-                type="text"
-                autoComplete="name"
-                value={nameCompany}
-                onChange={(event) => setNameCompany(event.target.value)}
-                placeholder={t.namePlaceholder}
-                className="w-full rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-3.5 py-3 text-base text-[#807D75] placeholder-[#827D75] transition-colors focus:border-[#255643] focus:bg-[#DDD6C9] focus:outline-none"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="modal-email"
-                className="mb-1.5 block text-base font-semibold text-[#807D75]"
-              >
-                {t.emailFieldLabel}
-                <span className="ml-0.5 text-[#958965]" aria-hidden="true">
-                  *
-                </span>
-              </label>
-
-              <input
-                ref={emailInputRef}
-                id="modal-email"
-                name="email"
-                type="email"
-                inputMode="email"
-                autoComplete="email"
-                required
-                aria-required="true"
-                aria-invalid={fieldErrors.email ? true : undefined}
-                aria-describedby={
-                  fieldErrors.email ? 'contact-email-error' : undefined
-                }
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                placeholder={t.emailPlaceholder}
-                className="w-full rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-3.5 py-3 text-base text-[#807D75] placeholder-[#827D75] transition-colors focus:border-[#255643] focus:bg-[#DDD6C9] focus:outline-none"
-              />
-
-              {fieldErrors.email && (
-                <p
-                  id="contact-email-error"
-                  className="mt-1.5 flex items-start gap-1.5 text-sm font-medium text-[#8B3A2E]"
+            <div className="mt-4 space-y-4">
+              <div>
+                <label
+                  htmlFor="modal-name-company"
+                  className="mb-1.5 block text-base font-semibold text-[#3B5745]"
                 >
-                  <AlertCircle
-                    className="mt-0.5 h-4 w-4 shrink-0"
-                    aria-hidden="true"
-                  />
-                  <span>{fieldErrors.email}</span>
-                </p>
-              )}
-            </div>
+                  {t.nameLabel}
+                </label>
 
-            <div>
-              <label
-                htmlFor="modal-message"
-                className="mb-1.5 block text-base font-semibold text-[#807D75]"
-              >
-                {t.messageLabel}
-                <span className="ml-0.5 text-[#958965]" aria-hidden="true">
-                  *
-                </span>
-              </label>
+                <input
+                  id="modal-name-company"
+                  name="name"
+                  type="text"
+                  autoComplete="name"
+                  value={nameCompany}
+                  onChange={(event) => setNameCompany(event.target.value)}
+                  placeholder={t.namePlaceholder}
+                  className="w-full rounded-xl border border-[#BFA690]/50 bg-[#DDD6C9] px-3.5 py-3 text-base text-[#807D75] placeholder-[#958965] transition-colors hover:border-[#BFA690] focus:border-[#255643] focus:bg-[#DDD6C9] focus:outline-none focus:ring-2 focus:ring-[#255643]/15"
+                />
+              </div>
 
-              <textarea
-                ref={messageInputRef}
-                id="modal-message"
-                name="message"
-                rows={5}
-                required
-                aria-required="true"
-                aria-invalid={fieldErrors.message ? true : undefined}
-                aria-describedby={
-                  fieldErrors.message ? 'contact-message-error' : undefined
-                }
-                value={message}
-                onChange={(event) => setMessage(event.target.value)}
-                placeholder={t.messagePlaceholder}
-                className="w-full resize-y rounded-xl border border-[#E6E4DF] bg-[#DDD6C9] px-3.5 py-3 text-base leading-relaxed text-[#807D75] placeholder-[#827D75] transition-colors focus:border-[#255643] focus:bg-[#DDD6C9] focus:outline-none"
-              />
-
-              {fieldErrors.message && (
-                <p
-                  id="contact-message-error"
-                  className="mt-1.5 flex items-start gap-1.5 text-sm font-medium text-[#8B3A2E]"
+              <div>
+                <label
+                  htmlFor="modal-email"
+                  className="mb-1.5 block text-base font-semibold text-[#3B5745]"
                 >
-                  <AlertCircle
-                    className="mt-0.5 h-4 w-4 shrink-0"
+                  {t.emailFieldLabel}
+                  <span
+                    className="ml-0.5 text-[#8B3A2E]"
                     aria-hidden="true"
-                  />
-                  <span>{fieldErrors.message}</span>
-                </p>
-              )}
+                  >
+                    *
+                  </span>
+                </label>
+
+                <input
+                  ref={emailInputRef}
+                  id="modal-email"
+                  name="email"
+                  type="email"
+                  inputMode="email"
+                  autoComplete="email"
+                  required
+                  aria-required="true"
+                  aria-invalid={fieldErrors.email ? true : undefined}
+                  aria-describedby={
+                    fieldErrors.email ? 'contact-email-error' : undefined
+                  }
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  placeholder={t.emailPlaceholder}
+                  className="w-full rounded-xl border border-[#BFA690]/50 bg-[#DDD6C9] px-3.5 py-3 text-base text-[#807D75] placeholder-[#958965] transition-colors hover:border-[#BFA690] focus:border-[#255643] focus:bg-[#DDD6C9] focus:outline-none focus:ring-2 focus:ring-[#255643]/15"
+                />
+
+                {fieldErrors.email && (
+                  <p
+                    id="contact-email-error"
+                    className="mt-1.5 flex items-start gap-1.5 text-sm font-medium text-[#8B3A2E]"
+                  >
+                    <AlertCircle
+                      className="mt-0.5 h-4 w-4 shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span>{fieldErrors.email}</span>
+                  </p>
+                )}
+              </div>
+
+              <div>
+                <label
+                  htmlFor="modal-message"
+                  className="mb-1.5 block text-base font-semibold text-[#3B5745]"
+                >
+                  {t.messageLabel}
+                  <span
+                    className="ml-0.5 text-[#8B3A2E]"
+                    aria-hidden="true"
+                  >
+                    *
+                  </span>
+                </label>
+
+                <textarea
+                  ref={messageInputRef}
+                  id="modal-message"
+                  name="message"
+                  rows={5}
+                  required
+                  aria-required="true"
+                  aria-invalid={fieldErrors.message ? true : undefined}
+                  aria-describedby={
+                    fieldErrors.message ? 'contact-message-error' : undefined
+                  }
+                  value={message}
+                  onChange={(event) => setMessage(event.target.value)}
+                  placeholder={t.messagePlaceholder}
+                  className="w-full resize-y rounded-xl border border-[#BFA690]/50 bg-[#DDD6C9] px-3.5 py-3 text-base leading-relaxed text-[#807D75] placeholder-[#958965] transition-colors hover:border-[#BFA690] focus:border-[#255643] focus:bg-[#DDD6C9] focus:outline-none focus:ring-2 focus:ring-[#255643]/15"
+                />
+
+                {fieldErrors.message && (
+                  <p
+                    id="contact-message-error"
+                    className="mt-1.5 flex items-start gap-1.5 text-sm font-medium text-[#8B3A2E]"
+                  >
+                    <AlertCircle
+                      className="mt-0.5 h-4 w-4 shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span>{fieldErrors.message}</span>
+                  </p>
+                )}
+              </div>
+
+              <p className="text-xs font-medium text-[#827D75]">
+                {t.requiredNote}
+              </p>
             </div>
 
             {(status === 'error' || status === 'uncertain') && (
               <div
                 ref={feedbackRef}
                 tabIndex={-1}
-                className="flex items-start gap-2.5 rounded-xl border border-[#8B3A2E]/40 bg-[#8B3A2E]/5 p-4 text-sm font-medium leading-relaxed text-[#8B3A2E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B3A2E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#DDD6C9]"
+                className="mt-4 flex items-start gap-2.5 rounded-xl border border-[#8B3A2E]/40 bg-[#8B3A2E]/5 p-4 text-sm font-medium leading-relaxed text-[#8B3A2E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B3A2E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#DDD6C9]"
               >
                 <AlertCircle
                   className="mt-0.5 h-4 w-4 shrink-0"
@@ -520,7 +544,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               type="submit"
               disabled={isSubmitting}
               aria-disabled={isSubmitting}
-              className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#255643] px-4 py-3.5 text-base font-bold text-white shadow-sm transition-colors hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:brightness-100"
+              className="mt-4 inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#255643] px-4 py-3.5 text-base font-bold text-white shadow-md transition-colors hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:brightness-100"
             >
               {isSubmitting ? (
                 <Loader2

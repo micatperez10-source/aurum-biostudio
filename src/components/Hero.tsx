@@ -90,7 +90,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
             />
           </button>
 
-          <p className="flex items-center justify-center gap-1.5 text-sm font-medium text-[#827D75] sm:text-base">
+          <p className="flex items-center justify-center gap-1.5 text-base font-medium text-[#827D75]">
             <Clock
               className="inline-block h-4 w-4 text-[#BFA690]"
               aria-hidden="true"
@@ -100,7 +100,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
         </div>
 
         <div className="mx-auto mt-14 max-w-3xl rounded-2xl border border-[#E6E4DF] bg-[#DDD6C9] p-4 text-left shadow-sm sm:mt-16 sm:p-6">
-          <div className="flex items-center justify-between border-b border-[#E6E4DF] pb-4 text-sm text-[#827D75]">
+          <div className="flex items-center justify-between border-b border-[#E6E4DF] pb-4 text-base text-[#827D75]">
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#255643]" />
               <span className="font-sans font-semibold text-[#827D75]">
@@ -108,12 +108,12 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
               </span>
             </div>
 
-            <span className="hidden font-sans text-sm text-[#827D75] sm:inline">
+            <span className="hidden font-sans text-base text-[#827D75] sm:inline">
               Aurum BioStudio • Data Analysis
             </span>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 pt-4 text-sm md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 pt-4 text-base md:grid-cols-3">
             <div className="space-y-1.5 rounded-xl border border-[#E6E4DF]/60 bg-[#DDD6C9] p-3.5">
               <div className="flex items-center gap-1.5 font-sans text-base font-semibold text-[#827D75]">
                 <BarChart3
@@ -123,7 +123,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
                 <span>{previewCopy.figuresTitle}</span>
               </div>
 
-              <p className="font-sans text-sm leading-relaxed text-[#827D75]">
+              <p className="font-sans text-base leading-relaxed text-[#827D75]">
                 {previewCopy.figuresText}
               </p>
             </div>
@@ -137,7 +137,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
                 <span>{previewCopy.summaryTitle}</span>
               </div>
 
-              <p className="font-sans text-sm leading-relaxed text-[#827D75]">
+              <p className="font-sans text-base leading-relaxed text-[#827D75]">
                 {previewCopy.summaryText}
               </p>
             </div>
@@ -151,7 +151,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
                 <span>{previewCopy.codeTitle}</span>
               </div>
 
-              <p className="font-sans text-sm leading-relaxed text-[#827D75]">
+              <p className="font-sans text-base leading-relaxed text-[#827D75]">
                 {previewCopy.codeText}
               </p>
             </div>

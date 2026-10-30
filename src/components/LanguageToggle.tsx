@@ -15,7 +15,7 @@ export const LanguageToggle: React.FC<LanguageToggleProps> = ({
 }) => {
   return (
     <div
-      className={`inline-flex items-center bg-[#DDD6C9]/60 hover:bg-[#DDD6C9] hover:brightness-95 p-0.5 rounded-lg border border-[#E6E4DF] text-xs font-semibold transition-colors ${className}`}
+      className={`inline-flex items-center bg-[#DDD6C9]/60 hover:bg-[#DDD6C9] hover:brightness-95 p-0.5 rounded-lg border border-[#E6E4DF] text-sm font-semibold transition-colors ${className}`}
       role="group"
       aria-label="Language selector / Selector de idioma"
     >

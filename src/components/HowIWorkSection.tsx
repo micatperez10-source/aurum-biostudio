@@ -55,7 +55,7 @@ export const HowIWorkSection: React.FC<HowIWorkSectionProps> = ({ lang }) => {
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#E6E4DF]/80 text-[11px] font-mono text-[#827D75]">
+              <div className="mt-6 pt-4 border-t border-[#E6E4DF]/80 text-xs font-mono text-[#827D75]">
                 {lang === 'en' ? `Step ${st.step} of 4` : `Paso ${st.step} de 4`}
               </div>
             </div>

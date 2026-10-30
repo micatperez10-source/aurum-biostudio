@@ -147,7 +147,7 @@ export const OngoingSupportModal: React.FC<OngoingSupportModalProps> = ({
                 className="overflow-hidden rounded-xl border border-[#BFA690] bg-[#E6E4DF] shadow-sm"
               >
                 <div className="border-b border-[#BFA690]/70 bg-[#DDD6C9] px-5 py-4">
-                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-[#827D75]">
+                  <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-[#827D75]">
                     {t.sample.label}
                   </p>
                   <h3

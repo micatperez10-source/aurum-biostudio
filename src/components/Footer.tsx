@@ -76,7 +76,7 @@ export const Footer: React.FC<FooterProps> = ({
               {t.footer.tagline}
             </p>
 
-            <div className="flex items-center gap-2 text-xs text-[#827D75]">
+            <div className="flex items-center gap-2 text-sm text-[#827D75]">
               <Mail
                 className="h-3.5 w-3.5 text-[#255643]"
                 aria-hidden="true"
@@ -92,11 +92,11 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
 
           <div className="space-y-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#807D75]">
+            <span className="text-sm font-semibold uppercase tracking-wider text-[#807D75]">
               {navigationLabel}
             </span>
 
-            <ul className="space-y-2 text-xs">
+            <ul className="space-y-2 text-sm">
               <li>
                 <button
                   type="button"
@@ -150,11 +150,11 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
 
           <div className="space-y-3">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#807D75]">
+            <span className="text-sm font-semibold uppercase tracking-wider text-[#807D75]">
               {resourcesLabel}
             </span>
 
-            <ul className="space-y-2 text-xs">
+            <ul className="space-y-2 text-sm">
               {/* TEMPORALMENTE OCULTO - ENTREGABLES no listo todavía. Descomentar cuando esté listo.
               <li>
                 <button
@@ -190,7 +190,7 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-[#E6E4DF] pt-8 text-xs sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-[#E6E4DF] pt-8 text-sm sm:flex-row">
           <p>{t.footer.copyright}</p>
         </div>
       </div>

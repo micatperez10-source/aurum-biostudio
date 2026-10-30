@@ -120,6 +120,8 @@ export interface ContactModalContent {
   copyEmail: string;
   copiedEmail: string;
   formTitle: string;
+  formHint: string;
+  requiredNote: string;
   nameLabel: string;
   namePlaceholder: string;
   emailFieldLabel: string;

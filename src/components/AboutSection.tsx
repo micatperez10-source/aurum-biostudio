@@ -77,7 +77,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
               <span>{confidentialityText}</span>
             </div>
 
-            <span className="font-serif text-[11px] text-[#255643]">
+            <span className="font-serif text-xs text-[#255643]">
               Aurum BioStudio
             </span>
           </div>

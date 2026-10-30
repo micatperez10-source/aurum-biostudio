@@ -192,7 +192,7 @@ export const AnalysisReportModal: React.FC<AnalysisReportModalProps> = ({
                 aria-describedby="analysis-report-figure-description"
               >
                 <div className="border-b border-[#BFA690]/70 bg-[#DDD6C9] px-5 py-4">
-                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-[#827D75]">
+                  <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-[#827D75]">
                     {t.sample.label}
                   </p>
                   <h3
@@ -221,7 +221,7 @@ export const AnalysisReportModal: React.FC<AnalysisReportModalProps> = ({
                       <p className="text-xs font-bold uppercase tracking-wider text-[#827D75]">
                         {t.sample.visualizationLabel}
                       </p>
-                      <span className="rounded-full border border-[#BFA690] bg-[#DDD6C9] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[#827D75]">
+                      <span className="rounded-full border border-[#BFA690] bg-[#DDD6C9] px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-[#827D75]">
                         {t.sample.figureSimulatedLabel}
                       </span>
                     </div>
