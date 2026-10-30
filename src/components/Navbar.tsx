@@ -90,7 +90,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 Aurum BioStudio
               </span>
 
-              <span className="whitespace-nowrap font-sans text-xs font-medium uppercase tracking-wider text-[#827D75]">
+              <span className="hidden whitespace-nowrap font-sans text-xs font-medium uppercase tracking-wider text-[#827D75] sm:inline">
                 {t.nav.subbrand}
               </span>
             </div>
@@ -184,10 +184,12 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           <div className="flex shrink-0 items-center gap-2 xl:hidden">
-            <LanguageToggle
-              currentLang={currentLang}
-              onToggle={handleLanguageChange}
-            />
+            <div className="hidden sm:flex">
+              <LanguageToggle
+                currentLang={currentLang}
+                onToggle={handleLanguageChange}
+              />
+            </div>
 
             <button
               type="button"
@@ -216,6 +218,13 @@ export const Navbar: React.FC<NavbarProps> = ({
           id="mobile-navigation"
           className="space-y-3 border-b border-[#E6E4DF] bg-[#DDD6C9] px-4 pb-6 pt-3 xl:hidden"
         >
+          <div className="flex justify-center border-b border-[#E6E4DF] pb-3 sm:hidden">
+            <LanguageToggle
+              currentLang={currentLang}
+              onToggle={handleLanguageChange}
+            />
+          </div>
+
           <div className="flex flex-col space-y-2">
             <button
               type="button"
